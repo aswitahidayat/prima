@@ -28,6 +28,9 @@ import Page500 from '../views/pages/Page500';
 import Login from '../views/pages/Login';
 import Register from '../views/pages/Register';
 
+// Views - Modules
+import TipsNTrik from '../views/modules/master/TipsNTrik';
+
 Vue.use(Router);
 
 export default new Router({
@@ -120,11 +123,26 @@ export default new Router({
               component: SimpleLineIcons
             }
           ]
+        },
+        {
+          path: 'master',
+          redirect: '/master/mititi',
+          name: 'Master',
+          component: {
+            render (c) { return c('router-view'); }
+          },
+          children: [
+            {
+              path: 'mititi',
+              name: 'TipsNTrik',
+              component: TipsNTrik
+            }
+          ]
         }
       ]
     },
     {
-      path: 'pages',
+      path: '/pages',
       redirect: '/pages/404',
       name: 'Pages',
       component: {

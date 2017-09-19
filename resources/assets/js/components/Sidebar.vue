@@ -55,23 +55,37 @@
         <li class="nav-title">
           Extras
         </li>
-        <li class="nav-item nav-dropdown">
-          <a class="nav-link nav-dropdown-toggle" href="#" @click="handleClick"><i class="icon-star"></i> Pages</a>
+        
+        <router-link tag="li" class="nav-item nav-dropdown" :to="{ path: '/pages'}" disabled>
+          <div class="nav-link nav-dropdown-toggle" @click="handleClick"><i class="icon-star"></i> Pages</div>
           <ul class="nav-dropdown-items">
             <li class="nav-item">
               <router-link :to="'/pages/login'" class="nav-link" exact><i class="icon-star"></i> Login</router-link>
             </li>
             <li class="nav-item">
-                <router-link :to="'/pages/register'" class="nav-link" exact><i class="icon-star"></i> Register</router-link>
+              <router-link :to="'/pages/register'" class="nav-link" exact><i class="icon-star"></i> Register</router-link>
             </li>
             <li class="nav-item">
-                <router-link :to="'/pages/404'" class="nav-link" exact><i class="icon-star"></i> Error 404</router-link>
+              <router-link :to="'/pages/404'" class="nav-link" exact><i class="icon-star"></i> Error 404</router-link>
             </li>
             <li class="nav-item">
               <router-link :to="'/pages/500'" class="nav-link" exact><i class="icon-star"></i> Error 500</router-link>
             </li>
           </ul>
-        </li>
+        </router-link>
+
+         <router-link tag="li" class="nav-item nav-dropdown" :to="{ path: '/master'}" disabled>
+          <div class="nav-link nav-dropdown-toggle" @click="handleClick"><i class="icon-puzzle"></i> Tentang Aku</div>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <router-link :to="'/master/mititi'" class="nav-link" exact><i class="icon-puzzle"></i> Materi Tips n Trik</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link :to="'/components/social-buttons'" class="nav-link" exact><i class="icon-puzzle"></i> Social Buttons</router-link>
+            </li>
+          </ul>
+        </router-link>
+
       </ul>
     </nav>
   </div>
