@@ -13,10 +13,11 @@ class MititiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //$mititi = Mititi::all()->toArray();
-
-        return Mititi::all()->toArray();
+    {        
+        return Mititi::where('deleted', 0)
+                ->orderBy('id', 'asc')
+                ->take(10)
+                ->get();
     }
 
     /**
@@ -37,7 +38,15 @@ class MititiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'file' => 'required|max:500',
+            'keterangan' => 'required|max:500'
+        ]);
+
+        return Mititi::firstOrCreate([ 
+            'file' => $request->file,
+            'keterangan' => $request->keterangan
+        ]);
     }
 
     /**
@@ -48,7 +57,9 @@ class MititiController extends Controller
      */
     public function show($id)
     {
-        //
+        return Mititi::where('deleted', 0)
+                ->where('id', $id)
+                ->first();
     }
 
     /**
@@ -57,7 +68,7 @@ class MititiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+     public function edit($id)
     {
         //
     }
@@ -71,7 +82,17 @@ class MititiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'file' => 'required|max:500',
+            'keterangan' => 'required|max:500'
+        ]);
+
+        return Mititi::where('deleted', 0)
+        ->where('id', $id)
+        ->update([
+            'file' => $request->file,
+            'keterangan' => $request->keterangan
+        ]);
     }
 
     /**
@@ -82,6 +103,9 @@ class MititiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Mititi::where('deleted', 0)
+                ->where('id', $id)
+                ->update(['deleted' => 1]);
+                
     }
 }

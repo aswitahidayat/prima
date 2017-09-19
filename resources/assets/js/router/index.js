@@ -134,7 +134,7 @@ export default new Router({
           children: [
             {
               path: 'mititi',
-              name: 'TipsNTrik',
+              name: 'Tips N Trik',
               component: TipsNTrik
             }
           ]

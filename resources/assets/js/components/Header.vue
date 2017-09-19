@@ -6,25 +6,24 @@
       <li class="nav-item">
         <a class="nav-link navbar-toggler sidebar-toggler" href="#" @click="sidebarToggle">&#9776;</a>
       </li>
-      <li class="nav-item px-1">
-        <a class="nav-link" href="#">Dashboard</a>
-      </li>
-      <li class="nav-item px-1">
-        <a class="nav-link" href="#">Users</a>
-      </li>
-      <li class="nav-item px-1">
-        <a class="nav-link" href="#">Settings</a>
-      </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item hidden-md-down">
-        <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
-      </li>
-      <li class="nav-item hidden-md-down">
-        <a class="nav-link" href="#"><i class="icon-list"></i></a>
-      </li>
-      <li class="nav-item hidden-md-down">
-        <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+      <li class="nav-item">
+        <dropdown size="nav" class="nav-item">
+          <span slot="button">
+            <i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span>
+          </span>
+          <div slot="dropdown-menu"class="dropdown-menu dropdown-menu-right">
+
+            <div class="dropdown-header text-center"><strong>Account</strong></div>
+
+            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
+            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
+            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
+            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>
+
+          </div>
+        </dropdown>
       </li>
       <dropdown size="nav" class="nav-item">
         <span slot="button">
@@ -32,14 +31,6 @@
           <span class="hidden-md-down">admin</span>
         </span>
         <div slot="dropdown-menu"class="dropdown-menu dropdown-menu-right">
-
-          <div class="dropdown-header text-center"><strong>Account</strong></div>
-
-          <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>
-
           <div class="dropdown-header text-center"><strong>Settings</strong></div>
 
           <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
@@ -51,9 +42,7 @@
           <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
         </div>
       </dropdown>
-      <li class="nav-item hidden-md-down">
-        <a class="nav-link navbar-toggler aside-menu-toggler" href="#" @click="asideToggle">&#9776;</a>
-      </li>
+      <li class="nav-item hidden-md-down">&nbsp;</li>
     </ul>
   </navbar>
 </template>
@@ -79,11 +68,11 @@ export default {
     mobileSidebarToggle (e) {
       e.preventDefault()
       document.body.classList.toggle('sidebar-mobile-show')
-    },
-    asideToggle (e) {
-      e.preventDefault()
-      document.body.classList.toggle('aside-menu-hidden')
     }
+    // asideToggle (e) {
+    //   e.preventDefault()
+    //   document.body.classList.toggle('aside-menu-hidden')
+    // }
   }
 }
 </script>
