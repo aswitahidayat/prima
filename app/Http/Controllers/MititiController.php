@@ -16,8 +16,7 @@ class MititiController extends Controller
     {        
         return Mititi::where('deleted', 0)
                 ->orderBy('id', 'asc')
-                ->take(10)
-                ->get();
+                ->paginate(10);
     }
 
     /**

@@ -96,7 +96,7 @@
           fetchMititiList() {
             axios.get('api/mititi')
               .then((res) => {
-                this.list = res.data;
+                this.list = res.data.data;
               })
               .catch((err) => console.error(err));
             },

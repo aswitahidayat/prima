@@ -53014,7 +53014,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this = this;
 
       axios.get('api/mititi').then(function (res) {
-        _this.list = res.data;
+        _this.list = res.data.data;
       }).catch(function (err) {
         return console.error(err);
       });
