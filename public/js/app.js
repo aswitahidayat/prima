@@ -41850,7 +41850,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 /* 238 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"~coreui/fonts/font-awesome\";\n^\n      File to import not found or unreadable: ~coreui/fonts/font-awesome.\nParent style sheet: stdin\n      in /home/aswita/workplace/prima/prima/resources/assets/sass/app.scss (line 12, column 1)\n    at runLoaders (/home/aswita/workplace/prima/prima/node_modules/webpack/lib/NormalModule.js:192:19)\n    at /home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/home/aswita/workplace/prima/prima/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/home/aswita/workplace/prima/prima/node_modules/sass-loader/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/home/aswita/workplace/prima/prima/node_modules/sass-loader/node_modules/async/dist/async.js:906:16)\n    at options.error (/home/aswita/workplace/prima/prima/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 /* 239 */
