@@ -1,6 +1,6 @@
 <p align="center">
-    <img width="100" src="https://laravel.com/assets/img/components/logo-laravel.svg">
-    <img width="100" src="https://vuejs.org/images/logo.png">
+    <img src="https://laravel.com/assets/img/components/logo-laravel.svg">
+    <img width="70" src="https://vuejs.org/images/logo.png">
 </p>
 
 
