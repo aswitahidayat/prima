@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Apps;
 
 use Illuminate\Http\Request;
-use App\Mititi;
+use App\Http\Controllers\Controller;
+use App\Models\Mititi;
 
 class MititiController extends Controller
 {
@@ -55,7 +56,7 @@ class MititiController extends Controller
             'keterangan' => 'required|max:500'
         ]);
 
-        return Mititi::firstOrCreate([ 
+        return Mititi::create([ 
             'file' => $request->file,
             'keterangan' => $request->keterangan
         ]);

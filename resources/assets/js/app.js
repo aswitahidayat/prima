@@ -21,7 +21,6 @@ import App from './App.vue';
 import router from './router';
 
 Vue.component('App', require('./App.vue'));
-Vue.component('pagination', require('laravel-vue-pagination'));
 
 /* eslint-disable no-new */
 const app = new Vue({

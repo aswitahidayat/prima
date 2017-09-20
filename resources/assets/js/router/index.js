@@ -19,6 +19,8 @@ import Register from '../views/pages/Register';
 
 // Views - Modules
 import TipsNTrik from '../views/modules/master/TipsNTrik';
+import Kalpen from '../views/modules/master/Kalpen';
+import Banner from '../views/modules/master/Banner';
 
 Vue.use(Router);
 
@@ -50,6 +52,16 @@ export default new Router({
               path: 'mititi',
               name: 'Tips N Trik',
               component: TipsNTrik
+            },
+            {
+              path: 'banner',
+              name: 'Banner',
+              component: Banner
+            },
+            {
+              path: 'kalpen',
+              name: 'Kalpen',
+              component: Kalpen
             }
           ]
         }

@@ -11,19 +11,21 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>File</th>
+                <th>Judul</th>
                 <th>Keterangan</th>
+                <th>Tanggal</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(task, index) in list.data">
                 <td>{{ index + list.pagination.from }}</td>
-                <td>{{ task.file }}</td>
+                <td>{{ task.judul }}</td>
                 <td>{{ task.keterangan }}</td>
+                <td>{{ task.tanggal }}</td>
                 <td>
-                  <button type="button" class="btn btn-primary" @click="popUpEditMititi(task.id)"><i class="fa fa-edit"></i></button>
-                  <button @click="deleteMititi(task.id)" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
+                  <button type="button" class="btn btn-primary" @click="popUpEditKalpen(task.id)"><i class="fa fa-edit"></i></button>
+                  <button @click="deleteKalpen(task.id)" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                 </td>
               </tr>
             </tbody>
@@ -32,13 +34,13 @@
           <nav>
             <ul class="pagination">
               <li class="page-item" v-if="pagination.current_page > 1" >
-                <a class="page-link" href="javascript:;" @click="fetchMititiList(pagination.current_page - 1)">Prev</a>
+                <a class="page-link" href="javascript:;" @click="fetchKalpenList(pagination.current_page - 1)">Prev</a>
               </li>
               <li v-for="page in pagination.last_page" v-bind:class="[ page == pagination.current_page ? 'active' : '']">
-                <a href="javascript:;" @click="fetchMititiList(page)">{{ page }}</a>
+                <a href="javascript:;" @click="fetchKalpenList(page)">{{ page }}</a>
               </li>
               <li class="page-item" v-if="pagination.current_page <  pagination.last_page">
-                <a class="page-link" href="javascript:;" @click="fetchMititiList(pagination.current_page + 1)">Next</a>
+                <a class="page-link" href="javascript:;" @click="fetchKalpenList(pagination.current_page + 1)">Next</a>
               </li>
             </ul>
           </nav>
@@ -47,20 +49,26 @@
       </div>
     </div><!--/.col-->
     
-    <modal title="Modal title" class="modal-primary" v-model="primaryModal" @ok="editMititi(dataForm.id)" effect="fade/zoom">
+    <modal title="Modal title" class="modal-primary" v-model="primaryModal" @ok="editKalpen(dataForm.id)" effect="fade/zoom">
       <div slot="modal-header" class="modal-header">
         <h4 class="modal-title">{{ dataForm.id ? "Edit Data" : "Tambah Data" }}</h4>
       </div>
-
         <div class="card-block">
           <div class="form-group">
             <label for="company">File</label>
-            <input type="text" class="form-control" v-model="dataForm.file" value="{ dataForm.file }" placeholder="Masukan Nama File">
+            <input type="text" class="form-control" v-model="dataForm.judul" value="{ dataForm.judul }" 
+                placeholder="Masukan Nama File">
           </div>
 
           <div class="form-group">
             <label for="company">Keterangan</label>
-            <input type="text" class="form-control" v-model="dataForm.keterangan" value="{ dataForm.keterangan }" placeholder="Masukan Keterangan">
+            <input type="text" class="form-control" v-model="dataForm.keterangan" value="{ dataForm.keterangan }" 
+                placeholder="Masukan Keterangan" required>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Tanggal</label>
+            <datepicker v-model="dataForm.tanggal" value="{ dataForm.tanggal }" placeholder="Masukan Tanggal"></datepicker>
           </div>
 
         </div>
@@ -72,11 +80,13 @@
 
 <script>
   import modal from 'vue-strap/src/Modal'
+  import datepicker from 'vue-date'
     
     export default {
       name: 'modals',
       components: {
-        modal
+        modal,
+        datepicker
       },
       data() {
         return {
@@ -84,8 +94,9 @@
           list: [],
           dataForm: {
             id: '',
-            file: '',
-            keterangan: ''
+            judul: '',
+            keterangan: '',
+            tanggal: ''
           },
           pagination: {
                 total: 0,
@@ -98,12 +109,12 @@
       },
         
         created() {
-          this.fetchMititiList();
+          this.fetchKalpenList();
         },
         
         methods: {
-          fetchMititiList(page) {
-            axios.get('api/mititi?page=' + page)
+          fetchKalpenList(page) {
+            axios.get('api/kalpen?page=' + page)
               .then((res) => {
                 this.list = res.data;
                 this.pagination = res.data.pagination;
@@ -111,17 +122,17 @@
               .catch((err) => console.error(err));
             },
           
-          createMititi() {
-            axios.post('api/mititi', this.dataForm)
+          createKalpen() {
+            axios.post('api/kalpen', this.dataForm)
               .then((res) => {
                 this.dataForm = {};
-                this.fetchMititiList();
+                this.fetchKalpenList();
               })
               .catch((err) => console.error(err));
             },
             
-            popUpEditMititi(id){
-              axios.get('api/mititi/' + id)
+            popUpEditKalpen(id){
+              axios.get('api/kalpen/' + id)
                 .then((res) => {
                   this.primaryModal = true;
                   this.dataForm = res.data;
@@ -129,30 +140,30 @@
                 .catch((err) => console.error(err));
             },
 
-            editMititi(id) {
+            editKalpen(id) {
               if(id && id !== ""){
-                 axios.put('api/mititi/' + id, this.dataForm)
+                 axios.put('api/kalpen/' + id, this.dataForm)
                 .then((res) => {
                   this.primaryModal = false;
                   this.dataForm = {};
-                  this.fetchMititiList()
+                  this.fetchKalpenList()
                 })
                 .catch((err) => console.error(err));
               } else {
-                axios.post('api/mititi', this.dataForm)
+                axios.post('api/kalpen', this.dataForm)
                 .then((res) => {
                   this.primaryModal = false;
                   this.dataForm = {};
-                  this.fetchMititiList()
+                  this.fetchKalpenList()
                 })
               .catch((err) => console.error(err));
               }
             },
 
-            deleteMititi(id) {
-              axios.delete('api/mititi/' + id)
+            deleteKalpen(id) {
+              axios.delete('api/kalpen/' + id)
                 .then((res) => {
-                  this.fetchMititiList()
+                  this.fetchKalpenList()
                 })
                 .catch((err) => console.error(err));
             },

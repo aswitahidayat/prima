@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::prefix('api')->group(function() {
-	Route::resource('mititi', 'MititiController');
+    Route::resource('mititi', 'Apps\MititiController');
+    Route::resource('kalpen', 'Apps\KalpenController');
 });
