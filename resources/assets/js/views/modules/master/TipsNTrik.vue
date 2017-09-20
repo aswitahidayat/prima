@@ -17,8 +17,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(task, index) in list">
-                <td>{{ index + 1 }}</td>
+              <tr v-for="(task, index) in list.data">
+                <td>{{ index + list.pagination.from }}</td>
                 <td>{{ task.file }}</td>
                 <td>{{ task.keterangan }}</td>
                 <td>
@@ -28,18 +28,21 @@
               </tr>
             </tbody>
           </table>
+
           <nav>
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-              <li class="page-item active">
-                <a class="page-link" href="#">1</a>
+              <li class="page-item" v-if="pagination.current_page > 1" >
+                <a class="page-link" href="javascript:;" @click="fetchMititiList(pagination.current_page - 1)">Prev</a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              <li v-for="page in pagination.last_page" v-bind:class="[ page == pagination.current_page ? 'active' : '']">
+                <a href="javascript:;" @click="fetchMititiList(page)">{{ page }}</a>
+              </li>
+              <li class="page-item" v-if="pagination.current_page <  pagination.last_page">
+                <a class="page-link" href="javascript:;" @click="fetchMititiList(pagination.current_page + 1)">Next</a>
+              </li>
             </ul>
           </nav>
+
         </div>
       </div>
     </div><!--/.col-->
@@ -84,7 +87,14 @@
             id: '',
             file: '',
             keterangan: ''
-          }
+          },
+          pagination: {
+                total: 0,
+                per_page: 10,
+                from: 1,
+                to: 0,
+                current_page: 1
+            },
         };
       },
         
@@ -93,10 +103,11 @@
         },
         
         methods: {
-          fetchMititiList() {
-            axios.get('api/mititi')
+          fetchMititiList(page) {
+            axios.get('api/mititi?page=' + page)
               .then((res) => {
-                this.list = res.data.data;
+                this.list = res.data;
+                this.pagination = res.data.pagination;
               })
               .catch((err) => console.error(err));
             },
@@ -147,6 +158,32 @@
                 })
                 .catch((err) => console.error(err));
             },
+
+            pagesNumber: function () {
+                if (!this.pagination.to) {
+                    return [];
+                }
+                var from = this.pagination.current_page - this.offset;
+                if (from < 1) {
+                    from = 1;
+                }
+                var to = from + (this.offset * 2);
+                if (to >= this.pagination.last_page) {
+                    to = this.pagination.last_page;
+                }
+                var pagesArray = [];
+                while (from <= to) {
+                    pagesArray.push(from);
+                    from++;
+                }
+
+                return pagesArray;
+            },
+
+            changePage: function (page) {
+                this.pagination.current_page = page;
+                this.fetchItems(page);
+            }
         }
     }
 </script>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 561);
+/******/ 	return __webpack_require__(__webpack_require__.s = 527);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1899,7 +1899,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(479)("./" + name);
+            __webpack_require__(465)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4538,6 +4538,38 @@ return hooks;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(25);
+module.exports.easing = __webpack_require__(315);
+module.exports.canvas = __webpack_require__(314);
+module.exports.options = __webpack_require__(316);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var helpers = __webpack_require__(1);
+
+module.exports = {
+	/**
+	 * @private
+	 */
+	_set: function(scope, values) {
+		return helpers.merge(this[scope] || (this[scope] = {}), values);
+	}
+};
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -4591,38 +4623,6 @@ module.exports = function normalizeComponent (
     options: options
   }
 }
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(25);
-module.exports.easing = __webpack_require__(329);
-module.exports.canvas = __webpack_require__(328);
-module.exports.options = __webpack_require__(330);
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var helpers = __webpack_require__(2);
-
-module.exports = {
-	/**
-	 * @private
-	 */
-	_set: function(scope, values) {
-		return helpers.merge(this[scope] || (this[scope] = {}), values);
-	}
-};
 
 
 /***/ }),
@@ -4985,82 +4985,8 @@ module.exports = {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.mixins = exports.Bubble = exports.Radar = exports.PolarArea = exports.Pie = exports.Line = exports.Doughnut = exports.HorizontalBar = exports.Bar = exports.VueCharts = undefined;
-
-var _Bar = __webpack_require__(481);
-
-var _Bar2 = _interopRequireDefault(_Bar);
-
-var _HorizontalBar = __webpack_require__(484);
-
-var _HorizontalBar2 = _interopRequireDefault(_HorizontalBar);
-
-var _Doughnut = __webpack_require__(483);
-
-var _Doughnut2 = _interopRequireDefault(_Doughnut);
-
-var _Line = __webpack_require__(485);
-
-var _Line2 = _interopRequireDefault(_Line);
-
-var _Pie = __webpack_require__(486);
-
-var _Pie2 = _interopRequireDefault(_Pie);
-
-var _PolarArea = __webpack_require__(487);
-
-var _PolarArea2 = _interopRequireDefault(_PolarArea);
-
-var _Radar = __webpack_require__(488);
-
-var _Radar2 = _interopRequireDefault(_Radar);
-
-var _Bubble = __webpack_require__(482);
-
-var _Bubble2 = _interopRequireDefault(_Bubble);
-
-var _index = __webpack_require__(489);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var VueCharts = {
-  Bar: _Bar2.default,
-  HorizontalBar: _HorizontalBar2.default,
-  Doughnut: _Doughnut2.default,
-  Line: _Line2.default,
-  Pie: _Pie2.default,
-  PolarArea: _PolarArea2.default,
-  Radar: _Radar2.default,
-  Bubble: _Bubble2.default,
-  mixins: _index2.default
-};
-
-exports.default = VueCharts;
-exports.VueCharts = VueCharts;
-exports.Bar = _Bar2.default;
-exports.HorizontalBar = _HorizontalBar2.default;
-exports.Doughnut = _Doughnut2.default;
-exports.Line = _Line2.default;
-exports.Pie = _Pie2.default;
-exports.PolarArea = _PolarArea2.default;
-exports.Radar = _Radar2.default;
-exports.Bubble = _Bubble2.default;
-exports.mixins = _index2.default;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var color = __webpack_require__(71);
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 function interpolate(start, view, model, ease) {
 	var keys = Object.keys(model);
@@ -5175,7 +5101,7 @@ module.exports = Element;
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /**
@@ -5212,7 +5138,7 @@ module.exports = isObject;
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15412,66 +15338,66 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62)))
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * @namespace Chart
  */
-var Chart = __webpack_require__(318)();
+var Chart = __webpack_require__(304)();
 
-Chart.helpers = __webpack_require__(2);
+Chart.helpers = __webpack_require__(1);
 
 // @todo dispatch these helpers into appropriated helpers/helpers.* file and write unit tests!
-__webpack_require__(317)(Chart);
+__webpack_require__(303)(Chart);
 
-Chart.defaults = __webpack_require__(3);
-Chart.Element = __webpack_require__(8);
-Chart.elements = __webpack_require__(12);
+Chart.defaults = __webpack_require__(2);
+Chart.Element = __webpack_require__(7);
+Chart.elements = __webpack_require__(11);
 Chart.Interaction = __webpack_require__(69);
 Chart.platform = __webpack_require__(70);
 
-__webpack_require__(320)(Chart);
-__webpack_require__(314)(Chart);
-__webpack_require__(315)(Chart);
-__webpack_require__(316)(Chart);
-__webpack_require__(319)(Chart);
-__webpack_require__(322)(Chart);
-__webpack_require__(321)(Chart);
-__webpack_require__(323)(Chart);
-
-__webpack_require__(338)(Chart);
-__webpack_require__(336)(Chart);
-__webpack_require__(337)(Chart);
-__webpack_require__(339)(Chart);
-__webpack_require__(340)(Chart);
-__webpack_require__(341)(Chart);
-
-// Controllers must be loaded after elements
-// See Chart.core.datasetController.dataElementType
-__webpack_require__(307)(Chart);
-__webpack_require__(308)(Chart);
-__webpack_require__(309)(Chart);
-__webpack_require__(310)(Chart);
-__webpack_require__(311)(Chart);
-__webpack_require__(312)(Chart);
-__webpack_require__(313)(Chart);
-
+__webpack_require__(306)(Chart);
 __webpack_require__(300)(Chart);
 __webpack_require__(301)(Chart);
 __webpack_require__(302)(Chart);
-__webpack_require__(303)(Chart);
-__webpack_require__(304)(Chart);
 __webpack_require__(305)(Chart);
-__webpack_require__(306)(Chart);
+__webpack_require__(308)(Chart);
+__webpack_require__(307)(Chart);
+__webpack_require__(309)(Chart);
+
+__webpack_require__(324)(Chart);
+__webpack_require__(322)(Chart);
+__webpack_require__(323)(Chart);
+__webpack_require__(325)(Chart);
+__webpack_require__(326)(Chart);
+__webpack_require__(327)(Chart);
+
+// Controllers must be loaded after elements
+// See Chart.core.datasetController.dataElementType
+__webpack_require__(293)(Chart);
+__webpack_require__(294)(Chart);
+__webpack_require__(295)(Chart);
+__webpack_require__(296)(Chart);
+__webpack_require__(297)(Chart);
+__webpack_require__(298)(Chart);
+__webpack_require__(299)(Chart);
+
+__webpack_require__(286)(Chart);
+__webpack_require__(287)(Chart);
+__webpack_require__(288)(Chart);
+__webpack_require__(289)(Chart);
+__webpack_require__(290)(Chart);
+__webpack_require__(291)(Chart);
+__webpack_require__(292)(Chart);
 
 // Loading built-it plugins
 var plugins = [];
 
 plugins.push(
-	__webpack_require__(333)(Chart),
-	__webpack_require__(334)(Chart),
-	__webpack_require__(335)(Chart)
+	__webpack_require__(319)(Chart),
+	__webpack_require__(320)(Chart),
+	__webpack_require__(321)(Chart)
 );
 
 Chart.plugins.register(plugins);
@@ -15496,21 +15422,21 @@ Chart.canvasHelpers = Chart.helpers.canvas;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = {};
-module.exports.Arc = __webpack_require__(324);
-module.exports.Line = __webpack_require__(325);
-module.exports.Point = __webpack_require__(326);
-module.exports.Rectangle = __webpack_require__(327);
+module.exports.Arc = __webpack_require__(310);
+module.exports.Line = __webpack_require__(311);
+module.exports.Point = __webpack_require__(312);
+module.exports.Rectangle = __webpack_require__(313);
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 /**
@@ -15545,7 +15471,7 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15556,7 +15482,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.mergeOptions = mergeOptions;
 
-var _merge = __webpack_require__(461);
+var _merge = __webpack_require__(447);
 
 var _merge2 = _interopRequireDefault(_merge);
 
@@ -15567,11 +15493,11 @@ function mergeOptions(obj, src) {
 }
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(371),
-    getValue = __webpack_require__(408);
+var baseIsNative = __webpack_require__(357),
+    getValue = __webpack_require__(394);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -15590,7 +15516,7 @@ module.exports = getNative;
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(4);
@@ -15602,12 +15528,12 @@ module.exports = Symbol;
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16),
-    getRawTag = __webpack_require__(407),
-    objectToString = __webpack_require__(439);
+var Symbol = __webpack_require__(15),
+    getRawTag = __webpack_require__(393),
+    objectToString = __webpack_require__(425);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -15636,13 +15562,87 @@ module.exports = baseGetTag;
 
 
 /***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mixins = exports.Bubble = exports.Radar = exports.PolarArea = exports.Pie = exports.Line = exports.Doughnut = exports.HorizontalBar = exports.Bar = exports.VueCharts = undefined;
+
+var _Bar = __webpack_require__(467);
+
+var _Bar2 = _interopRequireDefault(_Bar);
+
+var _HorizontalBar = __webpack_require__(470);
+
+var _HorizontalBar2 = _interopRequireDefault(_HorizontalBar);
+
+var _Doughnut = __webpack_require__(469);
+
+var _Doughnut2 = _interopRequireDefault(_Doughnut);
+
+var _Line = __webpack_require__(471);
+
+var _Line2 = _interopRequireDefault(_Line);
+
+var _Pie = __webpack_require__(472);
+
+var _Pie2 = _interopRequireDefault(_Pie);
+
+var _PolarArea = __webpack_require__(473);
+
+var _PolarArea2 = _interopRequireDefault(_PolarArea);
+
+var _Radar = __webpack_require__(474);
+
+var _Radar2 = _interopRequireDefault(_Radar);
+
+var _Bubble = __webpack_require__(468);
+
+var _Bubble2 = _interopRequireDefault(_Bubble);
+
+var _index = __webpack_require__(475);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var VueCharts = {
+  Bar: _Bar2.default,
+  HorizontalBar: _HorizontalBar2.default,
+  Doughnut: _Doughnut2.default,
+  Line: _Line2.default,
+  Pie: _Pie2.default,
+  PolarArea: _PolarArea2.default,
+  Radar: _Radar2.default,
+  Bubble: _Bubble2.default,
+  mixins: _index2.default
+};
+
+exports.default = VueCharts;
+exports.VueCharts = VueCharts;
+exports.Bar = _Bar2.default;
+exports.HorizontalBar = _HorizontalBar2.default;
+exports.Doughnut = _Doughnut2.default;
+exports.Line = _Line2.default;
+exports.Pie = _Pie2.default;
+exports.PolarArea = _PolarArea2.default;
+exports.Radar = _Radar2.default;
+exports.Bubble = _Bubble2.default;
+exports.mixins = _index2.default;
+
+/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 /**
  * Namespace to hold static tick generation functions
@@ -15877,7 +15877,7 @@ module.exports = copyArray;
 /***/ (function(module, exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(79),
-    baseAssignValue = __webpack_require__(50);
+    baseAssignValue = __webpack_require__(49);
 
 /**
  * Copies properties of `source` to `object`.
@@ -15992,8 +15992,8 @@ module.exports = eq;
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(17),
-    isObjectLike = __webpack_require__(13);
+var baseGetTag = __webpack_require__(16),
+    isObjectLike = __webpack_require__(12);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -16357,6 +16357,625 @@ helpers.getValueAtIndexOrDefault = helpers.valueAtIndexOrDefault;
 
 /***/ }),
 /* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var listCacheClear = __webpack_require__(410),
+    listCacheDelete = __webpack_require__(411),
+    listCacheGet = __webpack_require__(412),
+    listCacheHas = __webpack_require__(413),
+    listCacheSet = __webpack_require__(414);
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+module.exports = ListCache;
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ListCache = __webpack_require__(26),
+    stackClear = __webpack_require__(430),
+    stackDelete = __webpack_require__(431),
+    stackGet = __webpack_require__(432),
+    stackHas = __webpack_require__(433),
+    stackSet = __webpack_require__(434);
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  var data = this.__data__ = new ListCache(entries);
+  this.size = data.size;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+module.exports = Stack;
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var eq = __webpack_require__(22);
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+module.exports = assocIndexOf;
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(8);
+
+/** Built-in value references. */
+var objectCreate = Object.create;
+
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */
+var baseCreate = (function() {
+  function object() {}
+  return function(proto) {
+    if (!isObject(proto)) {
+      return {};
+    }
+    if (objectCreate) {
+      return objectCreate(proto);
+    }
+    object.prototype = proto;
+    var result = new object;
+    object.prototype = undefined;
+    return result;
+  };
+}());
+
+module.exports = baseCreate;
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseCreate = __webpack_require__(29),
+    isObject = __webpack_require__(8);
+
+/**
+ * Creates a function that produces an instance of `Ctor` regardless of
+ * whether it was invoked as part of a `new` expression or by `call` or `apply`.
+ *
+ * @private
+ * @param {Function} Ctor The constructor to wrap.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createCtor(Ctor) {
+  return function() {
+    // Use a `switch` statement to work with class constructors. See
+    // http://ecma-international.org/ecma-262/7.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
+    // for more details.
+    var args = arguments;
+    switch (args.length) {
+      case 0: return new Ctor;
+      case 1: return new Ctor(args[0]);
+      case 2: return new Ctor(args[0], args[1]);
+      case 3: return new Ctor(args[0], args[1], args[2]);
+      case 4: return new Ctor(args[0], args[1], args[2], args[3]);
+      case 5: return new Ctor(args[0], args[1], args[2], args[3], args[4]);
+      case 6: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
+      case 7: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+    }
+    var thisBinding = baseCreate(Ctor.prototype),
+        result = Ctor.apply(thisBinding, args);
+
+    // Mimic the constructor's `return` behavior.
+    // See https://es5.github.io/#x13.2.2 for more details.
+    return isObject(result) ? result : thisBinding;
+  };
+}
+
+module.exports = createCtor;
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isKeyable = __webpack_require__(407);
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+module.exports = getMapData;
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+module.exports = isIndex;
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getNative = __webpack_require__(14);
+
+/* Built-in method references that are verified to be native. */
+var nativeCreate = getNative(Object, 'create');
+
+module.exports = nativeCreate;
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+module.exports = identity;
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseIsArguments = __webpack_require__(353),
+    isObjectLike = __webpack_require__(12);
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+module.exports = isArguments;
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isFunction = __webpack_require__(38),
+    isLength = __webpack_require__(59);
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+module.exports = isArrayLike;
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(4),
+    stubFalse = __webpack_require__(459);
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+module.exports = isBuffer;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)(module)))
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseGetTag = __webpack_require__(16),
+    isObject = __webpack_require__(8);
+
+/** `Object#toString` result references. */
+var asyncTag = '[object AsyncFunction]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    proxyTag = '[object Proxy]';
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = baseGetTag(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+module.exports = isFunction;
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeKeys = __webpack_require__(75),
+    baseKeys = __webpack_require__(85),
+    isArrayLike = __webpack_require__(36);
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+module.exports = keys;
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeKeys = __webpack_require__(75),
+    baseKeysIn = __webpack_require__(360),
+    isArrayLike = __webpack_require__(36);
+
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */
+function keysIn(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+}
+
+module.exports = keysIn;
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var utils = __webpack_require__(6);
+var normalizeHeaderName = __webpack_require__(253);
+
+var PROTECTION_PREFIX = /^\)\]\}',?\n/;
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(63);
+  } else if (typeof process !== 'undefined') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(63);
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      data = data.replace(PROTECTION_PREFIX, '');
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMehtodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(466)))
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports) {
 
 /*
@@ -16412,23 +17031,70 @@ module.exports = function() {
 
 
 /***/ }),
-/* 27 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(424),
-    listCacheDelete = __webpack_require__(425),
-    listCacheGet = __webpack_require__(426),
-    listCacheHas = __webpack_require__(427),
-    listCacheSet = __webpack_require__(428);
+var baseCreate = __webpack_require__(29),
+    baseLodash = __webpack_require__(50);
+
+/** Used as references for the maximum length and index of an array. */
+var MAX_ARRAY_LENGTH = 4294967295;
 
 /**
- * Creates an list cache object.
+ * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
+ *
+ * @private
+ * @constructor
+ * @param {*} value The value to wrap.
+ */
+function LazyWrapper(value) {
+  this.__wrapped__ = value;
+  this.__actions__ = [];
+  this.__dir__ = 1;
+  this.__filtered__ = false;
+  this.__iteratees__ = [];
+  this.__takeCount__ = MAX_ARRAY_LENGTH;
+  this.__views__ = [];
+}
+
+// Ensure `LazyWrapper` is an instance of `baseLodash`.
+LazyWrapper.prototype = baseCreate(baseLodash.prototype);
+LazyWrapper.prototype.constructor = LazyWrapper;
+
+module.exports = LazyWrapper;
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getNative = __webpack_require__(14),
+    root = __webpack_require__(4);
+
+/* Built-in method references that are verified to be native. */
+var Map = getNative(root, 'Map');
+
+module.exports = Map;
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var mapCacheClear = __webpack_require__(415),
+    mapCacheDelete = __webpack_require__(416),
+    mapCacheGet = __webpack_require__(417),
+    mapCacheHas = __webpack_require__(418),
+    mapCacheSet = __webpack_require__(419);
+
+/**
+ * Creates a map cache object to store key-value pairs.
  *
  * @private
  * @constructor
  * @param {Array} [entries] The key-value pairs to cache.
  */
-function ListCache(entries) {
+function MapCache(entries) {
   var index = -1,
       length = entries == null ? 0 : entries.length;
 
@@ -16439,498 +17105,516 @@ function ListCache(entries) {
   }
 }
 
-// Add methods to `ListCache`.
-ListCache.prototype.clear = listCacheClear;
-ListCache.prototype['delete'] = listCacheDelete;
-ListCache.prototype.get = listCacheGet;
-ListCache.prototype.has = listCacheHas;
-ListCache.prototype.set = listCacheSet;
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
 
-module.exports = ListCache;
+module.exports = MapCache;
 
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var ListCache = __webpack_require__(27),
-    stackClear = __webpack_require__(444),
-    stackDelete = __webpack_require__(445),
-    stackGet = __webpack_require__(446),
-    stackHas = __webpack_require__(447),
-    stackSet = __webpack_require__(448);
+/* 46 */
+/***/ (function(module, exports) {
 
 /**
- * Creates a stack cache object to store key-value pairs.
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
  *
  * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
  */
-function Stack(entries) {
-  var data = this.__data__ = new ListCache(entries);
-  this.size = data.size;
+function apply(func, thisArg, args) {
+  switch (args.length) {
+    case 0: return func.call(thisArg);
+    case 1: return func.call(thisArg, args[0]);
+    case 2: return func.call(thisArg, args[0], args[1]);
+    case 3: return func.call(thisArg, args[0], args[1], args[2]);
+  }
+  return func.apply(thisArg, args);
 }
 
-// Add methods to `Stack`.
-Stack.prototype.clear = stackClear;
-Stack.prototype['delete'] = stackDelete;
-Stack.prototype.get = stackGet;
-Stack.prototype.has = stackHas;
-Stack.prototype.set = stackSet;
-
-module.exports = Stack;
+module.exports = apply;
 
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var eq = __webpack_require__(22);
+/* 47 */
+/***/ (function(module, exports) {
 
 /**
- * Gets the index at which the `key` is found in `array` of key-value pairs.
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
  *
  * @private
- * @param {Array} array The array to inspect.
- * @param {*} key The key to search for.
- * @returns {number} Returns the index of the matched value, else `-1`.
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
  */
-function assocIndexOf(array, key) {
-  var length = array.length;
-  while (length--) {
-    if (eq(array[length][0], key)) {
-      return length;
+function arrayEach(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (iteratee(array[index], index, array) === false) {
+      break;
     }
   }
-  return -1;
+  return array;
 }
 
-module.exports = assocIndexOf;
+module.exports = arrayEach;
 
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(9);
-
-/** Built-in value references. */
-var objectCreate = Object.create;
+/* 48 */
+/***/ (function(module, exports) {
 
 /**
- * The base implementation of `_.create` without support for assigning
- * properties to the created object.
+ * Appends the elements of `values` to `array`.
  *
  * @private
- * @param {Object} proto The object to inherit from.
- * @returns {Object} Returns the new object.
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
  */
-var baseCreate = (function() {
-  function object() {}
-  return function(proto) {
-    if (!isObject(proto)) {
-      return {};
-    }
-    if (objectCreate) {
-      return objectCreate(proto);
-    }
-    object.prototype = proto;
-    var result = new object;
-    object.prototype = undefined;
-    return result;
-  };
-}());
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
 
-module.exports = baseCreate;
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+module.exports = arrayPush;
 
 
 /***/ }),
-/* 31 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(30),
-    isObject = __webpack_require__(9);
+var defineProperty = __webpack_require__(94);
 
 /**
- * Creates a function that produces an instance of `Ctor` regardless of
- * whether it was invoked as part of a `new` expression or by `call` or `apply`.
+ * The base implementation of `assignValue` and `assignMergeValue` without
+ * value checks.
  *
  * @private
- * @param {Function} Ctor The constructor to wrap.
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */
+function baseAssignValue(object, key, value) {
+  if (key == '__proto__' && defineProperty) {
+    defineProperty(object, key, {
+      'configurable': true,
+      'enumerable': true,
+      'value': value,
+      'writable': true
+    });
+  } else {
+    object[key] = value;
+  }
+}
+
+module.exports = baseAssignValue;
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports) {
+
+/**
+ * The function whose prototype chain sequence wrappers inherit from.
+ *
+ * @private
+ */
+function baseLodash() {
+  // No operation performed.
+}
+
+module.exports = baseLodash;
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Uint8Array = __webpack_require__(73);
+
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */
+function cloneArrayBuffer(arrayBuffer) {
+  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+  new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+  return result;
+}
+
+module.exports = cloneArrayBuffer;
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseSetData = __webpack_require__(86),
+    createBind = __webpack_require__(384),
+    createCurry = __webpack_require__(385),
+    createHybrid = __webpack_require__(92),
+    createPartial = __webpack_require__(386),
+    getData = __webpack_require__(98),
+    mergeData = __webpack_require__(421),
+    setData = __webpack_require__(109),
+    setWrapToString = __webpack_require__(111),
+    toInteger = __webpack_require__(117);
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_CURRY_RIGHT_FLAG = 16,
+    WRAP_PARTIAL_FLAG = 32,
+    WRAP_PARTIAL_RIGHT_FLAG = 64;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates a function that either curries or invokes `func` with optional
+ * `this` binding and partially applied arguments.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to wrap.
+ * @param {number} bitmask The bitmask flags.
+ *    1 - `_.bind`
+ *    2 - `_.bindKey`
+ *    4 - `_.curry` or `_.curryRight` of a bound function
+ *    8 - `_.curry`
+ *   16 - `_.curryRight`
+ *   32 - `_.partial`
+ *   64 - `_.partialRight`
+ *  128 - `_.rearg`
+ *  256 - `_.ary`
+ *  512 - `_.flip`
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to be partially applied.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
  * @returns {Function} Returns the new wrapped function.
  */
-function createCtor(Ctor) {
-  return function() {
-    // Use a `switch` statement to work with class constructors. See
-    // http://ecma-international.org/ecma-262/7.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
-    // for more details.
-    var args = arguments;
-    switch (args.length) {
-      case 0: return new Ctor;
-      case 1: return new Ctor(args[0]);
-      case 2: return new Ctor(args[0], args[1]);
-      case 3: return new Ctor(args[0], args[1], args[2]);
-      case 4: return new Ctor(args[0], args[1], args[2], args[3]);
-      case 5: return new Ctor(args[0], args[1], args[2], args[3], args[4]);
-      case 6: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
-      case 7: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
-    }
-    var thisBinding = baseCreate(Ctor.prototype),
-        result = Ctor.apply(thisBinding, args);
+function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+  var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
+  if (!isBindKey && typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var length = partials ? partials.length : 0;
+  if (!length) {
+    bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
+    partials = holders = undefined;
+  }
+  ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
+  arity = arity === undefined ? arity : toInteger(arity);
+  length -= holders ? holders.length : 0;
 
-    // Mimic the constructor's `return` behavior.
-    // See https://es5.github.io/#x13.2.2 for more details.
-    return isObject(result) ? result : thisBinding;
-  };
+  if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
+    var partialsRight = partials,
+        holdersRight = holders;
+
+    partials = holders = undefined;
+  }
+  var data = isBindKey ? undefined : getData(func);
+
+  var newData = [
+    func, bitmask, thisArg, partials, holders, partialsRight, holdersRight,
+    argPos, ary, arity
+  ];
+
+  if (data) {
+    mergeData(newData, data);
+  }
+  func = newData[0];
+  bitmask = newData[1];
+  thisArg = newData[2];
+  partials = newData[3];
+  holders = newData[4];
+  arity = newData[9] = newData[9] === undefined
+    ? (isBindKey ? 0 : func.length)
+    : nativeMax(newData[9] - length, 0);
+
+  if (!arity && bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG)) {
+    bitmask &= ~(WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG);
+  }
+  if (!bitmask || bitmask == WRAP_BIND_FLAG) {
+    var result = createBind(func, bitmask, thisArg);
+  } else if (bitmask == WRAP_CURRY_FLAG || bitmask == WRAP_CURRY_RIGHT_FLAG) {
+    result = createCurry(func, bitmask, arity);
+  } else if ((bitmask == WRAP_PARTIAL_FLAG || bitmask == (WRAP_BIND_FLAG | WRAP_PARTIAL_FLAG)) && !holders.length) {
+    result = createPartial(func, bitmask, thisArg, partials);
+  } else {
+    result = createHybrid.apply(undefined, newData);
+  }
+  var setter = data ? baseSetData : setData;
+  return setWrapToString(setter(result, newData), func, bitmask);
 }
 
-module.exports = createCtor;
+module.exports = createWrap;
 
 
 /***/ }),
-/* 32 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(421);
+var overArg = __webpack_require__(107);
 
-/**
- * Gets the data for `map`.
- *
- * @private
- * @param {Object} map The map to query.
- * @param {string} key The reference key.
- * @returns {*} Returns the map data.
- */
-function getMapData(map, key) {
-  var data = map.__data__;
-  return isKeyable(key)
-    ? data[typeof key == 'string' ? 'string' : 'hash']
-    : data.map;
-}
+/** Built-in value references. */
+var getPrototype = overArg(Object.getPrototypeOf, Object);
 
-module.exports = getMapData;
+module.exports = getPrototype;
 
 
 /***/ }),
-/* 33 */
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayFilter = __webpack_require__(344),
+    stubArray = __webpack_require__(116);
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols;
+
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+  if (object == null) {
+    return [];
+  }
+  object = Object(object);
+  return arrayFilter(nativeGetSymbols(object), function(symbol) {
+    return propertyIsEnumerable.call(object, symbol);
+  });
+};
+
+module.exports = getSymbols;
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isArray = __webpack_require__(5),
+    isSymbol = __webpack_require__(23);
+
+/** Used to match property names within property paths. */
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp = /^\w*$/;
+
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */
+function isKey(value, object) {
+  if (isArray(value)) {
+    return false;
+  }
+  var type = typeof value;
+  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+      value == null || isSymbol(value)) {
+    return true;
+  }
+  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+    (object != null && value in Object(object));
+}
+
+module.exports = isKey;
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports) {
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+module.exports = isPrototype;
+
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports) {
+
+/** Used as the internal argument placeholder. */
+var PLACEHOLDER = '__lodash_placeholder__';
+
+/**
+ * Replaces all `placeholder` elements in `array` with an internal placeholder
+ * and returns an array of their indexes.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {*} placeholder The placeholder to replace.
+ * @returns {Array} Returns the new array of placeholder indexes.
+ */
+function replaceHolders(array, placeholder) {
+  var index = -1,
+      length = array.length,
+      resIndex = 0,
+      result = [];
+
+  while (++index < length) {
+    var value = array[index];
+    if (value === placeholder || value === PLACEHOLDER) {
+      array[index] = PLACEHOLDER;
+      result[resIndex++] = index;
+    }
+  }
+  return result;
+}
+
+module.exports = replaceHolders;
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseSetToString = __webpack_require__(368),
+    shortOut = __webpack_require__(112);
+
+/**
+ * Sets the `toString` method of `func` to return `string`.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */
+var setToString = shortOut(baseSetToString);
+
+module.exports = setToString;
+
+
+/***/ }),
+/* 59 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
-/** Used to detect unsigned integer values. */
-var reIsUint = /^(?:0|[1-9]\d*)$/;
-
 /**
- * Checks if `value` is a valid array-like index.
+ * Checks if `value` is a valid array-like length.
  *
- * @private
- * @param {*} value The value to check.
- * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
- * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
- */
-function isIndex(value, length) {
-  length = length == null ? MAX_SAFE_INTEGER : length;
-  return !!length &&
-    (typeof value == 'number' || reIsUint.test(value)) &&
-    (value > -1 && value % 1 == 0 && value < length);
-}
-
-module.exports = isIndex;
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getNative = __webpack_require__(15);
-
-/* Built-in method references that are verified to be native. */
-var nativeCreate = getNative(Object, 'create');
-
-module.exports = nativeCreate;
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-module.exports = identity;
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseIsArguments = __webpack_require__(367),
-    isObjectLike = __webpack_require__(13);
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/** Built-in value references. */
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-
-/**
- * Checks if `value` is likely an `arguments` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- *  else `false`.
- * @example
- *
- * _.isArguments(function() { return arguments; }());
- * // => true
- *
- * _.isArguments([1, 2, 3]);
- * // => false
- */
-var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
-  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
-    !propertyIsEnumerable.call(value, 'callee');
-};
-
-module.exports = isArguments;
-
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isFunction = __webpack_require__(39),
-    isLength = __webpack_require__(60);
-
-/**
- * Checks if `value` is array-like. A value is considered array-like if it's
- * not a function and has a `value.length` that's an integer greater than or
- * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
  *
  * @static
  * @memberOf _
  * @since 4.0.0
  * @category Lang
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
  * @example
  *
- * _.isArrayLike([1, 2, 3]);
+ * _.isLength(3);
  * // => true
  *
- * _.isArrayLike(document.body.children);
- * // => true
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
  *
- * _.isArrayLike('abc');
- * // => true
+ * _.isLength(Infinity);
+ * // => false
  *
- * _.isArrayLike(_.noop);
+ * _.isLength('3');
  * // => false
  */
-function isArrayLike(value) {
-  return value != null && isLength(value.length) && !isFunction(value);
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
 }
 
-module.exports = isArrayLike;
+module.exports = isLength;
 
 
 /***/ }),
-/* 38 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(4),
-    stubFalse = __webpack_require__(473);
+var baseIsTypedArray = __webpack_require__(358),
+    baseUnary = __webpack_require__(371),
+    nodeUtil = __webpack_require__(424);
 
-/** Detect free variable `exports`. */
-var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-
-/** Detect free variable `module`. */
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-
-/** Detect the popular CommonJS extension `module.exports`. */
-var moduleExports = freeModule && freeModule.exports === freeExports;
-
-/** Built-in value references. */
-var Buffer = moduleExports ? root.Buffer : undefined;
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
 
 /**
- * Checks if `value` is a buffer.
- *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
- * @example
- *
- * _.isBuffer(new Buffer(2));
- * // => true
- *
- * _.isBuffer(new Uint8Array(2));
- * // => false
- */
-var isBuffer = nativeIsBuffer || stubFalse;
-
-module.exports = isBuffer;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)(module)))
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseGetTag = __webpack_require__(17),
-    isObject = __webpack_require__(9);
-
-/** `Object#toString` result references. */
-var asyncTag = '[object AsyncFunction]',
-    funcTag = '[object Function]',
-    genTag = '[object GeneratorFunction]',
-    proxyTag = '[object Proxy]';
-
-/**
- * Checks if `value` is classified as a `Function` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a function, else `false`.
- * @example
- *
- * _.isFunction(_);
- * // => true
- *
- * _.isFunction(/abc/);
- * // => false
- */
-function isFunction(value) {
-  if (!isObject(value)) {
-    return false;
-  }
-  // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 9 which returns 'object' for typed arrays and other constructors.
-  var tag = baseGetTag(value);
-  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
-}
-
-module.exports = isFunction;
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeKeys = __webpack_require__(75),
-    baseKeys = __webpack_require__(85),
-    isArrayLike = __webpack_require__(37);
-
-/**
- * Creates an array of the own enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects. See the
- * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * for more details.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keys(new Foo);
- * // => ['a', 'b'] (iteration order is not guaranteed)
- *
- * _.keys('hi');
- * // => ['0', '1']
- */
-function keys(object) {
-  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
-}
-
-module.exports = keys;
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeKeys = __webpack_require__(75),
-    baseKeysIn = __webpack_require__(374),
-    isArrayLike = __webpack_require__(37);
-
-/**
- * Creates an array of the own and inherited enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects.
+ * Checks if `value` is classified as a typed array.
  *
  * @static
  * @memberOf _
  * @since 3.0.0
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
  * @example
  *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
+ * _.isTypedArray(new Uint8Array);
+ * // => true
  *
- * Foo.prototype.c = 3;
- *
- * _.keysIn(new Foo);
- * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ * _.isTypedArray([]);
+ * // => false
  */
-function keysIn(object) {
-  return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
-}
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
 
-module.exports = keysIn;
+module.exports = isTypedArray;
 
 
 /***/ }),
-/* 42 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -16949,7 +17633,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(560)
+var listToStyles = __webpack_require__(526)
 
 /*
 type StyleObject = {
@@ -17151,690 +17835,6 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-var utils = __webpack_require__(6);
-var normalizeHeaderName = __webpack_require__(254);
-
-var PROTECTION_PREFIX = /^\)\]\}',?\n/;
-var DEFAULT_CONTENT_TYPE = {
-  'Content-Type': 'application/x-www-form-urlencoded'
-};
-
-function setContentTypeIfUnset(headers, value) {
-  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
-    headers['Content-Type'] = value;
-  }
-}
-
-function getDefaultAdapter() {
-  var adapter;
-  if (typeof XMLHttpRequest !== 'undefined') {
-    // For browsers use XHR adapter
-    adapter = __webpack_require__(63);
-  } else if (typeof process !== 'undefined') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(63);
-  }
-  return adapter;
-}
-
-var defaults = {
-  adapter: getDefaultAdapter(),
-
-  transformRequest: [function transformRequest(data, headers) {
-    normalizeHeaderName(headers, 'Content-Type');
-    if (utils.isFormData(data) ||
-      utils.isArrayBuffer(data) ||
-      utils.isStream(data) ||
-      utils.isFile(data) ||
-      utils.isBlob(data)
-    ) {
-      return data;
-    }
-    if (utils.isArrayBufferView(data)) {
-      return data.buffer;
-    }
-    if (utils.isURLSearchParams(data)) {
-      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
-      return data.toString();
-    }
-    if (utils.isObject(data)) {
-      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
-      return JSON.stringify(data);
-    }
-    return data;
-  }],
-
-  transformResponse: [function transformResponse(data) {
-    /*eslint no-param-reassign:0*/
-    if (typeof data === 'string') {
-      data = data.replace(PROTECTION_PREFIX, '');
-      try {
-        data = JSON.parse(data);
-      } catch (e) { /* Ignore */ }
-    }
-    return data;
-  }],
-
-  timeout: 0,
-
-  xsrfCookieName: 'XSRF-TOKEN',
-  xsrfHeaderName: 'X-XSRF-TOKEN',
-
-  maxContentLength: -1,
-
-  validateStatus: function validateStatus(status) {
-    return status >= 200 && status < 300;
-  }
-};
-
-defaults.headers = {
-  common: {
-    'Accept': 'application/json, text/plain, */*'
-  }
-};
-
-utils.forEach(['delete', 'get', 'head'], function forEachMehtodNoData(method) {
-  defaults.headers[method] = {};
-});
-
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
-  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
-});
-
-module.exports = defaults;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(480)))
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseCreate = __webpack_require__(30),
-    baseLodash = __webpack_require__(51);
-
-/** Used as references for the maximum length and index of an array. */
-var MAX_ARRAY_LENGTH = 4294967295;
-
-/**
- * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
- *
- * @private
- * @constructor
- * @param {*} value The value to wrap.
- */
-function LazyWrapper(value) {
-  this.__wrapped__ = value;
-  this.__actions__ = [];
-  this.__dir__ = 1;
-  this.__filtered__ = false;
-  this.__iteratees__ = [];
-  this.__takeCount__ = MAX_ARRAY_LENGTH;
-  this.__views__ = [];
-}
-
-// Ensure `LazyWrapper` is an instance of `baseLodash`.
-LazyWrapper.prototype = baseCreate(baseLodash.prototype);
-LazyWrapper.prototype.constructor = LazyWrapper;
-
-module.exports = LazyWrapper;
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getNative = __webpack_require__(15),
-    root = __webpack_require__(4);
-
-/* Built-in method references that are verified to be native. */
-var Map = getNative(root, 'Map');
-
-module.exports = Map;
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var mapCacheClear = __webpack_require__(429),
-    mapCacheDelete = __webpack_require__(430),
-    mapCacheGet = __webpack_require__(431),
-    mapCacheHas = __webpack_require__(432),
-    mapCacheSet = __webpack_require__(433);
-
-/**
- * Creates a map cache object to store key-value pairs.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */
-function MapCache(entries) {
-  var index = -1,
-      length = entries == null ? 0 : entries.length;
-
-  this.clear();
-  while (++index < length) {
-    var entry = entries[index];
-    this.set(entry[0], entry[1]);
-  }
-}
-
-// Add methods to `MapCache`.
-MapCache.prototype.clear = mapCacheClear;
-MapCache.prototype['delete'] = mapCacheDelete;
-MapCache.prototype.get = mapCacheGet;
-MapCache.prototype.has = mapCacheHas;
-MapCache.prototype.set = mapCacheSet;
-
-module.exports = MapCache;
-
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-/**
- * A faster alternative to `Function#apply`, this function invokes `func`
- * with the `this` binding of `thisArg` and the arguments of `args`.
- *
- * @private
- * @param {Function} func The function to invoke.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} args The arguments to invoke `func` with.
- * @returns {*} Returns the result of `func`.
- */
-function apply(func, thisArg, args) {
-  switch (args.length) {
-    case 0: return func.call(thisArg);
-    case 1: return func.call(thisArg, args[0]);
-    case 2: return func.call(thisArg, args[0], args[1]);
-    case 3: return func.call(thisArg, args[0], args[1], args[2]);
-  }
-  return func.apply(thisArg, args);
-}
-
-module.exports = apply;
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-/**
- * A specialized version of `_.forEach` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns `array`.
- */
-function arrayEach(array, iteratee) {
-  var index = -1,
-      length = array == null ? 0 : array.length;
-
-  while (++index < length) {
-    if (iteratee(array[index], index, array) === false) {
-      break;
-    }
-  }
-  return array;
-}
-
-module.exports = arrayEach;
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports) {
-
-/**
- * Appends the elements of `values` to `array`.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {Array} values The values to append.
- * @returns {Array} Returns `array`.
- */
-function arrayPush(array, values) {
-  var index = -1,
-      length = values.length,
-      offset = array.length;
-
-  while (++index < length) {
-    array[offset + index] = values[index];
-  }
-  return array;
-}
-
-module.exports = arrayPush;
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var defineProperty = __webpack_require__(94);
-
-/**
- * The base implementation of `assignValue` and `assignMergeValue` without
- * value checks.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {string} key The key of the property to assign.
- * @param {*} value The value to assign.
- */
-function baseAssignValue(object, key, value) {
-  if (key == '__proto__' && defineProperty) {
-    defineProperty(object, key, {
-      'configurable': true,
-      'enumerable': true,
-      'value': value,
-      'writable': true
-    });
-  } else {
-    object[key] = value;
-  }
-}
-
-module.exports = baseAssignValue;
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports) {
-
-/**
- * The function whose prototype chain sequence wrappers inherit from.
- *
- * @private
- */
-function baseLodash() {
-  // No operation performed.
-}
-
-module.exports = baseLodash;
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Uint8Array = __webpack_require__(73);
-
-/**
- * Creates a clone of `arrayBuffer`.
- *
- * @private
- * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
- * @returns {ArrayBuffer} Returns the cloned array buffer.
- */
-function cloneArrayBuffer(arrayBuffer) {
-  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
-  new Uint8Array(result).set(new Uint8Array(arrayBuffer));
-  return result;
-}
-
-module.exports = cloneArrayBuffer;
-
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseSetData = __webpack_require__(86),
-    createBind = __webpack_require__(398),
-    createCurry = __webpack_require__(399),
-    createHybrid = __webpack_require__(92),
-    createPartial = __webpack_require__(400),
-    getData = __webpack_require__(98),
-    mergeData = __webpack_require__(435),
-    setData = __webpack_require__(109),
-    setWrapToString = __webpack_require__(111),
-    toInteger = __webpack_require__(117);
-
-/** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-
-/** Used to compose bitmasks for function metadata. */
-var WRAP_BIND_FLAG = 1,
-    WRAP_BIND_KEY_FLAG = 2,
-    WRAP_CURRY_FLAG = 8,
-    WRAP_CURRY_RIGHT_FLAG = 16,
-    WRAP_PARTIAL_FLAG = 32,
-    WRAP_PARTIAL_RIGHT_FLAG = 64;
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * Creates a function that either curries or invokes `func` with optional
- * `this` binding and partially applied arguments.
- *
- * @private
- * @param {Function|string} func The function or method name to wrap.
- * @param {number} bitmask The bitmask flags.
- *    1 - `_.bind`
- *    2 - `_.bindKey`
- *    4 - `_.curry` or `_.curryRight` of a bound function
- *    8 - `_.curry`
- *   16 - `_.curryRight`
- *   32 - `_.partial`
- *   64 - `_.partialRight`
- *  128 - `_.rearg`
- *  256 - `_.ary`
- *  512 - `_.flip`
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to be partially applied.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */
-function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
-  var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
-  if (!isBindKey && typeof func != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  var length = partials ? partials.length : 0;
-  if (!length) {
-    bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
-    partials = holders = undefined;
-  }
-  ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
-  arity = arity === undefined ? arity : toInteger(arity);
-  length -= holders ? holders.length : 0;
-
-  if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
-    var partialsRight = partials,
-        holdersRight = holders;
-
-    partials = holders = undefined;
-  }
-  var data = isBindKey ? undefined : getData(func);
-
-  var newData = [
-    func, bitmask, thisArg, partials, holders, partialsRight, holdersRight,
-    argPos, ary, arity
-  ];
-
-  if (data) {
-    mergeData(newData, data);
-  }
-  func = newData[0];
-  bitmask = newData[1];
-  thisArg = newData[2];
-  partials = newData[3];
-  holders = newData[4];
-  arity = newData[9] = newData[9] === undefined
-    ? (isBindKey ? 0 : func.length)
-    : nativeMax(newData[9] - length, 0);
-
-  if (!arity && bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG)) {
-    bitmask &= ~(WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG);
-  }
-  if (!bitmask || bitmask == WRAP_BIND_FLAG) {
-    var result = createBind(func, bitmask, thisArg);
-  } else if (bitmask == WRAP_CURRY_FLAG || bitmask == WRAP_CURRY_RIGHT_FLAG) {
-    result = createCurry(func, bitmask, arity);
-  } else if ((bitmask == WRAP_PARTIAL_FLAG || bitmask == (WRAP_BIND_FLAG | WRAP_PARTIAL_FLAG)) && !holders.length) {
-    result = createPartial(func, bitmask, thisArg, partials);
-  } else {
-    result = createHybrid.apply(undefined, newData);
-  }
-  var setter = data ? baseSetData : setData;
-  return setWrapToString(setter(result, newData), func, bitmask);
-}
-
-module.exports = createWrap;
-
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var overArg = __webpack_require__(107);
-
-/** Built-in value references. */
-var getPrototype = overArg(Object.getPrototypeOf, Object);
-
-module.exports = getPrototype;
-
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayFilter = __webpack_require__(358),
-    stubArray = __webpack_require__(116);
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Built-in value references. */
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeGetSymbols = Object.getOwnPropertySymbols;
-
-/**
- * Creates an array of the own enumerable symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of symbols.
- */
-var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
-  if (object == null) {
-    return [];
-  }
-  object = Object(object);
-  return arrayFilter(nativeGetSymbols(object), function(symbol) {
-    return propertyIsEnumerable.call(object, symbol);
-  });
-};
-
-module.exports = getSymbols;
-
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isArray = __webpack_require__(5),
-    isSymbol = __webpack_require__(23);
-
-/** Used to match property names within property paths. */
-var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-    reIsPlainProp = /^\w*$/;
-
-/**
- * Checks if `value` is a property name and not a property path.
- *
- * @private
- * @param {*} value The value to check.
- * @param {Object} [object] The object to query keys on.
- * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
- */
-function isKey(value, object) {
-  if (isArray(value)) {
-    return false;
-  }
-  var type = typeof value;
-  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
-      value == null || isSymbol(value)) {
-    return true;
-  }
-  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
-    (object != null && value in Object(object));
-}
-
-module.exports = isKey;
-
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/**
- * Checks if `value` is likely a prototype object.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
- */
-function isPrototype(value) {
-  var Ctor = value && value.constructor,
-      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
-
-  return value === proto;
-}
-
-module.exports = isPrototype;
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports) {
-
-/** Used as the internal argument placeholder. */
-var PLACEHOLDER = '__lodash_placeholder__';
-
-/**
- * Replaces all `placeholder` elements in `array` with an internal placeholder
- * and returns an array of their indexes.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {*} placeholder The placeholder to replace.
- * @returns {Array} Returns the new array of placeholder indexes.
- */
-function replaceHolders(array, placeholder) {
-  var index = -1,
-      length = array.length,
-      resIndex = 0,
-      result = [];
-
-  while (++index < length) {
-    var value = array[index];
-    if (value === placeholder || value === PLACEHOLDER) {
-      array[index] = PLACEHOLDER;
-      result[resIndex++] = index;
-    }
-  }
-  return result;
-}
-
-module.exports = replaceHolders;
-
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseSetToString = __webpack_require__(382),
-    shortOut = __webpack_require__(112);
-
-/**
- * Sets the `toString` method of `func` to return `string`.
- *
- * @private
- * @param {Function} func The function to modify.
- * @param {Function} string The `toString` result.
- * @returns {Function} Returns `func`.
- */
-var setToString = shortOut(baseSetToString);
-
-module.exports = setToString;
-
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports) {
-
-/** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
-
-/**
- * Checks if `value` is a valid array-like length.
- *
- * **Note:** This method is loosely based on
- * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
- * @example
- *
- * _.isLength(3);
- * // => true
- *
- * _.isLength(Number.MIN_VALUE);
- * // => false
- *
- * _.isLength(Infinity);
- * // => false
- *
- * _.isLength('3');
- * // => false
- */
-function isLength(value) {
-  return typeof value == 'number' &&
-    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-}
-
-module.exports = isLength;
-
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var baseIsTypedArray = __webpack_require__(372),
-    baseUnary = __webpack_require__(385),
-    nodeUtil = __webpack_require__(438);
-
-/* Node.js helper references. */
-var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
-
-/**
- * Checks if `value` is classified as a typed array.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- * @example
- *
- * _.isTypedArray(new Uint8Array);
- * // => true
- *
- * _.isTypedArray([]);
- * // => false
- */
-var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
-
-module.exports = isTypedArray;
-
-
-/***/ }),
 /* 62 */
 /***/ (function(module, exports) {
 
@@ -17869,12 +17869,12 @@ module.exports = g;
 
 
 var utils = __webpack_require__(6);
-var settle = __webpack_require__(246);
-var buildURL = __webpack_require__(249);
-var parseHeaders = __webpack_require__(255);
-var isURLSameOrigin = __webpack_require__(253);
+var settle = __webpack_require__(245);
+var buildURL = __webpack_require__(248);
+var parseHeaders = __webpack_require__(254);
+var isURLSameOrigin = __webpack_require__(252);
 var createError = __webpack_require__(66);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(248);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(247);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -17970,7 +17970,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(251);
+      var cookies = __webpack_require__(250);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -18090,7 +18090,7 @@ module.exports = function isCancel(value) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(245);
+var enhanceError = __webpack_require__(244);
 
 /**
  * Create an Error with the specified message, config, error code, and response.
@@ -18129,7 +18129,7 @@ module.exports = function bind(fn, thisArg) {
 /* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(297), __esModule: true };
+module.exports = { "default": __webpack_require__(283), __esModule: true };
 
 /***/ }),
 /* 69 */
@@ -18138,7 +18138,7 @@ module.exports = { "default": __webpack_require__(297), __esModule: true };
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 /**
  * Helper function to get relative position for an event
@@ -18475,9 +18475,9 @@ module.exports = {
 "use strict";
 
 
-var helpers = __webpack_require__(2);
-var basic = __webpack_require__(331);
-var dom = __webpack_require__(332);
+var helpers = __webpack_require__(1);
+var basic = __webpack_require__(317);
+var dom = __webpack_require__(318);
 
 // @TODO Make possible to select another platform at build time.
 var implementation = dom._enabled ? dom : basic;
@@ -18554,8 +18554,8 @@ module.exports = helpers.extend({
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var convert = __webpack_require__(344);
-var string = __webpack_require__(342);
+var convert = __webpack_require__(330);
+var string = __webpack_require__(328);
 
 var Color = function (obj) {
 	if (obj instanceof Color) {
@@ -19044,8 +19044,8 @@ module.exports = Color;
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(30),
-    baseLodash = __webpack_require__(51);
+var baseCreate = __webpack_require__(29),
+    baseLodash = __webpack_require__(50);
 
 /**
  * The base constructor for creating `lodash` wrapper objects.
@@ -19084,7 +19084,7 @@ module.exports = Uint8Array;
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(15),
+var getNative = __webpack_require__(14),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
@@ -19097,12 +19097,12 @@ module.exports = WeakMap;
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(383),
-    isArguments = __webpack_require__(36),
+var baseTimes = __webpack_require__(369),
+    isArguments = __webpack_require__(35),
     isArray = __webpack_require__(5),
-    isBuffer = __webpack_require__(38),
-    isIndex = __webpack_require__(33),
-    isTypedArray = __webpack_require__(61);
+    isBuffer = __webpack_require__(37),
+    isIndex = __webpack_require__(32),
+    isTypedArray = __webpack_require__(60);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -19211,7 +19211,7 @@ module.exports = arrayReduce;
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(50),
+var baseAssignValue = __webpack_require__(49),
     eq = __webpack_require__(22);
 
 /**
@@ -19237,7 +19237,7 @@ module.exports = assignMergeValue;
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(50),
+var baseAssignValue = __webpack_require__(49),
     eq = __webpack_require__(22);
 
 /** Used for built-in method references. */
@@ -19272,7 +19272,7 @@ module.exports = assignValue;
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(20),
-    keys = __webpack_require__(40);
+    keys = __webpack_require__(39);
 
 /**
  * The base implementation of `_.assign` without support for multiple sources
@@ -19294,25 +19294,25 @@ module.exports = baseAssign;
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(28),
-    arrayEach = __webpack_require__(48),
+var Stack = __webpack_require__(27),
+    arrayEach = __webpack_require__(47),
     assignValue = __webpack_require__(79),
     baseAssign = __webpack_require__(80),
-    baseAssignIn = __webpack_require__(361),
+    baseAssignIn = __webpack_require__(347),
     cloneBuffer = __webpack_require__(88),
     copyArray = __webpack_require__(19),
-    copySymbols = __webpack_require__(392),
-    copySymbolsIn = __webpack_require__(393),
+    copySymbols = __webpack_require__(378),
+    copySymbolsIn = __webpack_require__(379),
     getAllKeys = __webpack_require__(97),
-    getAllKeysIn = __webpack_require__(404),
+    getAllKeysIn = __webpack_require__(390),
     getTag = __webpack_require__(101),
-    initCloneArray = __webpack_require__(416),
-    initCloneByTag = __webpack_require__(417),
+    initCloneArray = __webpack_require__(402),
+    initCloneByTag = __webpack_require__(403),
     initCloneObject = __webpack_require__(102),
     isArray = __webpack_require__(5),
-    isBuffer = __webpack_require__(38),
-    isObject = __webpack_require__(9),
-    keys = __webpack_require__(40);
+    isBuffer = __webpack_require__(37),
+    isObject = __webpack_require__(8),
+    keys = __webpack_require__(39);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -19483,7 +19483,7 @@ module.exports = baseGet;
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(49),
+var arrayPush = __webpack_require__(48),
     isArray = __webpack_require__(5);
 
 /**
@@ -19509,8 +19509,8 @@ module.exports = baseGetAllKeys;
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(368),
-    isObjectLike = __webpack_require__(13);
+var baseIsEqualDeep = __webpack_require__(354),
+    isObjectLike = __webpack_require__(12);
 
 /**
  * The base implementation of `_.isEqual` which supports partial comparisons
@@ -19543,8 +19543,8 @@ module.exports = baseIsEqual;
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPrototype = __webpack_require__(57),
-    nativeKeys = __webpack_require__(436);
+var isPrototype = __webpack_require__(56),
+    nativeKeys = __webpack_require__(422);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -19579,7 +19579,7 @@ module.exports = baseKeys;
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var identity = __webpack_require__(35),
+var identity = __webpack_require__(34),
     metaMap = __webpack_require__(106);
 
 /**
@@ -19603,7 +19603,7 @@ module.exports = baseSetData;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArray = __webpack_require__(5),
-    isKey = __webpack_require__(56),
+    isKey = __webpack_require__(55),
     stringToPath = __webpack_require__(113),
     toString = __webpack_require__(118);
 
@@ -19671,7 +19671,7 @@ module.exports = cloneBuffer;
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(52);
+var cloneArrayBuffer = __webpack_require__(51);
 
 /**
  * Creates a clone of `typedArray`.
@@ -19787,12 +19787,12 @@ module.exports = composeArgsRight;
 
 var composeArgs = __webpack_require__(90),
     composeArgsRight = __webpack_require__(91),
-    countHolders = __webpack_require__(395),
-    createCtor = __webpack_require__(31),
+    countHolders = __webpack_require__(381),
+    createCtor = __webpack_require__(30),
     createRecurry = __webpack_require__(93),
     getHolder = __webpack_require__(99),
-    reorder = __webpack_require__(441),
-    replaceHolders = __webpack_require__(58),
+    reorder = __webpack_require__(427),
+    replaceHolders = __webpack_require__(57),
     root = __webpack_require__(4);
 
 /** Used to compose bitmasks for function metadata. */
@@ -19883,7 +19883,7 @@ module.exports = createHybrid;
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isLaziable = __webpack_require__(422),
+var isLaziable = __webpack_require__(408),
     setData = __webpack_require__(109),
     setWrapToString = __webpack_require__(111);
 
@@ -19945,7 +19945,7 @@ module.exports = createRecurry;
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(15);
+var getNative = __webpack_require__(14);
 
 var defineProperty = (function() {
   try {
@@ -19962,9 +19962,9 @@ module.exports = defineProperty;
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(355),
-    arraySome = __webpack_require__(360),
-    cacheHas = __webpack_require__(386);
+var SetCache = __webpack_require__(341),
+    arraySome = __webpack_require__(346),
+    cacheHas = __webpack_require__(372);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -20063,8 +20063,8 @@ module.exports = freeGlobal;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetAllKeys = __webpack_require__(83),
-    getSymbols = __webpack_require__(55),
-    keys = __webpack_require__(40);
+    getSymbols = __webpack_require__(54),
+    keys = __webpack_require__(39);
 
 /**
  * Creates an array of own enumerable property names and symbols of `object`.
@@ -20085,7 +20085,7 @@ module.exports = getAllKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var metaMap = __webpack_require__(106),
-    noop = __webpack_require__(470);
+    noop = __webpack_require__(456);
 
 /**
  * Gets metadata for `func`.
@@ -20124,9 +20124,9 @@ module.exports = getHolder;
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(49),
-    getPrototype = __webpack_require__(54),
-    getSymbols = __webpack_require__(55),
+var arrayPush = __webpack_require__(48),
+    getPrototype = __webpack_require__(53),
+    getSymbols = __webpack_require__(54),
     stubArray = __webpack_require__(116);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -20155,12 +20155,12 @@ module.exports = getSymbolsIn;
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(351),
-    Map = __webpack_require__(45),
-    Promise = __webpack_require__(353),
-    Set = __webpack_require__(354),
+var DataView = __webpack_require__(337),
+    Map = __webpack_require__(44),
+    Promise = __webpack_require__(339),
+    Set = __webpack_require__(340),
     WeakMap = __webpack_require__(74),
-    baseGetTag = __webpack_require__(17),
+    baseGetTag = __webpack_require__(16),
     toSource = __webpack_require__(114);
 
 /** `Object#toString` result references. */
@@ -20219,9 +20219,9 @@ module.exports = getTag;
 /* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(30),
-    getPrototype = __webpack_require__(54),
-    isPrototype = __webpack_require__(57);
+var baseCreate = __webpack_require__(29),
+    getPrototype = __webpack_require__(53),
+    isPrototype = __webpack_require__(56);
 
 /**
  * Initializes an object clone.
@@ -20243,7 +20243,7 @@ module.exports = initCloneObject;
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(9);
+var isObject = __webpack_require__(8);
 
 /**
  * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -20347,7 +20347,7 @@ module.exports = overArg;
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(47);
+var apply = __webpack_require__(46);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -20439,10 +20439,10 @@ module.exports = setToArray;
 /* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getWrapDetails = __webpack_require__(409),
-    insertWrapDetails = __webpack_require__(418),
-    setToString = __webpack_require__(59),
-    updateWrapDetails = __webpack_require__(450);
+var getWrapDetails = __webpack_require__(395),
+    insertWrapDetails = __webpack_require__(404),
+    setToString = __webpack_require__(58),
+    updateWrapDetails = __webpack_require__(436);
 
 /**
  * Sets the `toString` method of `wrapper` to mimic the source of `reference`
@@ -20509,7 +20509,7 @@ module.exports = shortOut;
 /* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(434);
+var memoizeCapped = __webpack_require__(420);
 
 /** Used to match property names within property paths. */
 var reLeadingDot = /^\./,
@@ -20616,7 +20616,7 @@ module.exports = stubArray;
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toFinite = __webpack_require__(474);
+var toFinite = __webpack_require__(460);
 
 /**
  * Converts `value` to an integer.
@@ -20658,7 +20658,7 @@ module.exports = toInteger;
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(384);
+var baseToString = __webpack_require__(370);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -31772,49 +31772,11 @@ return zhTw;
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-/* styles */
-__webpack_require__(558)
-
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(257),
   /* template */
-  __webpack_require__(545),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/node_modules/vue-strap/src/Modal.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-611fc2ee", Component.options)
-  } else {
-    hotAPI.reload("data-v-611fc2ee", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 235 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(258),
-  /* template */
-  __webpack_require__(531),
+  __webpack_require__(505),
   /* scopeId */
   null,
   /* cssModules */
@@ -31841,7 +31803,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 236 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -41804,16 +41766,16 @@ return /******/ (function(modules) { // webpackBootstrap
 //# sourceMappingURL=vue-strap.js.map
 
 /***/ }),
-/* 237 */
+/* 236 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__(282);
 /* jshint esversion: 6 */
 
 /**
@@ -41822,7 +41784,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(295);
+__webpack_require__(281);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -41836,7 +41798,8 @@ __webpack_require__(295);
 
 
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('App', __webpack_require__(235));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('App', __webpack_require__(234));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('pagination', __webpack_require__(336));
 
 /* eslint-disable no-new */
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
@@ -41847,19 +41810,19 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 });
 
 /***/ }),
-/* 238 */
+/* 237 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"~coreui/fonts/font-awesome\";\n^\n      File to import not found or unreadable: ~coreui/fonts/font-awesome.\nParent style sheet: stdin\n      in /home/aswita/workplace/prima/prima/resources/assets/sass/app.scss (line 12, column 1)\n    at runLoaders (/home/aswita/workplace/prima/prima/node_modules/webpack/lib/NormalModule.js:192:19)\n    at /home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/home/aswita/workplace/prima/prima/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/home/aswita/workplace/prima/prima/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/home/aswita/workplace/prima/prima/node_modules/sass-loader/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/home/aswita/workplace/prima/prima/node_modules/sass-loader/node_modules/async/dist/async.js:906:16)\n    at options.error (/home/aswita/workplace/prima/prima/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(239);
 
 /***/ }),
 /* 239 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(240);
-
-/***/ }),
-/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41867,8 +41830,8 @@ module.exports = __webpack_require__(240);
 
 var utils = __webpack_require__(6);
 var bind = __webpack_require__(67);
-var Axios = __webpack_require__(242);
-var defaults = __webpack_require__(43);
+var Axios = __webpack_require__(241);
+var defaults = __webpack_require__(41);
 
 /**
  * Create an instance of Axios
@@ -41902,14 +41865,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(64);
-axios.CancelToken = __webpack_require__(241);
+axios.CancelToken = __webpack_require__(240);
 axios.isCancel = __webpack_require__(65);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(256);
+axios.spread = __webpack_require__(255);
 
 module.exports = axios;
 
@@ -41918,7 +41881,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 241 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41982,18 +41945,18 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 242 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(43);
+var defaults = __webpack_require__(41);
 var utils = __webpack_require__(6);
-var InterceptorManager = __webpack_require__(243);
-var dispatchRequest = __webpack_require__(244);
-var isAbsoluteURL = __webpack_require__(252);
-var combineURLs = __webpack_require__(250);
+var InterceptorManager = __webpack_require__(242);
+var dispatchRequest = __webpack_require__(243);
+var isAbsoluteURL = __webpack_require__(251);
+var combineURLs = __webpack_require__(249);
 
 /**
  * Create a new instance of Axios
@@ -42074,7 +42037,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 243 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42133,16 +42096,16 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 244 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(6);
-var transformData = __webpack_require__(247);
+var transformData = __webpack_require__(246);
 var isCancel = __webpack_require__(65);
-var defaults = __webpack_require__(43);
+var defaults = __webpack_require__(41);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -42219,7 +42182,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 245 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42245,7 +42208,7 @@ module.exports = function enhanceError(error, config, code, response) {
 
 
 /***/ }),
-/* 246 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42277,7 +42240,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 247 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42304,7 +42267,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 248 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42347,7 +42310,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 249 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42422,7 +42385,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 250 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42441,7 +42404,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 251 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42501,7 +42464,7 @@ module.exports = (
 
 
 /***/ }),
-/* 252 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42522,7 +42485,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 253 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42597,7 +42560,7 @@ module.exports = (
 
 
 /***/ }),
-/* 254 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42616,7 +42579,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 255 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42660,7 +42623,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 256 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42694,12 +42657,12 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 257 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_utils_js__ = __webpack_require__(555);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_utils_js__ = __webpack_require__(522);
 //
 //
 //
@@ -42811,7 +42774,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 258 */
+/* 257 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42826,7 +42789,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 259 */
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42918,7 +42881,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 260 */
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42954,7 +42917,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 261 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42971,14 +42934,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 262 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(483);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Navbar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_strap__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_strap__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_strap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_strap__);
 //
 //
@@ -43060,7 +43023,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 263 */
+/* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43079,58 +43042,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 264 */
+/* 263 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -43189,20 +43105,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 265 */
+/* 264 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Header__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Header__ = __webpack_require__(482);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Sidebar__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Sidebar__ = __webpack_require__(484);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Sidebar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Sidebar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Aside__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Aside__ = __webpack_require__(479);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Aside___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Aside__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Footer__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Footer__ = __webpack_require__(481);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Footer__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb__ = __webpack_require__(480);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Breadcrumb__);
 //
 //
@@ -43248,148 +43164,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 265 */,
 /* 266 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_BarExample__ = __webpack_require__(502);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_BarExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__charts_BarExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_LineExample__ = __webpack_require__(504);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_LineExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__charts_LineExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_DoughnutExample__ = __webpack_require__(503);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_DoughnutExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__charts_DoughnutExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_RadarExample__ = __webpack_require__(507);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_RadarExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__charts_RadarExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_PieExample__ = __webpack_require__(505);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__charts_PieExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__charts_PieExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__charts_PolarAreaExample__ = __webpack_require__(506);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__charts_PolarAreaExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__charts_PolarAreaExample__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'charts',
-  components: {
-    BarExample: __WEBPACK_IMPORTED_MODULE_0__charts_BarExample___default.a,
-    LineExample: __WEBPACK_IMPORTED_MODULE_1__charts_LineExample___default.a,
-    DoughnutExample: __WEBPACK_IMPORTED_MODULE_2__charts_DoughnutExample___default.a,
-    RadarExample: __WEBPACK_IMPORTED_MODULE_3__charts_RadarExample___default.a,
-    PieExample: __WEBPACK_IMPORTED_MODULE_4__charts_PieExample___default.a,
-    PolarAreaExample: __WEBPACK_IMPORTED_MODULE_5__charts_PolarAreaExample___default.a
-  }
-});
-
-/***/ }),
-/* 267 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dashboard_CardLine1ChartExample__ = __webpack_require__(516);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dashboard_CardLine1ChartExample__ = __webpack_require__(490);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dashboard_CardLine1ChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__dashboard_CardLine1ChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard_CardLine2ChartExample__ = __webpack_require__(517);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard_CardLine2ChartExample__ = __webpack_require__(491);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dashboard_CardLine2ChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__dashboard_CardLine2ChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_CardLine3ChartExample__ = __webpack_require__(518);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_CardLine3ChartExample__ = __webpack_require__(492);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_CardLine3ChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dashboard_CardLine3ChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_CardBarChartExample__ = __webpack_require__(515);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_CardBarChartExample__ = __webpack_require__(489);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_CardBarChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__dashboard_CardBarChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_MainChartExample__ = __webpack_require__(519);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_MainChartExample__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_MainChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__dashboard_MainChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_SocialBoxChartExample__ = __webpack_require__(520);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_SocialBoxChartExample__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_SocialBoxChartExample___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__dashboard_SocialBoxChartExample__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_strap__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_strap__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_strap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_vue_strap__);
 //
 //
@@ -44211,4085 +44004,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 267 */,
 /* 268 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'widgets',
-  data: function data() {
-    return {
-      msg: 'Widgets'
-    };
-  }
-});
-
-/***/ }),
-/* 269 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Bar"].extend({
-  mounted: function mounted() {
-    // Overwriting base render method with actual data.
-    this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      datasets: [{
-        label: 'GitHub Commits',
-        backgroundColor: '#f87979',
-        data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
-      }]
-    });
-  }
-}));
-
-/***/ }),
-/* 270 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Doughnut"].extend({
-  mounted: function mounted() {
-    this.renderChart({
-      labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
-      datasets: [{
-        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-        data: [40, 20, 80, 10]
-      }]
-    }, { responsive: true, maintainAspectRatio: false });
-  }
-}));
-
-/***/ }),
-/* 271 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Line"].extend({
-  mounted: function mounted() {
-    this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [{
-        label: 'Data One',
-        backgroundColor: '#f87979',
-        data: [40, 39, 10, 40, 39, 80, 40]
-      }]
-    }, { responsive: true, maintainAspectRatio: false });
-  }
-}));
-
-/***/ }),
-/* 272 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Pie"].extend({
-  mounted: function mounted() {
-    this.renderChart({
-      labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
-      datasets: [{
-        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-        data: [40, 20, 80, 10]
-      }]
-    }, { responsive: true, maintainAspectRatio: false });
-  }
-}));
-
-/***/ }),
-/* 273 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["PolarArea"].extend({
-  mounted: function mounted() {
-    this.renderChart({
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgba(179,181,198,0.2)',
-        pointBackgroundColor: 'rgba(179,181,198,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(179,181,198,1)',
-        data: [65, 59, 90, 81, 56, 55, 40]
-      }, {
-        label: 'My Second dataset',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
-        data: [28, 48, 40, 19, 96, 27, 100]
-      }]
-    }, { responsive: true, maintainAspectRatio: false });
-  }
-}));
-
-/***/ }),
-/* 274 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__["Radar"].extend({
-  mounted: function mounted() {
-    this.renderChart({
-      labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgba(179,181,198,0.2)',
-        borderColor: 'rgba(179,181,198,1)',
-        pointBackgroundColor: 'rgba(179,181,198,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(179,181,198,1)',
-        data: [65, 59, 90, 81, 56, 55, 40]
-      }, {
-        label: 'My Second dataset',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
-        data: [28, 48, 40, 19, 96, 27, 100]
-      }]
-    }, { responsive: true, maintainAspectRatio: false });
-  }
-}));
-
-/***/ }),
-/* 275 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'buttons'
-});
-
-/***/ }),
-/* 276 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'cards'
-});
-
-/***/ }),
-/* 277 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'forms'
-});
-
-/***/ }),
-/* 278 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'modals',
-  components: {
-    modal: __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal___default.a
-  },
-  data: function data() {
-    return {
-      myModal: false,
-      largeModal: false,
-      smallModal: false,
-      primaryModal: false,
-      successModal: false,
-      warningModal: false,
-      dangerModal: false,
-      infoModal: false
-    };
-  }
-});
-
-/***/ }),
-/* 279 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'social-buttons'
-});
-
-/***/ }),
-/* 280 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'switches'
-});
-
-/***/ }),
-/* 281 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'tables'
-});
-
-/***/ }),
-/* 282 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48327,12 +44048,12 @@ var datasets = [{
 }));
 
 /***/ }),
-/* 283 */
+/* 269 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48391,12 +44112,12 @@ var datasets = [{
 }));
 
 /***/ }),
-/* 284 */
+/* 270 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48457,12 +44178,12 @@ var datasets = [{
 }));
 
 /***/ }),
-/* 285 */
+/* 271 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48508,12 +44229,12 @@ var datasets = [{
 }));
 
 /***/ }),
-/* 286 */
+/* 272 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48611,12 +44332,12 @@ function random(min, max) {
 }));
 
 /***/ }),
-/* 287 */
+/* 273 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_chartjs__);
 
 
@@ -48660,7 +44381,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 }));
 
 /***/ }),
-/* 288 */
+/* 274 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52151,7 +47872,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 289 */
+/* 275 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52908,13 +48629,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 290 */
+/* 276 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__ = __webpack_require__(478);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__);
+//
+//
+//
 //
 //
 //
@@ -53001,6 +48725,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         id: '',
         file: '',
         keterangan: ''
+      },
+      pagination: {
+        total: 0,
+        per_page: 10,
+        from: 1,
+        to: 0,
+        current_page: 1
       }
     };
   },
@@ -53010,11 +48741,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
   methods: {
-    fetchMititiList: function fetchMititiList() {
+    fetchMititiList: function fetchMititiList(page) {
       var _this = this;
 
-      axios.get('api/mititi').then(function (res) {
-        _this.list = res.data.data;
+      axios.get('api/mititi?page=' + page).then(function (res) {
+        _this.list = res.data;
+        _this.pagination = res.data.pagination;
       }).catch(function (err) {
         return console.error(err);
       });
@@ -53069,12 +48801,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }).catch(function (err) {
         return console.error(err);
       });
+    },
+
+
+    pagesNumber: function pagesNumber() {
+      if (!this.pagination.to) {
+        return [];
+      }
+      var from = this.pagination.current_page - this.offset;
+      if (from < 1) {
+        from = 1;
+      }
+      var to = from + this.offset * 2;
+      if (to >= this.pagination.last_page) {
+        to = this.pagination.last_page;
+      }
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+
+      return pagesArray;
+    },
+
+    changePage: function changePage(page) {
+      this.pagination.current_page = page;
+      this.fetchItems(page);
     }
   }
 });
 
 /***/ }),
-/* 291 */
+/* 277 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53129,7 +48888,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 292 */
+/* 278 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53163,7 +48922,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 293 */
+/* 279 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53197,7 +48956,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 294 */
+/* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53256,11 +49015,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 295 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(467);
+window._ = __webpack_require__(453);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -53268,9 +49027,9 @@ window._ = __webpack_require__(467);
  * code may be modified to fit the specific needs of your application.
  */
 
-window.$ = window.jQuery = __webpack_require__(350);
+window.$ = window.jQuery = __webpack_require__(335);
 
-__webpack_require__(299);
+__webpack_require__(285);
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -53278,7 +49037,7 @@ __webpack_require__(299);
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = __webpack_require__(10);
+window.Vue = __webpack_require__(9);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -53286,7 +49045,7 @@ window.Vue = __webpack_require__(10);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(239);
+window.axios = __webpack_require__(238);
 
 window.axios.defaults.headers.common = {
   'X-CSRF-TOKEN': window.Laravel.csrfToken,
@@ -53309,49 +49068,31 @@ window.axios.defaults.headers.common = {
 // });
 
 /***/ }),
-/* 296 */
+/* 282 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(554);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_Full__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_Full__ = __webpack_require__(485);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_Full___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__containers_Full__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__views_Dashboard__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__views_Dashboard__ = __webpack_require__(487);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__views_Dashboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__views_Dashboard__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_Charts__ = __webpack_require__(499);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_Charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__views_Charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_Widgets__ = __webpack_require__(501);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_Widgets___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__views_Widgets__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_components_Buttons__ = __webpack_require__(508);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_components_Buttons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__views_components_Buttons__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_components_SocialButtons__ = __webpack_require__(512);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_components_SocialButtons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__views_components_SocialButtons__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_components_Cards__ = __webpack_require__(509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_components_Cards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__views_components_Cards__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_components_Forms__ = __webpack_require__(510);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_components_Forms___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__views_components_Forms__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_components_Modals__ = __webpack_require__(511);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_components_Modals___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__views_components_Modals__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__views_components_Switches__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__views_components_Switches___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__views_components_Switches__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__views_components_Tables__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__views_components_Tables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__views_components_Tables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__views_icons_FontAwesome__ = __webpack_require__(521);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__views_icons_FontAwesome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__views_icons_FontAwesome__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__views_icons_SimpleLineIcons__ = __webpack_require__(522);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__views_icons_SimpleLineIcons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__views_icons_SimpleLineIcons__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__views_pages_Page404__ = __webpack_require__(525);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__views_pages_Page404___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__views_pages_Page404__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__views_pages_Page500__ = __webpack_require__(526);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__views_pages_Page500___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__views_pages_Page500__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__views_pages_Login__ = __webpack_require__(524);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__views_pages_Login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__views_pages_Login__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__views_pages_Register__ = __webpack_require__(527);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__views_pages_Register___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__views_pages_Register__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__views_modules_master_TipsNTrik__ = __webpack_require__(523);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__views_modules_master_TipsNTrik___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19__views_modules_master_TipsNTrik__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_icons_FontAwesome__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__views_icons_FontAwesome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__views_icons_FontAwesome__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_icons_SimpleLineIcons__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_icons_SimpleLineIcons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__views_icons_SimpleLineIcons__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_pages_Page404__ = __webpack_require__(499);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_pages_Page404___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__views_pages_Page404__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_pages_Page500__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_pages_Page500___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__views_pages_Page500__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_pages_Login__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_pages_Login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__views_pages_Login__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_pages_Register__ = __webpack_require__(501);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_pages_Register___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__views_pages_Register__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_modules_master_TipsNTrik__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_modules_master_TipsNTrik___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__views_modules_master_TipsNTrik__);
 
 
 
@@ -53359,17 +49100,6 @@ window.axios.defaults.headers.common = {
 
 
 // Views
-
-
-
-
-// Views - Components
-
-
-
-
-
-
 
 
 // Views - Icons
@@ -53403,70 +49133,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
       name: 'Dashboard',
       component: __WEBPACK_IMPORTED_MODULE_3__views_Dashboard___default.a
     }, {
-      path: 'charts',
-      name: 'Charts',
-      component: __WEBPACK_IMPORTED_MODULE_4__views_Charts___default.a
-    }, {
-      path: 'widgets',
-      name: 'Widgets',
-      component: __WEBPACK_IMPORTED_MODULE_5__views_Widgets___default.a
-    }, {
-      path: 'components',
-      redirect: '/components/buttons',
-      name: 'Components',
-      component: {
-        render: function render(c) {
-          return c('router-view');
-        }
-      },
-      children: [{
-        path: 'buttons',
-        name: 'Buttons',
-        component: __WEBPACK_IMPORTED_MODULE_6__views_components_Buttons___default.a
-      }, {
-        path: 'social-buttons',
-        name: 'Social Buttons',
-        component: __WEBPACK_IMPORTED_MODULE_7__views_components_SocialButtons___default.a
-      }, {
-        path: 'cards',
-        name: 'Cards',
-        component: __WEBPACK_IMPORTED_MODULE_8__views_components_Cards___default.a
-      }, {
-        path: 'forms',
-        name: 'Forms',
-        component: __WEBPACK_IMPORTED_MODULE_9__views_components_Forms___default.a
-      }, {
-        path: 'modals',
-        name: 'Modals',
-        component: __WEBPACK_IMPORTED_MODULE_10__views_components_Modals___default.a
-      }, {
-        path: 'switches',
-        name: 'Switches',
-        component: __WEBPACK_IMPORTED_MODULE_11__views_components_Switches___default.a
-      }, {
-        path: 'tables',
-        name: 'Tables',
-        component: __WEBPACK_IMPORTED_MODULE_12__views_components_Tables___default.a
-      }]
-    }, {
-      path: 'icons',
-      redirect: '/icons/font-awesome',
-      name: 'Icons',
-      component: {
-        render: function render(c) {
-          return c('router-view');
-        }
-      },
-      children: [{
-        path: 'font-awesome',
-        name: 'Font Awesome',
-        component: __WEBPACK_IMPORTED_MODULE_13__views_icons_FontAwesome___default.a
-      }, {
-        path: 'simple-line-icons',
-        name: 'Simple Line Icons',
-        component: __WEBPACK_IMPORTED_MODULE_14__views_icons_SimpleLineIcons___default.a
-      }]
-    }, {
       path: 'master',
       redirect: '/master/mititi',
       name: 'Master',
@@ -53478,7 +49144,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
       children: [{
         path: 'mititi',
         name: 'Tips N Trik',
-        component: __WEBPACK_IMPORTED_MODULE_19__views_modules_master_TipsNTrik___default.a
+        component: __WEBPACK_IMPORTED_MODULE_10__views_modules_master_TipsNTrik___default.a
       }]
     }]
   }, {
@@ -53493,28 +49159,28 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
     children: [{
       path: '404',
       name: 'Page404',
-      component: __WEBPACK_IMPORTED_MODULE_15__views_pages_Page404___default.a
+      component: __WEBPACK_IMPORTED_MODULE_6__views_pages_Page404___default.a
     }, {
       path: '500',
       name: 'Page500',
-      component: __WEBPACK_IMPORTED_MODULE_16__views_pages_Page500___default.a
+      component: __WEBPACK_IMPORTED_MODULE_7__views_pages_Page500___default.a
     }, {
       path: 'login',
       name: 'Login',
-      component: __WEBPACK_IMPORTED_MODULE_17__views_pages_Login___default.a
+      component: __WEBPACK_IMPORTED_MODULE_8__views_pages_Login___default.a
     }, {
       path: 'register',
       name: 'Register',
-      component: __WEBPACK_IMPORTED_MODULE_18__views_pages_Register___default.a
+      component: __WEBPACK_IMPORTED_MODULE_9__views_pages_Register___default.a
     }]
   }]
 }));
 
 /***/ }),
-/* 297 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(298);
+var core = __webpack_require__(284);
 var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
 module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
@@ -53522,7 +49188,7 @@ module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 
 
 /***/ }),
-/* 298 */
+/* 284 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.1' };
@@ -53530,7 +49196,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 299 */
+/* 285 */
 /***/ (function(module, exports) {
 
 /*!
@@ -55913,7 +51579,7 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 300 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55931,7 +51597,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 301 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55948,7 +51614,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 302 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55966,7 +51632,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 303 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55984,7 +51650,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 304 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56002,7 +51668,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 305 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56020,7 +51686,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 306 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56035,15 +51701,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 307 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('bar', {
 	hover: {
@@ -56463,15 +52129,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 308 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('bubble', {
 	hover: {
@@ -56650,15 +52316,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 309 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('doughnut', {
 	animation: {
@@ -56956,15 +52622,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 310 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('line', {
 	showLines: true,
@@ -57296,15 +52962,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 311 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('polarArea', {
 	scale: {
@@ -57525,15 +53191,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 312 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('radar', {
 	scale: {
@@ -57700,13 +53366,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 313 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
+var defaults = __webpack_require__(2);
 
 defaults._set('scatter', {
 	hover: {
@@ -57749,16 +53415,16 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 314 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* global window: false */
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	animation: {
@@ -57928,14 +53594,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 315 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 var Interaction = __webpack_require__(69);
 var platform = __webpack_require__(70);
 
@@ -58811,13 +54477,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 316 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 module.exports = function(Chart) {
 
@@ -59148,7 +54814,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 317 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59157,8 +54823,8 @@ module.exports = function(Chart) {
 
 
 var color = __webpack_require__(71);
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 module.exports = function(Chart) {
 
@@ -59790,13 +55456,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 318 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
+var defaults = __webpack_require__(2);
 
 defaults._set('global', {
 	responsive: true,
@@ -59846,13 +55512,13 @@ module.exports = function() {
 
 
 /***/ }),
-/* 319 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 module.exports = function(Chart) {
 
@@ -60275,15 +55941,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 320 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	plugins: {}
@@ -60656,15 +56322,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 321 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 var Ticks = __webpack_require__(18);
 
 defaults._set('scale', {
@@ -61571,14 +57237,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 322 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 module.exports = function(Chart) {
 
@@ -61623,15 +57289,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 323 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	tooltips: {
@@ -62575,15 +58241,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 324 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	elements: {
@@ -62689,15 +58355,15 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 325 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 var globalDefaults = defaults.global;
 
@@ -62787,15 +58453,15 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 326 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 var defaultColor = defaults.global.defaultColor;
 
@@ -62900,14 +58566,14 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 327 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
 
 defaults._set('global', {
 	elements: {
@@ -63124,7 +58790,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 328 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63345,7 +59011,7 @@ helpers.drawRoundedRectangle = function(ctx) {
 
 
 /***/ }),
-/* 329 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63602,7 +59268,7 @@ helpers.easingEffects = effects;
 
 
 /***/ }),
-/* 330 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63705,7 +59371,7 @@ module.exports = {
 
 
 /***/ }),
-/* 331 */
+/* 317 */
 /***/ (function(module, exports) {
 
 /**
@@ -63726,7 +59392,7 @@ module.exports = {
 
 
 /***/ }),
-/* 332 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63736,7 +59402,7 @@ module.exports = {
 
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 var EXPANDO_KEY = '$chartjs';
 var CSS_PREFIX = 'chartjs-';
@@ -64183,7 +59849,7 @@ helpers.removeEvent = removeEventListener;
 
 
 /***/ }),
-/* 333 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64195,9 +59861,9 @@ helpers.removeEvent = removeEventListener;
 
 
 
-var defaults = __webpack_require__(3);
-var elements = __webpack_require__(12);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var elements = __webpack_require__(11);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	plugins: {
@@ -64511,15 +60177,15 @@ module.exports = function() {
 
 
 /***/ }),
-/* 334 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	legend: {
@@ -65085,15 +60751,15 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 335 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var Element = __webpack_require__(8);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var Element = __webpack_require__(7);
+var helpers = __webpack_require__(1);
 
 defaults._set('global', {
 	title: {
@@ -65335,7 +61001,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 336 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65475,14 +61141,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 337 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 var Ticks = __webpack_require__(18);
 
 module.exports = function(Chart) {
@@ -65674,13 +61340,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 338 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 var Ticks = __webpack_require__(18);
 
 module.exports = function(Chart) {
@@ -65813,13 +61479,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 339 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 var Ticks = __webpack_require__(18);
 
 module.exports = function(Chart) {
@@ -66064,14 +61730,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 340 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 var Ticks = __webpack_require__(18);
 
 module.exports = function(Chart) {
@@ -66601,7 +62267,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 341 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66611,8 +62277,8 @@ module.exports = function(Chart) {
 var moment = __webpack_require__(0);
 moment = typeof moment === 'function' ? moment : window.moment;
 
-var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(2);
+var defaults = __webpack_require__(2);
+var helpers = __webpack_require__(1);
 
 // Integer constants are from the ES6 spec.
 var MIN_INTEGER = Number.MIN_SAFE_INTEGER || -9007199254740991;
@@ -67342,11 +63008,11 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 342 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var colorNames = __webpack_require__(345);
+var colorNames = __webpack_require__(331);
 
 module.exports = {
    getRgba: getRgba,
@@ -67569,7 +63235,7 @@ for (var name in colorNames) {
 
 
 /***/ }),
-/* 343 */
+/* 329 */
 /***/ (function(module, exports) {
 
 /* MIT license */
@@ -68273,10 +63939,10 @@ for (var key in cssKeywords) {
 
 
 /***/ }),
-/* 344 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__(343);
+var conversions = __webpack_require__(329);
 
 var convert = function() {
    return new Converter();
@@ -68370,7 +64036,7 @@ Converter.prototype.getValues = function(space) {
 module.exports = convert;
 
 /***/ }),
-/* 345 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68529,35 +64195,28 @@ module.exports = {
 
 
 /***/ }),
-/* 346 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(26)();
+exports = module.exports = __webpack_require__(42)();
 exports.push([module.i, "\n.dropdown-toggle::after {\n  /*display: none !important;*/\n}\n", ""]);
 
 /***/ }),
-/* 347 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(26)();
+exports = module.exports = __webpack_require__(42)();
 exports.push([module.i, "\n.nav-link {\n  cursor:pointer;\n}\n", ""]);
 
 /***/ }),
-/* 348 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(26)();
+exports = module.exports = __webpack_require__(42)();
 exports.push([module.i, "\n.modal {\n  transition: all 0.3s ease;\n}\n.modal.in {\n  background-color: rgba(0,0,0,0.5);\n}\n.modal.zoom .modal-dialog {\n  -webkit-transform: scale(0.1);\n  transform: scale(0.1);\n  top: 300px;\n  opacity: 0;\n  transition: all 0.3s;\n}\n.modal.zoom.in .modal-dialog {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transform: translate3d(0, -300px, 0);\n  transform: translate3d(0, -300px, 0);\n  opacity: 1;\n}\n", ""]);
 
 /***/ }),
-/* 349 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(26)();
-exports.push([module.i, "\n.btn {\n   margin-bottom: 4px;\n}\n", ""]);
-
-/***/ }),
-/* 350 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -78817,10 +74476,79 @@ return jQuery;
 
 
 /***/ }),
-/* 351 */
+/* 336 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	props: {
+		data: {
+			type: Object,
+			default: function() {
+				return {
+					current_page: 1,
+					data: [],
+					from: 1,
+					last_page: 1,
+					next_page_url: null,
+					per_page: 10,
+					prev_page_url: null,
+					to: 1,
+					total: 0,
+				}
+			}
+		},
+		limit: {
+			type: Number,
+			default: 0
+		}
+	},
+
+	template: '<ul class="pagination" v-if="data.total > data.per_page">\
+		<li class="page-item" v-if="data.prev_page_url">\
+			<a class="page-link" href="#" aria-label="Previous" @click.prevent="selectPage(--data.current_page)"><span aria-hidden="true">&laquo;</span></a>\
+		</li>\
+		<li class="page-item" v-for="n in getPages()" :class="{ \'active\': n == data.current_page }"><a class="page-link" href="#" @click.prevent="selectPage(n)">{{ n }}</a></li>\
+		<li class="page-item" v-if="data.next_page_url">\
+			<a class="page-link" href="#" aria-label="Next" @click.prevent="selectPage(++data.current_page)"><span aria-hidden="true">&raquo;</span></a>\
+		</li>\
+	</ul>',
+
+	methods: {
+		selectPage: function(page) {
+			this.$emit('pagination-change-page', page);
+		},
+		getPages: function() {
+			if (this.limit === -1) {
+				return 0;
+			}
+
+			if (this.limit === 0) {
+				return this.data.last_page;
+			}
+
+        	var start = this.data.current_page - this.limit,
+        	    end   = this.data.current_page + this.limit + 1,
+        	    pages = [],
+        	    index;
+
+        	start = start < 1 ? 1 : start;
+        	end   = end >= this.data.last_page ? this.data.last_page + 1 : end;
+
+        	for (index = start; index < end; index++) {
+        		pages.push(index);
+        	}
+
+        	return pages;
+		}
+	}
+};
+
+
+/***/ }),
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(15),
+var getNative = __webpack_require__(14),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
@@ -78830,14 +74558,14 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 352 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(411),
-    hashDelete = __webpack_require__(412),
-    hashGet = __webpack_require__(413),
-    hashHas = __webpack_require__(414),
-    hashSet = __webpack_require__(415);
+var hashClear = __webpack_require__(397),
+    hashDelete = __webpack_require__(398),
+    hashGet = __webpack_require__(399),
+    hashHas = __webpack_require__(400),
+    hashSet = __webpack_require__(401);
 
 /**
  * Creates a hash object.
@@ -78868,10 +74596,10 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 353 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(15),
+var getNative = __webpack_require__(14),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
@@ -78881,10 +74609,10 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 354 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(15),
+var getNative = __webpack_require__(14),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
@@ -78894,12 +74622,12 @@ module.exports = Set;
 
 
 /***/ }),
-/* 355 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(46),
-    setCacheAdd = __webpack_require__(442),
-    setCacheHas = __webpack_require__(443);
+var MapCache = __webpack_require__(45),
+    setCacheAdd = __webpack_require__(428),
+    setCacheHas = __webpack_require__(429);
 
 /**
  *
@@ -78927,7 +74655,7 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 356 */
+/* 342 */
 /***/ (function(module, exports) {
 
 /**
@@ -78948,7 +74676,7 @@ module.exports = addMapEntry;
 
 
 /***/ }),
-/* 357 */
+/* 343 */
 /***/ (function(module, exports) {
 
 /**
@@ -78969,7 +74697,7 @@ module.exports = addSetEntry;
 
 
 /***/ }),
-/* 358 */
+/* 344 */
 /***/ (function(module, exports) {
 
 /**
@@ -79000,10 +74728,10 @@ module.exports = arrayFilter;
 
 
 /***/ }),
-/* 359 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(366);
+var baseIndexOf = __webpack_require__(352);
 
 /**
  * A specialized version of `_.includes` for arrays without support for
@@ -79023,7 +74751,7 @@ module.exports = arrayIncludes;
 
 
 /***/ }),
-/* 360 */
+/* 346 */
 /***/ (function(module, exports) {
 
 /**
@@ -79052,11 +74780,11 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 361 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(20),
-    keysIn = __webpack_require__(41);
+    keysIn = __webpack_require__(40);
 
 /**
  * The base implementation of `_.assignIn` without support for multiple sources
@@ -79075,7 +74803,7 @@ module.exports = baseAssignIn;
 
 
 /***/ }),
-/* 362 */
+/* 348 */
 /***/ (function(module, exports) {
 
 /**
@@ -79105,11 +74833,11 @@ module.exports = baseFindIndex;
 
 
 /***/ }),
-/* 363 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(49),
-    isFlattenable = __webpack_require__(419);
+var arrayPush = __webpack_require__(48),
+    isFlattenable = __webpack_require__(405);
 
 /**
  * The base implementation of `_.flatten` with support for restricting flattening.
@@ -79149,10 +74877,10 @@ module.exports = baseFlatten;
 
 
 /***/ }),
-/* 364 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(397);
+var createBaseFor = __webpack_require__(383);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -79171,7 +74899,7 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 365 */
+/* 351 */
 /***/ (function(module, exports) {
 
 /**
@@ -79190,12 +74918,12 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 366 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(362),
-    baseIsNaN = __webpack_require__(370),
-    strictIndexOf = __webpack_require__(449);
+var baseFindIndex = __webpack_require__(348),
+    baseIsNaN = __webpack_require__(356),
+    strictIndexOf = __webpack_require__(435);
 
 /**
  * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -79216,11 +74944,11 @@ module.exports = baseIndexOf;
 
 
 /***/ }),
-/* 367 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(17),
-    isObjectLike = __webpack_require__(13);
+var baseGetTag = __webpack_require__(16),
+    isObjectLike = __webpack_require__(12);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -79240,17 +74968,17 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 368 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(28),
+var Stack = __webpack_require__(27),
     equalArrays = __webpack_require__(95),
-    equalByTag = __webpack_require__(401),
-    equalObjects = __webpack_require__(402),
+    equalByTag = __webpack_require__(387),
+    equalObjects = __webpack_require__(388),
     getTag = __webpack_require__(101),
     isArray = __webpack_require__(5),
-    isBuffer = __webpack_require__(38),
-    isTypedArray = __webpack_require__(61);
+    isBuffer = __webpack_require__(37),
+    isTypedArray = __webpack_require__(60);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -79329,10 +75057,10 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 369 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(28),
+var Stack = __webpack_require__(27),
     baseIsEqual = __webpack_require__(84);
 
 /** Used to compose bitmasks for value comparisons. */
@@ -79397,7 +75125,7 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 370 */
+/* 356 */
 /***/ (function(module, exports) {
 
 /**
@@ -79415,12 +75143,12 @@ module.exports = baseIsNaN;
 
 
 /***/ }),
-/* 371 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(39),
-    isMasked = __webpack_require__(423),
-    isObject = __webpack_require__(9),
+var isFunction = __webpack_require__(38),
+    isMasked = __webpack_require__(409),
+    isObject = __webpack_require__(8),
     toSource = __webpack_require__(114);
 
 /**
@@ -79468,12 +75196,12 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 372 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(17),
-    isLength = __webpack_require__(60),
-    isObjectLike = __webpack_require__(13);
+var baseGetTag = __webpack_require__(16),
+    isLength = __webpack_require__(59),
+    isObjectLike = __webpack_require__(12);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -79534,14 +75262,14 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 373 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(375),
-    baseMatchesProperty = __webpack_require__(376),
-    identity = __webpack_require__(35),
+var baseMatches = __webpack_require__(361),
+    baseMatchesProperty = __webpack_require__(362),
+    identity = __webpack_require__(34),
     isArray = __webpack_require__(5),
-    property = __webpack_require__(471);
+    property = __webpack_require__(457);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -79571,12 +75299,12 @@ module.exports = baseIteratee;
 
 
 /***/ }),
-/* 374 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(9),
-    isPrototype = __webpack_require__(57),
-    nativeKeysIn = __webpack_require__(437);
+var isObject = __webpack_require__(8),
+    isPrototype = __webpack_require__(56),
+    nativeKeysIn = __webpack_require__(423);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -79610,11 +75338,11 @@ module.exports = baseKeysIn;
 
 
 /***/ }),
-/* 375 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(369),
-    getMatchData = __webpack_require__(406),
+var baseIsMatch = __webpack_require__(355),
+    getMatchData = __webpack_require__(392),
     matchesStrictComparable = __webpack_require__(105);
 
 /**
@@ -79638,13 +75366,13 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 376 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsEqual = __webpack_require__(84),
-    get = __webpack_require__(462),
-    hasIn = __webpack_require__(463),
-    isKey = __webpack_require__(56),
+    get = __webpack_require__(448),
+    hasIn = __webpack_require__(449),
+    isKey = __webpack_require__(55),
     isStrictComparable = __webpack_require__(103),
     matchesStrictComparable = __webpack_require__(105),
     toKey = __webpack_require__(21);
@@ -79677,15 +75405,15 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 377 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(28),
+var Stack = __webpack_require__(27),
     assignMergeValue = __webpack_require__(78),
-    baseFor = __webpack_require__(364),
-    baseMergeDeep = __webpack_require__(378),
-    isObject = __webpack_require__(9),
-    keysIn = __webpack_require__(41);
+    baseFor = __webpack_require__(350),
+    baseMergeDeep = __webpack_require__(364),
+    isObject = __webpack_require__(8),
+    keysIn = __webpack_require__(40);
 
 /**
  * The base implementation of `_.merge` without support for multiple sources.
@@ -79724,7 +75452,7 @@ module.exports = baseMerge;
 
 
 /***/ }),
-/* 378 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assignMergeValue = __webpack_require__(78),
@@ -79732,15 +75460,15 @@ var assignMergeValue = __webpack_require__(78),
     cloneTypedArray = __webpack_require__(89),
     copyArray = __webpack_require__(19),
     initCloneObject = __webpack_require__(102),
-    isArguments = __webpack_require__(36),
+    isArguments = __webpack_require__(35),
     isArray = __webpack_require__(5),
-    isArrayLikeObject = __webpack_require__(464),
-    isBuffer = __webpack_require__(38),
-    isFunction = __webpack_require__(39),
-    isObject = __webpack_require__(9),
-    isPlainObject = __webpack_require__(465),
-    isTypedArray = __webpack_require__(61),
-    toPlainObject = __webpack_require__(477);
+    isArrayLikeObject = __webpack_require__(450),
+    isBuffer = __webpack_require__(37),
+    isFunction = __webpack_require__(38),
+    isObject = __webpack_require__(8),
+    isPlainObject = __webpack_require__(451),
+    isTypedArray = __webpack_require__(60),
+    toPlainObject = __webpack_require__(463);
 
 /**
  * A specialized version of `baseMerge` for arrays and objects which performs
@@ -79823,7 +75551,7 @@ module.exports = baseMergeDeep;
 
 
 /***/ }),
-/* 379 */
+/* 365 */
 /***/ (function(module, exports) {
 
 /**
@@ -79843,7 +75571,7 @@ module.exports = baseProperty;
 
 
 /***/ }),
-/* 380 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(82);
@@ -79865,12 +75593,12 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 381 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var identity = __webpack_require__(35),
+var identity = __webpack_require__(34),
     overRest = __webpack_require__(108),
-    setToString = __webpack_require__(59);
+    setToString = __webpack_require__(58);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -79888,12 +75616,12 @@ module.exports = baseRest;
 
 
 /***/ }),
-/* 382 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(454),
+var constant = __webpack_require__(440),
     defineProperty = __webpack_require__(94),
-    identity = __webpack_require__(35);
+    identity = __webpack_require__(34);
 
 /**
  * The base implementation of `setToString` without support for hot loop shorting.
@@ -79916,7 +75644,7 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 383 */
+/* 369 */
 /***/ (function(module, exports) {
 
 /**
@@ -79942,10 +75670,10 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 384 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16),
+var Symbol = __webpack_require__(15),
     arrayMap = __webpack_require__(76),
     isArray = __webpack_require__(5),
     isSymbol = __webpack_require__(23);
@@ -79985,7 +75713,7 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 385 */
+/* 371 */
 /***/ (function(module, exports) {
 
 /**
@@ -80005,7 +75733,7 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 386 */
+/* 372 */
 /***/ (function(module, exports) {
 
 /**
@@ -80024,10 +75752,10 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 387 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(52);
+var cloneArrayBuffer = __webpack_require__(51);
 
 /**
  * Creates a clone of `dataView`.
@@ -80046,10 +75774,10 @@ module.exports = cloneDataView;
 
 
 /***/ }),
-/* 388 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var addMapEntry = __webpack_require__(356),
+var addMapEntry = __webpack_require__(342),
     arrayReduce = __webpack_require__(77),
     mapToArray = __webpack_require__(104);
 
@@ -80074,7 +75802,7 @@ module.exports = cloneMap;
 
 
 /***/ }),
-/* 389 */
+/* 375 */
 /***/ (function(module, exports) {
 
 /** Used to match `RegExp` flags from their coerced string values. */
@@ -80097,10 +75825,10 @@ module.exports = cloneRegExp;
 
 
 /***/ }),
-/* 390 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var addSetEntry = __webpack_require__(357),
+var addSetEntry = __webpack_require__(343),
     arrayReduce = __webpack_require__(77),
     setToArray = __webpack_require__(110);
 
@@ -80125,10 +75853,10 @@ module.exports = cloneSet;
 
 
 /***/ }),
-/* 391 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16);
+var Symbol = __webpack_require__(15);
 
 /** Used to convert symbols to primitives and strings. */
 var symbolProto = Symbol ? Symbol.prototype : undefined,
@@ -80149,11 +75877,11 @@ module.exports = cloneSymbol;
 
 
 /***/ }),
-/* 392 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(20),
-    getSymbols = __webpack_require__(55);
+    getSymbols = __webpack_require__(54);
 
 /**
  * Copies own symbols of `source` to `object`.
@@ -80171,7 +75899,7 @@ module.exports = copySymbols;
 
 
 /***/ }),
-/* 393 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(20),
@@ -80193,7 +75921,7 @@ module.exports = copySymbolsIn;
 
 
 /***/ }),
-/* 394 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(4);
@@ -80205,7 +75933,7 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 395 */
+/* 381 */
 /***/ (function(module, exports) {
 
 /**
@@ -80232,11 +75960,11 @@ module.exports = countHolders;
 
 
 /***/ }),
-/* 396 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRest = __webpack_require__(381),
-    isIterateeCall = __webpack_require__(420);
+var baseRest = __webpack_require__(367),
+    isIterateeCall = __webpack_require__(406);
 
 /**
  * Creates a function like `_.assign`.
@@ -80275,7 +76003,7 @@ module.exports = createAssigner;
 
 
 /***/ }),
-/* 397 */
+/* 383 */
 /***/ (function(module, exports) {
 
 /**
@@ -80306,10 +76034,10 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 398 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createCtor = __webpack_require__(31),
+var createCtor = __webpack_require__(30),
     root = __webpack_require__(4);
 
 /** Used to compose bitmasks for function metadata. */
@@ -80340,15 +76068,15 @@ module.exports = createBind;
 
 
 /***/ }),
-/* 399 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(47),
-    createCtor = __webpack_require__(31),
+var apply = __webpack_require__(46),
+    createCtor = __webpack_require__(30),
     createHybrid = __webpack_require__(92),
     createRecurry = __webpack_require__(93),
     getHolder = __webpack_require__(99),
-    replaceHolders = __webpack_require__(58),
+    replaceHolders = __webpack_require__(57),
     root = __webpack_require__(4);
 
 /**
@@ -80392,11 +76120,11 @@ module.exports = createCurry;
 
 
 /***/ }),
-/* 400 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(47),
-    createCtor = __webpack_require__(31),
+var apply = __webpack_require__(46),
+    createCtor = __webpack_require__(30),
     root = __webpack_require__(4);
 
 /** Used to compose bitmasks for function metadata. */
@@ -80441,10 +76169,10 @@ module.exports = createPartial;
 
 
 /***/ }),
-/* 401 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16),
+var Symbol = __webpack_require__(15),
     Uint8Array = __webpack_require__(73),
     eq = __webpack_require__(22),
     equalArrays = __webpack_require__(95),
@@ -80559,7 +76287,7 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 402 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getAllKeys = __webpack_require__(97);
@@ -80654,12 +76382,12 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 403 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var flatten = __webpack_require__(456),
+var flatten = __webpack_require__(442),
     overRest = __webpack_require__(108),
-    setToString = __webpack_require__(59);
+    setToString = __webpack_require__(58);
 
 /**
  * A specialized version of `baseRest` which flattens the rest array.
@@ -80676,12 +76404,12 @@ module.exports = flatRest;
 
 
 /***/ }),
-/* 404 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetAllKeys = __webpack_require__(83),
     getSymbolsIn = __webpack_require__(100),
-    keysIn = __webpack_require__(41);
+    keysIn = __webpack_require__(40);
 
 /**
  * Creates an array of own and inherited enumerable property names and
@@ -80699,10 +76427,10 @@ module.exports = getAllKeysIn;
 
 
 /***/ }),
-/* 405 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var realNames = __webpack_require__(440);
+var realNames = __webpack_require__(426);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -80736,11 +76464,11 @@ module.exports = getFuncName;
 
 
 /***/ }),
-/* 406 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isStrictComparable = __webpack_require__(103),
-    keys = __webpack_require__(40);
+    keys = __webpack_require__(39);
 
 /**
  * Gets the property names, values, and compare flags of `object`.
@@ -80766,10 +76494,10 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 407 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16);
+var Symbol = __webpack_require__(15);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -80818,7 +76546,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 408 */
+/* 394 */
 /***/ (function(module, exports) {
 
 /**
@@ -80837,7 +76565,7 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 409 */
+/* 395 */
 /***/ (function(module, exports) {
 
 /** Used to match wrap detail comments. */
@@ -80860,14 +76588,14 @@ module.exports = getWrapDetails;
 
 
 /***/ }),
-/* 410 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(87),
-    isArguments = __webpack_require__(36),
+    isArguments = __webpack_require__(35),
     isArray = __webpack_require__(5),
-    isIndex = __webpack_require__(33),
-    isLength = __webpack_require__(60),
+    isIndex = __webpack_require__(32),
+    isLength = __webpack_require__(59),
     toKey = __webpack_require__(21);
 
 /**
@@ -80905,10 +76633,10 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 411 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(34);
+var nativeCreate = __webpack_require__(33);
 
 /**
  * Removes all key-value entries from the hash.
@@ -80926,7 +76654,7 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 412 */
+/* 398 */
 /***/ (function(module, exports) {
 
 /**
@@ -80949,10 +76677,10 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 413 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(34);
+var nativeCreate = __webpack_require__(33);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -80985,10 +76713,10 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 414 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(34);
+var nativeCreate = __webpack_require__(33);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -81014,10 +76742,10 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 415 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(34);
+var nativeCreate = __webpack_require__(33);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -81043,7 +76771,7 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 416 */
+/* 402 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -81075,15 +76803,15 @@ module.exports = initCloneArray;
 
 
 /***/ }),
-/* 417 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(52),
-    cloneDataView = __webpack_require__(387),
-    cloneMap = __webpack_require__(388),
-    cloneRegExp = __webpack_require__(389),
-    cloneSet = __webpack_require__(390),
-    cloneSymbol = __webpack_require__(391),
+var cloneArrayBuffer = __webpack_require__(51),
+    cloneDataView = __webpack_require__(373),
+    cloneMap = __webpack_require__(374),
+    cloneRegExp = __webpack_require__(375),
+    cloneSet = __webpack_require__(376),
+    cloneSymbol = __webpack_require__(377),
     cloneTypedArray = __webpack_require__(89);
 
 /** `Object#toString` result references. */
@@ -81161,7 +76889,7 @@ module.exports = initCloneByTag;
 
 
 /***/ }),
-/* 418 */
+/* 404 */
 /***/ (function(module, exports) {
 
 /** Used to match wrap detail comments. */
@@ -81190,11 +76918,11 @@ module.exports = insertWrapDetails;
 
 
 /***/ }),
-/* 419 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(16),
-    isArguments = __webpack_require__(36),
+var Symbol = __webpack_require__(15),
+    isArguments = __webpack_require__(35),
     isArray = __webpack_require__(5);
 
 /** Built-in value references. */
@@ -81216,13 +76944,13 @@ module.exports = isFlattenable;
 
 
 /***/ }),
-/* 420 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var eq = __webpack_require__(22),
-    isArrayLike = __webpack_require__(37),
-    isIndex = __webpack_require__(33),
-    isObject = __webpack_require__(9);
+    isArrayLike = __webpack_require__(36),
+    isIndex = __webpack_require__(32),
+    isObject = __webpack_require__(8);
 
 /**
  * Checks if the given arguments are from an iteratee call.
@@ -81252,7 +76980,7 @@ module.exports = isIterateeCall;
 
 
 /***/ }),
-/* 421 */
+/* 407 */
 /***/ (function(module, exports) {
 
 /**
@@ -81273,13 +77001,13 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 422 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(44),
+var LazyWrapper = __webpack_require__(43),
     getData = __webpack_require__(98),
-    getFuncName = __webpack_require__(405),
-    lodash = __webpack_require__(478);
+    getFuncName = __webpack_require__(391),
+    lodash = __webpack_require__(464);
 
 /**
  * Checks if `func` has a lazy counterpart.
@@ -81307,10 +77035,10 @@ module.exports = isLaziable;
 
 
 /***/ }),
-/* 423 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(394);
+var coreJsData = __webpack_require__(380);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -81333,7 +77061,7 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 424 */
+/* 410 */
 /***/ (function(module, exports) {
 
 /**
@@ -81352,10 +77080,10 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 425 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(29);
+var assocIndexOf = __webpack_require__(28);
 
 /** Used for built-in method references. */
 var arrayProto = Array.prototype;
@@ -81393,10 +77121,10 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 426 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(29);
+var assocIndexOf = __webpack_require__(28);
 
 /**
  * Gets the list cache value for `key`.
@@ -81418,10 +77146,10 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 427 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(29);
+var assocIndexOf = __webpack_require__(28);
 
 /**
  * Checks if a list cache value for `key` exists.
@@ -81440,10 +77168,10 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 428 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(29);
+var assocIndexOf = __webpack_require__(28);
 
 /**
  * Sets the list cache `key` to `value`.
@@ -81472,12 +77200,12 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 429 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(352),
-    ListCache = __webpack_require__(27),
-    Map = __webpack_require__(45);
+var Hash = __webpack_require__(338),
+    ListCache = __webpack_require__(26),
+    Map = __webpack_require__(44);
 
 /**
  * Removes all key-value entries from the map.
@@ -81499,10 +77227,10 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 430 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+var getMapData = __webpack_require__(31);
 
 /**
  * Removes `key` and its value from the map.
@@ -81523,10 +77251,10 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 431 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+var getMapData = __webpack_require__(31);
 
 /**
  * Gets the map value for `key`.
@@ -81545,10 +77273,10 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 432 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+var getMapData = __webpack_require__(31);
 
 /**
  * Checks if a map value for `key` exists.
@@ -81567,10 +77295,10 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 433 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+var getMapData = __webpack_require__(31);
 
 /**
  * Sets the map `key` to `value`.
@@ -81595,10 +77323,10 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 434 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(468);
+var memoize = __webpack_require__(454);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -81627,12 +77355,12 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 435 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var composeArgs = __webpack_require__(90),
     composeArgsRight = __webpack_require__(91),
-    replaceHolders = __webpack_require__(58);
+    replaceHolders = __webpack_require__(57);
 
 /** Used as the internal argument placeholder. */
 var PLACEHOLDER = '__lodash_placeholder__';
@@ -81723,7 +77451,7 @@ module.exports = mergeData;
 
 
 /***/ }),
-/* 436 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var overArg = __webpack_require__(107);
@@ -81735,7 +77463,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 437 */
+/* 423 */
 /***/ (function(module, exports) {
 
 /**
@@ -81761,7 +77489,7 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 438 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(96);
@@ -81790,7 +77518,7 @@ module.exports = nodeUtil;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)(module)))
 
 /***/ }),
-/* 439 */
+/* 425 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -81818,7 +77546,7 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 440 */
+/* 426 */
 /***/ (function(module, exports) {
 
 /** Used to lookup unminified function names. */
@@ -81828,11 +77556,11 @@ module.exports = realNames;
 
 
 /***/ }),
-/* 441 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyArray = __webpack_require__(19),
-    isIndex = __webpack_require__(33);
+    isIndex = __webpack_require__(32);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMin = Math.min;
@@ -81863,7 +77591,7 @@ module.exports = reorder;
 
 
 /***/ }),
-/* 442 */
+/* 428 */
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
@@ -81888,7 +77616,7 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 443 */
+/* 429 */
 /***/ (function(module, exports) {
 
 /**
@@ -81908,10 +77636,10 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 444 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(27);
+var ListCache = __webpack_require__(26);
 
 /**
  * Removes all key-value entries from the stack.
@@ -81929,7 +77657,7 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 445 */
+/* 431 */
 /***/ (function(module, exports) {
 
 /**
@@ -81953,7 +77681,7 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 446 */
+/* 432 */
 /***/ (function(module, exports) {
 
 /**
@@ -81973,7 +77701,7 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 447 */
+/* 433 */
 /***/ (function(module, exports) {
 
 /**
@@ -81993,12 +77721,12 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 448 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(27),
-    Map = __webpack_require__(45),
-    MapCache = __webpack_require__(46);
+var ListCache = __webpack_require__(26),
+    Map = __webpack_require__(44),
+    MapCache = __webpack_require__(45);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -82033,7 +77761,7 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 449 */
+/* 435 */
 /***/ (function(module, exports) {
 
 /**
@@ -82062,11 +77790,11 @@ module.exports = strictIndexOf;
 
 
 /***/ }),
-/* 450 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEach = __webpack_require__(48),
-    arrayIncludes = __webpack_require__(359);
+var arrayEach = __webpack_require__(47),
+    arrayIncludes = __webpack_require__(345);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1,
@@ -82114,10 +77842,10 @@ module.exports = updateWrapDetails;
 
 
 /***/ }),
-/* 451 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(44),
+var LazyWrapper = __webpack_require__(43),
     LodashWrapper = __webpack_require__(72),
     copyArray = __webpack_require__(19);
 
@@ -82143,10 +77871,10 @@ module.exports = wrapperClone;
 
 
 /***/ }),
-/* 452 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createWrap = __webpack_require__(53);
+var createWrap = __webpack_require__(52);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_ARY_FLAG = 128;
@@ -82178,7 +77906,7 @@ module.exports = ary;
 
 
 /***/ }),
-/* 453 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(81);
@@ -82220,7 +77948,7 @@ module.exports = clone;
 
 
 /***/ }),
-/* 454 */
+/* 440 */
 /***/ (function(module, exports) {
 
 /**
@@ -82252,10 +77980,10 @@ module.exports = constant;
 
 
 /***/ }),
-/* 455 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createWrap = __webpack_require__(53);
+var createWrap = __webpack_require__(52);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_CURRY_FLAG = 8;
@@ -82315,10 +78043,10 @@ module.exports = curry;
 
 
 /***/ }),
-/* 456 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFlatten = __webpack_require__(363);
+var baseFlatten = __webpack_require__(349);
 
 /**
  * Flattens `array` a single level deep.
@@ -82343,10 +78071,10 @@ module.exports = flatten;
 
 
 /***/ }),
-/* 457 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapping = __webpack_require__(458),
+var mapping = __webpack_require__(444),
     fallbackHolder = __webpack_require__(115);
 
 /** Built-in value reference. */
@@ -82917,7 +78645,7 @@ module.exports = baseConvert;
 
 
 /***/ }),
-/* 458 */
+/* 444 */
 /***/ (function(module, exports) {
 
 /** Used to map aliases to their real names. */
@@ -83291,31 +79019,31 @@ exports.skipRearg = {
 
 
 /***/ }),
-/* 459 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  'ary': __webpack_require__(452),
+  'ary': __webpack_require__(438),
   'assign': __webpack_require__(80),
-  'clone': __webpack_require__(453),
-  'curry': __webpack_require__(455),
-  'forEach': __webpack_require__(48),
+  'clone': __webpack_require__(439),
+  'curry': __webpack_require__(441),
+  'forEach': __webpack_require__(47),
   'isArray': __webpack_require__(5),
-  'isFunction': __webpack_require__(39),
-  'iteratee': __webpack_require__(466),
+  'isFunction': __webpack_require__(38),
+  'iteratee': __webpack_require__(452),
   'keys': __webpack_require__(85),
-  'rearg': __webpack_require__(472),
+  'rearg': __webpack_require__(458),
   'toInteger': __webpack_require__(117),
-  'toPath': __webpack_require__(476)
+  'toPath': __webpack_require__(462)
 };
 
 
 /***/ }),
-/* 460 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseConvert = __webpack_require__(457),
-    util = __webpack_require__(459);
+var baseConvert = __webpack_require__(443),
+    util = __webpack_require__(445);
 
 /**
  * Converts `func` of `name` to an immutable auto-curried iteratee-first data-last
@@ -83335,18 +79063,18 @@ module.exports = convert;
 
 
 /***/ }),
-/* 461 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var convert = __webpack_require__(460),
-    func = convert('merge', __webpack_require__(469));
+var convert = __webpack_require__(446),
+    func = convert('merge', __webpack_require__(455));
 
 func.placeholder = __webpack_require__(115);
 module.exports = func;
 
 
 /***/ }),
-/* 462 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(82);
@@ -83385,11 +79113,11 @@ module.exports = get;
 
 
 /***/ }),
-/* 463 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(365),
-    hasPath = __webpack_require__(410);
+var baseHasIn = __webpack_require__(351),
+    hasPath = __webpack_require__(396);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -83425,11 +79153,11 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 464 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(37),
-    isObjectLike = __webpack_require__(13);
+var isArrayLike = __webpack_require__(36),
+    isObjectLike = __webpack_require__(12);
 
 /**
  * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -83464,12 +79192,12 @@ module.exports = isArrayLikeObject;
 
 
 /***/ }),
-/* 465 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(17),
-    getPrototype = __webpack_require__(54),
-    isObjectLike = __webpack_require__(13);
+var baseGetTag = __webpack_require__(16),
+    getPrototype = __webpack_require__(53),
+    isObjectLike = __webpack_require__(12);
 
 /** `Object#toString` result references. */
 var objectTag = '[object Object]';
@@ -83532,11 +79260,11 @@ module.exports = isPlainObject;
 
 
 /***/ }),
-/* 466 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(81),
-    baseIteratee = __webpack_require__(373);
+    baseIteratee = __webpack_require__(359);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1;
@@ -83591,7 +79319,7 @@ module.exports = iteratee;
 
 
 /***/ }),
-/* 467 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -100683,10 +96411,10 @@ module.exports = iteratee;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62), __webpack_require__(24)(module)))
 
 /***/ }),
-/* 468 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(46);
+var MapCache = __webpack_require__(45);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -100762,11 +96490,11 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 469 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMerge = __webpack_require__(377),
-    createAssigner = __webpack_require__(396);
+var baseMerge = __webpack_require__(363),
+    createAssigner = __webpack_require__(382);
 
 /**
  * This method is like `_.assign` except that it recursively merges own and
@@ -100807,7 +96535,7 @@ module.exports = merge;
 
 
 /***/ }),
-/* 470 */
+/* 456 */
 /***/ (function(module, exports) {
 
 /**
@@ -100830,12 +96558,12 @@ module.exports = noop;
 
 
 /***/ }),
-/* 471 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(379),
-    basePropertyDeep = __webpack_require__(380),
-    isKey = __webpack_require__(56),
+var baseProperty = __webpack_require__(365),
+    basePropertyDeep = __webpack_require__(366),
+    isKey = __webpack_require__(55),
     toKey = __webpack_require__(21);
 
 /**
@@ -100868,11 +96596,11 @@ module.exports = property;
 
 
 /***/ }),
-/* 472 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createWrap = __webpack_require__(53),
-    flatRest = __webpack_require__(403);
+var createWrap = __webpack_require__(52),
+    flatRest = __webpack_require__(389);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_REARG_FLAG = 256;
@@ -100907,7 +96635,7 @@ module.exports = rearg;
 
 
 /***/ }),
-/* 473 */
+/* 459 */
 /***/ (function(module, exports) {
 
 /**
@@ -100931,10 +96659,10 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 474 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toNumber = __webpack_require__(475);
+var toNumber = __webpack_require__(461);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0,
@@ -100979,10 +96707,10 @@ module.exports = toFinite;
 
 
 /***/ }),
-/* 475 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(9),
+var isObject = __webpack_require__(8),
     isSymbol = __webpack_require__(23);
 
 /** Used as references for various `Number` constants. */
@@ -101051,7 +96779,7 @@ module.exports = toNumber;
 
 
 /***/ }),
-/* 476 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(76),
@@ -101090,11 +96818,11 @@ module.exports = toPath;
 
 
 /***/ }),
-/* 477 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(20),
-    keysIn = __webpack_require__(41);
+    keysIn = __webpack_require__(40);
 
 /**
  * Converts `value` to a plain object flattening inherited enumerable string
@@ -101128,15 +96856,15 @@ module.exports = toPlainObject;
 
 
 /***/ }),
-/* 478 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(44),
+var LazyWrapper = __webpack_require__(43),
     LodashWrapper = __webpack_require__(72),
-    baseLodash = __webpack_require__(51),
+    baseLodash = __webpack_require__(50),
     isArray = __webpack_require__(5),
-    isObjectLike = __webpack_require__(13),
-    wrapperClone = __webpack_require__(451);
+    isObjectLike = __webpack_require__(12),
+    wrapperClone = __webpack_require__(437);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -101281,7 +97009,7 @@ module.exports = lodash;
 
 
 /***/ }),
-/* 479 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -101530,10 +97258,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 479;
+webpackContext.id = 465;
 
 /***/ }),
-/* 480 */
+/* 466 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -101723,7 +97451,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 481 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101733,15 +97461,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101814,7 +97542,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 482 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101824,15 +97552,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101906,7 +97634,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 483 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101916,15 +97644,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101980,7 +97708,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 484 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101990,15 +97718,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102071,7 +97799,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 485 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102081,15 +97809,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102161,7 +97889,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 486 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102171,15 +97899,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102235,7 +97963,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 487 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102245,15 +97973,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102309,7 +98037,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 488 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102319,15 +98047,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = __webpack_require__(10);
+var _vue = __webpack_require__(9);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _chart = __webpack_require__(11);
+var _chart = __webpack_require__(10);
 
 var _chart2 = _interopRequireDefault(_chart);
 
-var _options = __webpack_require__(14);
+var _options = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102383,7 +98111,7 @@ exports.default = _vue2.default.extend({
 });
 
 /***/ }),
-/* 489 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102393,11 +98121,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactiveData = __webpack_require__(490);
+var _reactiveData = __webpack_require__(476);
 
 var _reactiveData2 = _interopRequireDefault(_reactiveData);
 
-var _reactiveProp = __webpack_require__(491);
+var _reactiveProp = __webpack_require__(477);
 
 var _reactiveProp2 = _interopRequireDefault(_reactiveProp);
 
@@ -102409,7 +98137,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 490 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102463,7 +98191,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 491 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102517,14 +98245,52 @@ module.exports = {
 };
 
 /***/ }),
-/* 492 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+
+/* styles */
+__webpack_require__(525)
+
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(259),
+  __webpack_require__(256),
   /* template */
-  __webpack_require__(549),
+  __webpack_require__(516),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/aswita/workplace/prima/prima/node_modules/vue-strap/src/Modal.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-611fc2ee", Component.options)
+  } else {
+    hotAPI.reload("data-v-611fc2ee", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 479 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(258),
+  /* template */
+  __webpack_require__(517),
   /* scopeId */
   null,
   /* cssModules */
@@ -102551,14 +98317,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 493 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(260),
+  __webpack_require__(259),
   /* template */
-  __webpack_require__(532),
+  __webpack_require__(506),
   /* scopeId */
   null,
   /* cssModules */
@@ -102585,14 +98351,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 494 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(261),
+  __webpack_require__(260),
   /* template */
-  __webpack_require__(538),
+  __webpack_require__(511),
   /* scopeId */
   null,
   /* cssModules */
@@ -102619,18 +98385,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 495 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(556)
+__webpack_require__(523)
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(262),
+  __webpack_require__(261),
   /* template */
-  __webpack_require__(528),
+  __webpack_require__(502),
   /* scopeId */
   null,
   /* cssModules */
@@ -102657,14 +98423,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 496 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(263),
+  __webpack_require__(262),
   /* template */
-  __webpack_require__(550),
+  __webpack_require__(518),
   /* scopeId */
   null,
   /* cssModules */
@@ -102691,18 +98457,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 497 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(557)
+__webpack_require__(524)
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(264),
+  __webpack_require__(263),
   /* template */
-  __webpack_require__(541),
+  __webpack_require__(513),
   /* scopeId */
   null,
   /* cssModules */
@@ -102729,14 +98495,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 498 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(265),
+  __webpack_require__(264),
   /* template */
-  __webpack_require__(551),
+  __webpack_require__(519),
   /* scopeId */
   null,
   /* cssModules */
@@ -102763,48 +98529,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 499 */
+/* 486 */,
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(266),
   /* template */
-  __webpack_require__(533),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/Charts.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Charts.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-27cd7008", Component.options)
-  } else {
-    hotAPI.reload("data-v-27cd7008", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 500 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(267),
-  /* template */
-  __webpack_require__(534),
+  __webpack_require__(508),
   /* scopeId */
   null,
   /* cssModules */
@@ -102831,486 +98564,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 501 */
+/* 488 */,
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(268),
-  /* template */
-  __webpack_require__(544),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/Widgets.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Widgets.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5f3a8018", Component.options)
-  } else {
-    hotAPI.reload("data-v-5f3a8018", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 502 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(269),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/BarExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4f43d33a", Component.options)
-  } else {
-    hotAPI.reload("data-v-4f43d33a", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 503 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(270),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/DoughnutExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-42a52635", Component.options)
-  } else {
-    hotAPI.reload("data-v-42a52635", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 504 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(271),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/LineExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-67819d83", Component.options)
-  } else {
-    hotAPI.reload("data-v-67819d83", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 505 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(272),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/PieExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8d10afbe", Component.options)
-  } else {
-    hotAPI.reload("data-v-8d10afbe", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 506 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(273),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/PolarAreaExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d63df22", Component.options)
-  } else {
-    hotAPI.reload("data-v-5d63df22", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 507 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(274),
-  /* template */
-  null,
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/charts/RadarExample.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d2fe0b2", Component.options)
-  } else {
-    hotAPI.reload("data-v-5d2fe0b2", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 508 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(275),
-  /* template */
-  __webpack_require__(535),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Buttons.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Buttons.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-396f0e22", Component.options)
-  } else {
-    hotAPI.reload("data-v-396f0e22", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 509 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(276),
-  /* template */
-  __webpack_require__(542),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Cards.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Cards.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5b08855e", Component.options)
-  } else {
-    hotAPI.reload("data-v-5b08855e", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 510 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(277),
-  /* template */
-  __webpack_require__(540),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Forms.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Forms.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4cf51c1d", Component.options)
-  } else {
-    hotAPI.reload("data-v-4cf51c1d", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 511 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(278),
-  /* template */
-  __webpack_require__(546),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Modals.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Modals.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-63620e30", Component.options)
-  } else {
-    hotAPI.reload("data-v-63620e30", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 512 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(559)
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(279),
-  /* template */
-  __webpack_require__(548),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/SocialButtons.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] SocialButtons.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6a81bac2", Component.options)
-  } else {
-    hotAPI.reload("data-v-6a81bac2", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 513 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(280),
-  /* template */
-  __webpack_require__(553),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Switches.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Switches.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f9ef1838", Component.options)
-  } else {
-    hotAPI.reload("data-v-f9ef1838", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 514 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(281),
-  /* template */
-  __webpack_require__(547),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/components/Tables.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Tables.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6a797732", Component.options)
-  } else {
-    hotAPI.reload("data-v-6a797732", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 515 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(282),
   /* template */
   null,
   /* scopeId */
@@ -103338,12 +98598,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 516 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(283),
+  __webpack_require__(269),
   /* template */
   null,
   /* scopeId */
@@ -103371,12 +98631,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 517 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(284),
+  __webpack_require__(270),
   /* template */
   null,
   /* scopeId */
@@ -103404,12 +98664,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 518 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(285),
+  __webpack_require__(271),
   /* template */
   null,
   /* scopeId */
@@ -103437,12 +98697,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 519 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(286),
+  __webpack_require__(272),
   /* template */
   null,
   /* scopeId */
@@ -103470,12 +98730,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 520 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(287),
+  __webpack_require__(273),
   /* template */
   null,
   /* scopeId */
@@ -103503,14 +98763,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 521 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(288),
+  __webpack_require__(274),
   /* template */
-  __webpack_require__(537),
+  __webpack_require__(510),
   /* scopeId */
   null,
   /* cssModules */
@@ -103537,14 +98797,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 522 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(289),
+  __webpack_require__(275),
   /* template */
-  __webpack_require__(536),
+  __webpack_require__(509),
   /* scopeId */
   null,
   /* cssModules */
@@ -103571,14 +98831,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 523 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(290),
+  __webpack_require__(276),
   /* template */
-  __webpack_require__(543),
+  __webpack_require__(514),
   /* scopeId */
   null,
   /* cssModules */
@@ -103605,14 +98865,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 524 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(291),
+  __webpack_require__(277),
   /* template */
-  __webpack_require__(552),
+  __webpack_require__(520),
   /* scopeId */
   null,
   /* cssModules */
@@ -103639,14 +98899,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 525 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(292),
+  __webpack_require__(278),
   /* template */
-  __webpack_require__(530),
+  __webpack_require__(504),
   /* scopeId */
   null,
   /* cssModules */
@@ -103673,14 +98933,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 526 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(293),
+  __webpack_require__(279),
   /* template */
-  __webpack_require__(539),
+  __webpack_require__(512),
   /* scopeId */
   null,
   /* cssModules */
@@ -103707,14 +98967,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 527 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(1)(
+var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(294),
+  __webpack_require__(280),
   /* template */
-  __webpack_require__(529),
+  __webpack_require__(503),
   /* scopeId */
   null,
   /* cssModules */
@@ -103741,7 +99001,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 528 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -103919,7 +99179,7 @@ if (false) {
 }
 
 /***/ }),
-/* 529 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -104019,7 +99279,7 @@ if (false) {
 }
 
 /***/ }),
-/* 530 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -104073,7 +99333,7 @@ if (false) {
 }
 
 /***/ }),
-/* 531 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -104088,7 +99348,7 @@ if (false) {
 }
 
 /***/ }),
-/* 532 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -104115,134 +99375,8 @@ if (false) {
 }
 
 /***/ }),
-/* 533 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "card-columns cols-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('line-example')], 1)])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_vm._m(1), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('bar-example')], 1)])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_vm._m(2), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('doughnut-example')], 1)])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_vm._m(3), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('radar-example')], 1)])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_vm._m(4), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('pie-example')], 1)])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_vm._m(5), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "chart-wrapper"
-  }, [_c('polar-area-example')], 1)])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Line Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Bar Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Doughnut Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Radar Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Pie Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n        Polar Area Chart\n        "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    attrs: {
-      "href": "http://www.chartjs.org"
-    }
-  }, [_c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("docs")])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-27cd7008", module.exports)
-  }
-}
-
-/***/ }),
-/* 534 */
+/* 507 */,
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -105605,586 +100739,7 @@ if (false) {
 }
 
 /***/ }),
-/* 535 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Options")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("With Icons")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-star"
-  }), _vm._v("  Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-lightbulb-o"
-  }), _vm._v("  Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-magic"
-  }), _vm._v("  Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-map-marker"
-  }), _vm._v("  Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-rss"
-  }), _vm._v("  Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-link"
-  }), _vm._v("  Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Size Large")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-lg")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Size Small")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-sm")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Disabled state")]), _vm._v(" "), _c('small', [_vm._v("Add this "), _c('code', [_vm._v("disabled=\"disabled\"")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Active state")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".active")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-primary active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Link")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Block Level Buttons")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-block")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-secondary btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-primary btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-link btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Options")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("With Icons")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-star"
-  }), _vm._v("  Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-lightbulb-o"
-  }), _vm._v("  Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-magic"
-  }), _vm._v("  Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-map-marker"
-  }), _vm._v("  Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-rss"
-  }), _vm._v("  Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Size Large")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-lg")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-info btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger btn-lg",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Size Small")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-sm")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-info btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger btn-sm",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Disabled state")]), _vm._v(" "), _c('small', [_vm._v("Add this "), _c('code', [_vm._v("disabled=\"disabled\"")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-info",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger",
-    attrs: {
-      "type": "button",
-      "disabled": "disabled"
-    }
-  }, [_vm._v("Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Active state")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".active")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-primary active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-secondary active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Secondary")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Success")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-info active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Info")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Warning")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger active",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Danger")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Block Level Buttons")]), _vm._v(" "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-block")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-outline-secondary btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-primary btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-success btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-info btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-warning btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-outline-danger btn-lg btn-block",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Block level button")])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-396f0e22", module.exports)
-  }
-}
-
-/***/ }),
-/* 536 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -106945,7 +101500,7 @@ if (false) {
 }
 
 /***/ }),
-/* 537 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -110677,7 +105232,7 @@ if (false) {
 }
 
 /***/ }),
-/* 538 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -110706,7 +105261,7 @@ if (false) {
 }
 
 /***/ }),
-/* 539 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -110760,2262 +105315,7 @@ if (false) {
 }
 
 /***/ }),
-/* 540 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Credit Card")]), _vm._v(" "), _c('small', [_vm._v("Form")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-12"
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "name"
-    }
-  }, [_vm._v("Name")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "name",
-      "placeholder": "Enter your name"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-12"
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "ccnumber"
-    }
-  }, [_vm._v("Credit Card Number")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "ccnumber",
-      "placeholder": "0000 0000 0000 0000"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "form-group col-sm-4"
-  }, [_c('label', {
-    attrs: {
-      "for": "ccmonth"
-    }
-  }, [_vm._v("Month")]), _vm._v(" "), _c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "ccmonth"
-    }
-  }, [_c('option', [_vm._v("1")]), _vm._v(" "), _c('option', [_vm._v("2")]), _vm._v(" "), _c('option', [_vm._v("3")]), _vm._v(" "), _c('option', [_vm._v("4")]), _vm._v(" "), _c('option', [_vm._v("5")]), _vm._v(" "), _c('option', [_vm._v("6")]), _vm._v(" "), _c('option', [_vm._v("7")]), _vm._v(" "), _c('option', [_vm._v("8")]), _vm._v(" "), _c('option', [_vm._v("9")]), _vm._v(" "), _c('option', [_vm._v("10")]), _vm._v(" "), _c('option', [_vm._v("11")]), _vm._v(" "), _c('option', [_vm._v("12")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group col-sm-4"
-  }, [_c('label', {
-    attrs: {
-      "for": "ccyear"
-    }
-  }, [_vm._v("Year")]), _vm._v(" "), _c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "ccyear"
-    }
-  }, [_c('option', [_vm._v("2014")]), _vm._v(" "), _c('option', [_vm._v("2015")]), _vm._v(" "), _c('option', [_vm._v("2016")]), _vm._v(" "), _c('option', [_vm._v("2017")]), _vm._v(" "), _c('option', [_vm._v("2018")]), _vm._v(" "), _c('option', [_vm._v("2019")]), _vm._v(" "), _c('option', [_vm._v("2020")]), _vm._v(" "), _c('option', [_vm._v("2021")]), _vm._v(" "), _c('option', [_vm._v("2022")]), _vm._v(" "), _c('option', [_vm._v("2023")]), _vm._v(" "), _c('option', [_vm._v("2024")]), _vm._v(" "), _c('option', [_vm._v("2025")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "cvv"
-    }
-  }, [_vm._v("CVV/CVC")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "cvv",
-      "placeholder": "123"
-    }
-  })])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Company")]), _vm._v(" "), _c('small', [_vm._v("Form")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "company"
-    }
-  }, [_vm._v("Company")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "company",
-      "placeholder": "Enter your company name"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "vat"
-    }
-  }, [_vm._v("VAT")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "vat",
-      "placeholder": "PL1234567890"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "street"
-    }
-  }, [_vm._v("Street")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "street",
-      "placeholder": "Enter street name"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "form-group col-sm-8"
-  }, [_c('label', {
-    attrs: {
-      "for": "city"
-    }
-  }, [_vm._v("City")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "city",
-      "placeholder": "Enter your city"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group col-sm-4"
-  }, [_c('label', {
-    attrs: {
-      "for": "postal-code"
-    }
-  }, [_vm._v("Postal Code")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "postal-code",
-      "placeholder": "Postal Code"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "country"
-    }
-  }, [_vm._v("Country")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "country",
-      "placeholder": "Country name"
-    }
-  })])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Basic Form")]), _vm._v(" Elements\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post",
-      "enctype": "multipart/form-data"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label"
-  }, [_vm._v("Static")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('p', {
-    staticClass: "form-control-static"
-  }, [_vm._v("Username")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "text-input"
-    }
-  }, [_vm._v("Text Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "text-input",
-      "name": "text-input",
-      "placeholder": "Text"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("This is a help text")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "email-input"
-    }
-  }, [_vm._v("Email Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "email-input",
-      "name": "email-input",
-      "placeholder": "Enter Email"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter your email")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "password-input"
-    }
-  }, [_vm._v("Password")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "password-input",
-      "name": "password-input",
-      "placeholder": "Password"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter a complex password")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "disabled-input"
-    }
-  }, [_vm._v("Disabled Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "disabled-input",
-      "name": "disabled-input",
-      "placeholder": "Disabled",
-      "disabled": ""
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "textarea-input"
-    }
-  }, [_vm._v("Textarea")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('textarea', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "textarea-input",
-      "name": "textarea-input",
-      "rows": "9",
-      "placeholder": "Content.."
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "select"
-    }
-  }, [_vm._v("Select")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "select",
-      "name": "select"
-    }
-  }, [_c('option', {
-    attrs: {
-      "value": "0"
-    }
-  }, [_vm._v("Please select")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "1"
-    }
-  }, [_vm._v("Option #1")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "2"
-    }
-  }, [_vm._v("Option #2")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "3"
-    }
-  }, [_vm._v("Option #3")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "select"
-    }
-  }, [_vm._v("Select Large")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('select', {
-    staticClass: "form-control form-control-lg",
-    attrs: {
-      "id": "select",
-      "name": "select"
-    }
-  }, [_c('option', {
-    attrs: {
-      "value": "0"
-    }
-  }, [_vm._v("Please select")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "1"
-    }
-  }, [_vm._v("Option #1")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "2"
-    }
-  }, [_vm._v("Option #2")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "3"
-    }
-  }, [_vm._v("Option #3")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "select"
-    }
-  }, [_vm._v("Select Small")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('select', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "id": "select",
-      "name": "select"
-    }
-  }, [_c('option', {
-    attrs: {
-      "value": "0"
-    }
-  }, [_vm._v("Please select")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "1"
-    }
-  }, [_vm._v("Option #1")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "2"
-    }
-  }, [_vm._v("Option #2")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "3"
-    }
-  }, [_vm._v("Option #3")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "select"
-    }
-  }, [_vm._v("Disabled Select")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "disabledSelect",
-      "disabled": ""
-    }
-  }, [_c('option', {
-    attrs: {
-      "value": "0"
-    }
-  }, [_vm._v("Please select")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "1"
-    }
-  }, [_vm._v("Option #1")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "2"
-    }
-  }, [_vm._v("Option #2")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "3"
-    }
-  }, [_vm._v("Option #3")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "multiple-select"
-    }
-  }, [_vm._v("Multiple select")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "multiple-select",
-      "name": "multiple-select",
-      "size": "5",
-      "multiple": ""
-    }
-  }, [_c('option', {
-    attrs: {
-      "value": "1"
-    }
-  }, [_vm._v("Option #1")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "2"
-    }
-  }, [_vm._v("Option #2")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "3"
-    }
-  }, [_vm._v("Option #3")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "4"
-    }
-  }, [_vm._v("Option #4")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "5"
-    }
-  }, [_vm._v("Option #5")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "6"
-    }
-  }, [_vm._v("Option #6")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "7"
-    }
-  }, [_vm._v("Option #7")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "8"
-    }
-  }, [_vm._v("Option #8")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "9"
-    }
-  }, [_vm._v("Option #9")]), _vm._v(" "), _c('option', {
-    attrs: {
-      "value": "10"
-    }
-  }, [_vm._v("Option #10")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label"
-  }, [_vm._v("Radios")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('div', {
-    staticClass: "radio"
-  }, [_c('label', {
-    attrs: {
-      "for": "radio1"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "radio1",
-      "name": "radios",
-      "value": "option1"
-    }
-  }), _vm._v(" Option 1\n                  ")])]), _vm._v(" "), _c('div', {
-    staticClass: "radio"
-  }, [_c('label', {
-    attrs: {
-      "for": "radio2"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "radio2",
-      "name": "radios",
-      "value": "option2"
-    }
-  }), _vm._v(" Option 2\n                  ")])]), _vm._v(" "), _c('div', {
-    staticClass: "radio"
-  }, [_c('label', {
-    attrs: {
-      "for": "radio3"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "radio3",
-      "name": "radios",
-      "value": "option3"
-    }
-  }), _vm._v(" Option 3\n                  ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label"
-  }, [_vm._v("Inline Radios")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('label', {
-    staticClass: "radio-inline",
-    attrs: {
-      "for": "inline-radio1"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "inline-radio1",
-      "name": "inline-radios",
-      "value": "option1"
-    }
-  }), _vm._v(" One\n                ")]), _vm._v(" "), _c('label', {
-    staticClass: "radio-inline",
-    attrs: {
-      "for": "inline-radio2"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "inline-radio2",
-      "name": "inline-radios",
-      "value": "option2"
-    }
-  }), _vm._v(" Two\n                ")]), _vm._v(" "), _c('label', {
-    staticClass: "radio-inline",
-    attrs: {
-      "for": "inline-radio3"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "radio",
-      "id": "inline-radio3",
-      "name": "inline-radios",
-      "value": "option3"
-    }
-  }), _vm._v(" Three\n                ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label"
-  }, [_vm._v("Checkboxes")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('div', {
-    staticClass: "checkbox"
-  }, [_c('label', {
-    attrs: {
-      "for": "checkbox1"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "checkbox1",
-      "name": "checkbox1",
-      "value": "option1"
-    }
-  }), _vm._v(" Option 1\n                  ")])]), _vm._v(" "), _c('div', {
-    staticClass: "checkbox"
-  }, [_c('label', {
-    attrs: {
-      "for": "checkbox2"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "checkbox2",
-      "name": "checkbox2",
-      "value": "option2"
-    }
-  }), _vm._v(" Option 2\n                  ")])]), _vm._v(" "), _c('div', {
-    staticClass: "checkbox"
-  }, [_c('label', {
-    attrs: {
-      "for": "checkbox3"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "checkbox3",
-      "name": "checkbox3",
-      "value": "option3"
-    }
-  }), _vm._v(" Option 3\n                  ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label"
-  }, [_vm._v("Inline Checkboxes")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('label', {
-    staticClass: "checkbox-inline",
-    attrs: {
-      "for": "inline-checkbox1"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "inline-checkbox1",
-      "name": "inline-checkbox1",
-      "value": "option1"
-    }
-  }), _vm._v("One\n                ")]), _vm._v(" "), _c('label', {
-    staticClass: "checkbox-inline",
-    attrs: {
-      "for": "inline-checkbox2"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "inline-checkbox2",
-      "name": "inline-checkbox2",
-      "value": "option2"
-    }
-  }), _vm._v("Two\n                ")]), _vm._v(" "), _c('label', {
-    staticClass: "checkbox-inline",
-    attrs: {
-      "for": "inline-checkbox3"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "checkbox",
-      "id": "inline-checkbox3",
-      "name": "inline-checkbox3",
-      "value": "option3"
-    }
-  }), _vm._v("Three\n                ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "file-input"
-    }
-  }, [_vm._v("File input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    attrs: {
-      "type": "file",
-      "id": "file-input",
-      "name": "file-input"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "file-multiple-input"
-    }
-  }, [_vm._v("Multiple File input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    attrs: {
-      "type": "file",
-      "id": "file-multiple-input",
-      "name": "file-multiple-input",
-      "multiple": ""
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Inline")]), _vm._v(" Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-inline",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "exampleInputName2"
-    }
-  }, [_vm._v("Name")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "exampleInputName2",
-      "placeholder": "Jane Doe"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "exampleInputEmail2"
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "exampleInputEmail2",
-      "placeholder": "jane.doe@example.com"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Horizontal")]), _vm._v(" Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "hf-email"
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "hf-email",
-      "name": "hf-email",
-      "placeholder": "Enter Email.."
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter your email")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-md-3 form-control-label",
-    attrs: {
-      "for": "hf-password"
-    }
-  }, [_vm._v("Password")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "hf-password",
-      "name": "hf-password",
-      "placeholder": "Enter Password.."
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter your password")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Normal")]), _vm._v(" Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "nf-email"
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "nf-email",
-      "name": "nf-email",
-      "placeholder": "Enter Email.."
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter your email")])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "nf-password"
-    }
-  }, [_vm._v("Password")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "nf-password",
-      "name": "nf-password",
-      "placeholder": "Enter Password.."
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Please enter your password")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Input "), _c('strong', [_vm._v("Grid")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-3"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-3"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-4"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-5"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-5"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-6"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-7"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-7"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-8"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-8"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-9"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-9"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-10"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-10"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-11"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-11"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-sm-12"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-sm-12"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-user"
-  }), _vm._v(" Login")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Input "), _c('strong', [_vm._v("Sizes")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-sm-3 form-control-label",
-    attrs: {
-      "for": "input-small"
-    }
-  }, [_vm._v("Small Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('input', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "type": "text",
-      "id": "input-small",
-      "name": "input-small",
-      "placeholder": ".form-control-sm"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-sm-3 form-control-label",
-    attrs: {
-      "for": "input-normal"
-    }
-  }, [_vm._v("Normal Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input-normal",
-      "name": "input-normal",
-      "placeholder": "Normal"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('label', {
-    staticClass: "col-sm-3 form-control-label",
-    attrs: {
-      "for": "input-large"
-    }
-  }, [_vm._v("Large Input")]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('input', {
-    staticClass: "form-control form-control-lg",
-    attrs: {
-      "type": "text",
-      "id": "input-large",
-      "name": "input-large",
-      "placeholder": ".form-control-lg"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Validation states")]), _vm._v(" Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "form-group has-success"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputSuccess1"
-    }
-  }, [_vm._v("Input with success")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "inputSuccess1"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group has-warning"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputWarning1"
-    }
-  }, [_vm._v("Input with warning")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "inputWarning1"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group has-danger"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputError1"
-    }
-  }, [_vm._v("Input with error")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "inputError1"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Validation states")]), _vm._v(" with optional icons\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "form-group has-success"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputSuccess2"
-    }
-  }, [_vm._v("Input with success")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-success",
-    attrs: {
-      "type": "text",
-      "id": "inputSuccess2"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group has-warning"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputWarning2"
-    }
-  }, [_vm._v("Input with warning")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-warning",
-    attrs: {
-      "type": "text",
-      "id": "inputWarning2"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group has-danger has-feedback"
-  }, [_c('label', {
-    staticClass: "form-form-control-label",
-    attrs: {
-      "for": "inputError2"
-    }
-  }, [_vm._v("Input with error")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-danger",
-    attrs: {
-      "type": "text",
-      "id": "inputError2"
-    }
-  })])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Icon/Text")]), _vm._v(" Groups\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-user"
-  })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input1-group1",
-      "name": "input1-group1",
-      "placeholder": "Username"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "input2-group1",
-      "name": "input2-group1",
-      "placeholder": "Email"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-envelope-o"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-euro"
-  })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input3-group1",
-      "name": "input3-group1",
-      "placeholder": ".."
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(".00")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Buttons")]), _vm._v(" Groups\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-search"
-  }), _vm._v(" Search")])]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input1-group2",
-      "name": "input1-group2",
-      "placeholder": "Username"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "input2-group2",
-      "name": "input2-group2",
-      "placeholder": "Email"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Submit")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-facebook"
-  })])]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input3-group2",
-      "name": "input3-group2",
-      "placeholder": "Search"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-twitter"
-  })])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Dropdowns")]), _vm._v(" Groups\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('div', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary dropdown-toggle",
-    attrs: {
-      "type": "button",
-      "data-toggle": "dropdown"
-    }
-  }, [_vm._v("Action "), _c('span', {
-    staticClass: "caret"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-menu"
-  }, [_c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Another action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Something else here")]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-divider",
-    attrs: {
-      "role": "separator"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Separated link")])])]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input1-group3",
-      "name": "input1-group3",
-      "placeholder": "Username"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "input2-group3",
-      "name": "input2-group3",
-      "placeholder": "Email"
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary dropdown-toggle",
-    attrs: {
-      "type": "button",
-      "data-toggle": "dropdown"
-    }
-  }, [_vm._v("Action "), _c('span', {
-    staticClass: "caret"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-menu dropdown-menu-right"
-  }, [_c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Another action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Something else here")]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-divider",
-    attrs: {
-      "role": "separator"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Separated link")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('div', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-primary dropdown-toggle dropdown-toggle-split",
-    attrs: {
-      "type": "button",
-      "data-toggle": "dropdown"
-    }
-  }, [_c('span', {
-    staticClass: "caret"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-menu"
-  }, [_c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Another action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Something else here")]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-divider",
-    attrs: {
-      "role": "separator"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Separated link")])])]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "input3-group3",
-      "name": "input3-group3",
-      "placeholder": ".."
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-primary dropdown-toggle",
-    attrs: {
-      "type": "button",
-      "data-toggle": "dropdown"
-    }
-  }, [_c('span', {
-    staticClass: "caret"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-menu dropdown-menu-right"
-  }, [_c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Another action")]), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Something else here")]), _vm._v(" "), _c('div', {
-    staticClass: "dropdown-divider",
-    attrs: {
-      "role": "separator"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "dropdown-item",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Separated link")])])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-dot-circle-o"
-  }), _vm._v(" Submit")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "reset"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-ban"
-  }), _vm._v(" Reset")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Use the grid for big devices! "), _c('small', [_c('code', [_vm._v(".col-lg-*")]), _vm._v(" "), _c('code', [_vm._v(".col-md-*")]), _vm._v(" "), _c('code', [_vm._v(".col-sm-*")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-8"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-8"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-4"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-4"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-7"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-7"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-5"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-5"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-6"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-6"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-5"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-5"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-7"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-7"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-md-4"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-4"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-8"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-md-8"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-info",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Input Grid for small devices! "), _c('small', [_c('code', [_vm._v(".col-*")])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal ",
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-4"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-4"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-8"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-8"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-5"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-5"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-7"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-7"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-6"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-6"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-6"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-7"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-5"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-5"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-5"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-8"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-8"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "col-4"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": ".col-4"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-danger",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-warning",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-info",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Action")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Example Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("Username")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "username3",
-      "name": "username3"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-user"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "email3",
-      "name": "email3"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-envelope"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("Password")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "password3",
-      "name": "password3"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-asterisk"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group form-actions"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Submit")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Example Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "username2",
-      "name": "username2",
-      "placeholder": "Username"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-user"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "email2",
-      "name": "email2",
-      "placeholder": "Email"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-envelope"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "password2",
-      "name": "password2",
-      "placeholder": "Password"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-asterisk"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group form-actions"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-default",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Submit")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Example Form\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    attrs: {
-      "action": "",
-      "method": "post"
-    }
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-user"
-  })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": "username",
-      "name": "username",
-      "placeholder": "Username"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-envelope"
-  })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "id": "email",
-      "name": "email",
-      "placeholder": "Email"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_c('i', {
-    staticClass: "fa fa-asterisk"
-  })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "id": "password",
-      "name": "password",
-      "placeholder": "Password"
-    }
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group form-actions"
-  }, [_c('button', {
-    staticClass: "btn btn-sm btn-success",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Submit")])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-edit"
-  }), _vm._v("Form Elements\n          "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    staticClass: "btn-setting",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-settings"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "btn-minimize",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-arrow-up"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "btn-close",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-close"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('form', {
-    staticClass: "form-horizontal"
-  }, [_c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    staticClass: "form-control-label",
-    attrs: {
-      "for": "prependedInput"
-    }
-  }, [_vm._v("Prepended text")]), _vm._v(" "), _c('div', {
-    staticClass: "controls"
-  }, [_c('div', {
-    staticClass: "input-prepend input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("@")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "prependedInput",
-      "size": "16",
-      "type": "text"
-    }
-  })]), _vm._v(" "), _c('p', {
-    staticClass: "help-block"
-  }, [_vm._v("Here's some help text")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    staticClass: "form-control-label",
-    attrs: {
-      "for": "appendedInput"
-    }
-  }, [_vm._v("Appended text")]), _vm._v(" "), _c('div', {
-    staticClass: "controls"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "appendedInput",
-      "size": "16",
-      "type": "text"
-    }
-  }), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(".00")])]), _vm._v(" "), _c('span', {
-    staticClass: "help-block"
-  }, [_vm._v("Here's more help text")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    staticClass: "form-control-label",
-    attrs: {
-      "for": "appendedPrependedInput"
-    }
-  }, [_vm._v("Append and prepend")]), _vm._v(" "), _c('div', {
-    staticClass: "controls"
-  }, [_c('div', {
-    staticClass: "input-prepend input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("$")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "appendedPrependedInput",
-      "size": "16",
-      "type": "text"
-    }
-  }), _c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(".00")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    staticClass: "form-control-label",
-    attrs: {
-      "for": "appendedInputButton"
-    }
-  }, [_vm._v("Append with button")]), _vm._v(" "), _c('div', {
-    staticClass: "controls"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "appendedInputButton",
-      "size": "16",
-      "type": "text"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-default",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Go!")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    staticClass: "form-control-label",
-    attrs: {
-      "for": "appendedInputButtons"
-    }
-  }, [_vm._v("Two-button append")]), _vm._v(" "), _c('div', {
-    staticClass: "controls"
-  }, [_c('div', {
-    staticClass: "input-group"
-  }, [_c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "id": "appendedInputButtons",
-      "size": "16",
-      "type": "text"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "input-group-btn"
-  }, [_c('button', {
-    staticClass: "btn btn-default",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Search")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-default",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Options")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-actions"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Save changes")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-default",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Cancel")])])])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4cf51c1d", module.exports)
-  }
-}
-
-/***/ }),
-/* 541 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -113037,158 +105337,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" Dashboard "), _c('span', {
     staticClass: "badge badge-info"
   }, [_vm._v("NEW")])])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-title"
-  }, [_vm._v("\n        UI Elements\n      ")]), _vm._v(" "), _c('router-link', {
-    staticClass: "nav-item nav-dropdown",
-    attrs: {
-      "tag": "li",
-      "to": {
-        path: '/components'
-      },
-      "disabled": ""
-    }
-  }, [_c('div', {
-    staticClass: "nav-link nav-dropdown-toggle",
-    on: {
-      "click": _vm.handleClick
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Components")]), _vm._v(" "), _c('ul', {
-    staticClass: "nav-dropdown-items"
-  }, [_c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/buttons',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Buttons")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/social-buttons',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Social Buttons")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/cards',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Cards")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/forms',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Forms")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/modals',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Modals")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/switches',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Switches")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/components/tables',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-puzzle"
-  }), _vm._v(" Tables")])], 1)])]), _vm._v(" "), _c('router-link', {
-    staticClass: "nav-item nav-dropdown",
-    attrs: {
-      "tag": "li",
-      "to": {
-        path: '/icons'
-      },
-      "disabled": ""
-    }
-  }, [_c('div', {
-    staticClass: "nav-link nav-dropdown-toggle",
-    on: {
-      "click": _vm.handleClick
-    }
-  }, [_c('i', {
-    staticClass: "icon-star"
-  }), _vm._v(" Icons")]), _vm._v(" "), _c('ul', {
-    staticClass: "nav-dropdown-items"
-  }, [_c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/icons/font-awesome',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-star"
-  }), _vm._v(" Font Awesome")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/icons/simple-line-icons',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-star"
-  }), _vm._v(" Simple Line Icons")])], 1)])]), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/widgets',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-calculator"
-  }), _vm._v(" Widgets "), _c('span', {
-    staticClass: "badge badge-info"
-  }, [_vm._v("NEW")])])], 1), _vm._v(" "), _c('li', {
-    staticClass: "nav-item"
-  }, [_c('router-link', {
-    staticClass: "nav-link",
-    attrs: {
-      "to": '/charts',
-      "exact": ""
-    }
-  }, [_c('i', {
-    staticClass: "icon-pie-chart"
-  }), _vm._v(" Charts")])], 1), _vm._v(" "), _c('li', {
-    staticClass: "divider"
-  }), _vm._v(" "), _c('li', {
     staticClass: "nav-title"
   }, [_vm._v("\n        Extras\n      ")]), _vm._v(" "), _c('router-link', {
     staticClass: "nav-item nav-dropdown",
@@ -113297,313 +105445,7 @@ if (false) {
 }
 
 /***/ }),
-/* 542 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer"
-  }, [_vm._v("Card footer")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-check"
-  }), _vm._v("Card with icon\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with switch\n          "), _c('label', {
-    staticClass: "switch switch-sm switch-text switch-info float-right mb-0"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with label\n          "), _c('span', {
-    staticClass: "badge badge-success float-right"
-  }, [_vm._v("Success")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with label\n          "), _c('span', {
-    staticClass: "badge badge-pill badge-danger float-right"
-  }, [_vm._v("42")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-primary"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-secondary"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-success"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-info"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-warning"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-outline-danger"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-primary"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-secondary"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-success"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-info"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-warning"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-accent-danger"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card with accent\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-primary text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-success text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-info text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-warning text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-danger text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-primary text-center"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('blockquote', {
-    staticClass: "card-blockquote"
-  }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.")]), _vm._v(" "), _c('footer', [_vm._v("Someone famous in\n              "), _c('cite', {
-    attrs: {
-      "title": "Source Title"
-    }
-  }, [_vm._v("Source Title")])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-primary"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-success"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-info"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-warning"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-4"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-danger"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Card title\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_vm._v("\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\n        ")])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5b08855e", module.exports)
-  }
-}
-
-/***/ }),
-/* 543 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -113629,8 +105471,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "fa fa-plus"
   }), _vm._v("Tambah")]), _vm._v(" "), _c('table', {
     staticClass: "table table-bordered table-striped table-condensed"
-  }, [_vm._m(1), _vm._v(" "), _c('tbody', _vm._l((_vm.list), function(task, index) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.file))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.keterangan))]), _vm._v(" "), _c('td', [_c('button', {
+  }, [_vm._m(1), _vm._v(" "), _c('tbody', _vm._l((_vm.list.data), function(task, index) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(index + _vm.list.pagination.from))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.file))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.keterangan))]), _vm._v(" "), _c('td', [_c('button', {
       staticClass: "btn btn-primary",
       attrs: {
         "type": "button"
@@ -113652,7 +105494,46 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('i', {
       staticClass: "fa fa-trash"
     })])])])
-  }))]), _vm._v(" "), _vm._m(2)])])]), _vm._v(" "), _c('modal', {
+  }))]), _vm._v(" "), _c('nav', [_c('ul', {
+    staticClass: "pagination"
+  }, [(_vm.pagination.current_page > 1) ? _c('li', {
+    staticClass: "page-item"
+  }, [_c('a', {
+    staticClass: "page-link",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.fetchMititiList(_vm.pagination.current_page - 1)
+      }
+    }
+  }, [_vm._v("Prev")])]) : _vm._e(), _vm._v(" "), _vm._l((_vm.pagination.last_page), function(page) {
+    return _c('li', {
+      class: [page == _vm.pagination.current_page ? 'active' : '']
+    }, [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.fetchMititiList(page)
+        }
+      }
+    }, [_vm._v(_vm._s(page))])])
+  }), _vm._v(" "), (_vm.pagination.current_page < _vm.pagination.last_page) ? _c('li', {
+    staticClass: "page-item"
+  }, [_c('a', {
+    staticClass: "page-link",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.fetchMititiList(_vm.pagination.current_page + 1)
+      }
+    }
+  }, [_vm._v("Next")])]) : _vm._e()], 2)])])])]), _vm._v(" "), _c('modal', {
     staticClass: "modal-primary",
     attrs: {
       "title": "Modal title",
@@ -113745,52 +105626,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" Tips N Trik Table\n      ")])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('thead', [_c('tr', [_c('th', [_vm._v("No")]), _vm._v(" "), _c('th', [_vm._v("File")]), _vm._v(" "), _c('th', [_vm._v("Keterangan")]), _vm._v(" "), _c('th', [_vm._v("Action")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', [_c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -113801,927 +105636,8 @@ if (false) {
 }
 
 /***/ }),
-/* 544 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("89.9%")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-success",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("12.124")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-info",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("$98.111,00")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-warning",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("2 TB")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-danger",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-primary"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("89.9%")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-warning"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("12.124")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-danger"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("$98.111,00")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-info"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h4 m-0"
-  }, [_vm._v("2 TB")]), _vm._v(" "), _c('div', [_vm._v("Lorem ipsum...")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs my-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted"
-  }, [_vm._v("Lorem ipsum dolor sit amet enim.")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-cogs bg-primary p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-primary mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-laptop bg-info p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-info mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-moon-o bg-warning p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-warning mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-bell bg-danger p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-danger mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-cogs bg-primary p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-primary mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer px-1 py-h"
-  }, [_c('a', {
-    staticClass: "font-weight-bold font-xs btn-block text-muted",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("View More "), _c('i', {
-    staticClass: "fa fa-angle-right float-right font-lg"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-laptop bg-info p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-info mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer px-1 py-h"
-  }, [_c('a', {
-    staticClass: "font-weight-bold font-xs btn-block text-muted",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("View More "), _c('i', {
-    staticClass: "fa fa-angle-right float-right font-lg"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-moon-o bg-warning p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-warning mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer px-1 py-h"
-  }, [_c('a', {
-    staticClass: "font-weight-bold font-xs btn-block text-muted",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("View More "), _c('i', {
-    staticClass: "fa fa-angle-right float-right font-lg"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-1 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-bell bg-danger p-1 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-danger mb-0 mt-h"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])]), _vm._v(" "), _c('div', {
-    staticClass: "card-footer px-1 py-h"
-  }, [_c('a', {
-    staticClass: "font-weight-bold font-xs btn-block text-muted",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("View More "), _c('i', {
-    staticClass: "fa fa-angle-right float-right font-lg"
-  })])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-cogs bg-primary p-2 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-primary mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-laptop bg-info p-2 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-info mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-moon-o bg-warning p-2 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-warning mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-bell bg-danger p-2 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-danger mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-cogs bg-primary p-2 px-3 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-primary mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-laptop bg-info p-2 px-3 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-info mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-moon-o bg-warning p-2 px-3 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-warning mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-6 col-lg-3"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block p-0 clearfix"
-  }, [_c('i', {
-    staticClass: "fa fa-bell bg-danger p-2 px-3 font-2xl mr-1 float-left"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "h5 text-danger mb-0 pt-1"
-  }, [_vm._v("$1.999,50")]), _vm._v(" "), _c('div', {
-    staticClass: "text-muted text-uppercase font-weight-bold font-xs"
-  }, [_vm._v("Income")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-3 col-sm-6"
-  }, [_c('div', {
-    staticClass: "social-box facebook"
-  }, [_c('i', {
-    staticClass: "fa fa-facebook"
-  }), _vm._v(" "), _c('ul', [_c('li', [_c('strong', [_vm._v("89k")]), _vm._v(" "), _c('span', [_vm._v("friends")])]), _vm._v(" "), _c('li', [_c('strong', [_vm._v("459")]), _vm._v(" "), _c('span', [_vm._v("feeds")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-3 col-sm-6"
-  }, [_c('div', {
-    staticClass: "social-box twitter"
-  }, [_c('i', {
-    staticClass: "fa fa-twitter"
-  }), _vm._v(" "), _c('ul', [_c('li', [_c('strong', [_vm._v("973k")]), _vm._v(" "), _c('span', [_vm._v("followers")])]), _vm._v(" "), _c('li', [_c('strong', [_vm._v("1.792")]), _vm._v(" "), _c('span', [_vm._v("tweets")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-3 col-sm-6"
-  }, [_c('div', {
-    staticClass: "social-box linkedin"
-  }, [_c('i', {
-    staticClass: "fa fa-linkedin"
-  }), _vm._v(" "), _c('ul', [_c('li', [_c('strong', [_vm._v("500+")]), _vm._v(" "), _c('span', [_vm._v("contacts")])]), _vm._v(" "), _c('li', [_c('strong', [_vm._v("292")]), _vm._v(" "), _c('span', [_vm._v("feeds")])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-3 col-sm-6"
-  }, [_c('div', {
-    staticClass: "social-box google-plus"
-  }, [_c('i', {
-    staticClass: "fa fa-google-plus"
-  }), _vm._v(" "), _c('ul', [_c('li', [_c('strong', [_vm._v("894")]), _vm._v(" "), _c('span', [_vm._v("followers")])]), _vm._v(" "), _c('li', [_c('strong', [_vm._v("92")]), _vm._v(" "), _c('span', [_vm._v("circles")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-group"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-people"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("87.500")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-info",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-user-follow"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("385")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("New Clients")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-success",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-basket-loaded"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("1238")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Products sold")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-warning",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-pie-chart"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("28%")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Returning Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-speedometer"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("5:34:11")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Avg. Time")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-danger",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-people"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("87.500")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-info",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-user-follow"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("385")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("New Clients")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-success",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-basket-loaded"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("1238")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Products sold")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-warning",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-pie-chart"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("28%")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Returning Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-speedometer"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("5:34:11")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Avg. Time")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-danger",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-speech"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("972")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Comments")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-xs mt-1 mb-0"
-  }, [_c('div', {
-    staticClass: "progress-bar bg-info",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-info"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-people"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("87.500")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-success"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-user-follow"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("385")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("New Clients")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-warning"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-basket-loaded"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("1238")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Products sold")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-primary"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-pie-chart"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("28%")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Returning Visitors")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-danger"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-speedometer"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("5:34:11")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Avg. Time")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-6 col-md-2"
-  }, [_c('div', {
-    staticClass: "card card-inverse card-info"
-  }, [_c('div', {
-    staticClass: "card-block"
-  }, [_c('div', {
-    staticClass: "h1 text-muted text-right mb-2"
-  }, [_c('i', {
-    staticClass: "icon-speech"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "h4 mb-0"
-  }, [_vm._v("972")]), _vm._v(" "), _c('small', {
-    staticClass: "text-muted text-uppercase font-weight-bold"
-  }, [_vm._v("Comments")]), _vm._v(" "), _c('div', {
-    staticClass: "progress progress-white progress-xs mt-1"
-  }, [_c('div', {
-    staticClass: "progress-bar",
-    staticStyle: {
-      "width": "25%"
-    },
-    attrs: {
-      "role": "progressbar",
-      "aria-valuenow": "25",
-      "aria-valuemin": "0",
-      "aria-valuemax": "100"
-    }
-  })])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5f3a8018", module.exports)
-  }
-}
-
-/***/ }),
-/* 545 */
+/* 515 */,
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -114806,1945 +105722,7 @@ if (false) {
 }
 
 /***/ }),
-/* 546 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "wrapper"
-  }, [_c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.myModal = true
-      }
-    }
-  }, [_vm._v("Launch demo modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.largeModal = true
-      }
-    }
-  }, [_vm._v("Launch large modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-secondary",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.smallModal = true
-      }
-    }
-  }, [_vm._v("Launch small modal")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.primaryModal = true
-      }
-    }
-  }, [_vm._v("Launch primary modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.successModal = true
-      }
-    }
-  }, [_vm._v("Launch success modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-warning",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.warningModal = true
-      }
-    }
-  }, [_vm._v("Launch warning modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-danger",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.dangerModal = true
-      }
-    }
-  }, [_vm._v("Launch danger modal")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-info",
-    attrs: {
-      "type": "button"
-    },
-    on: {
-      "click": function($event) {
-        _vm.infoModal = true
-      }
-    }
-  }, [_vm._v("Launch info modal")])])])])])]), _vm._v(" "), _c('modal', {
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.myModal = false
-      }
-    },
-    model: {
-      value: (_vm.myModal),
-      callback: function($$v) {
-        _vm.myModal = $$v
-      },
-      expression: "myModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    attrs: {
-      "title": "Modal title",
-      "large": "",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.largeModal = false
-      }
-    },
-    model: {
-      value: (_vm.largeModal),
-      callback: function($$v) {
-        _vm.largeModal = $$v
-      },
-      expression: "largeModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    attrs: {
-      "title": "Modal title",
-      "small": "",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.smallModal = false
-      }
-    },
-    model: {
-      value: (_vm.smallModal),
-      callback: function($$v) {
-        _vm.smallModal = $$v
-      },
-      expression: "smallModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    staticClass: "modal-primary",
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.primaryModal = false
-      }
-    },
-    model: {
-      value: (_vm.primaryModal),
-      callback: function($$v) {
-        _vm.primaryModal = $$v
-      },
-      expression: "primaryModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    staticClass: "modal-success",
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.successModal = false
-      }
-    },
-    model: {
-      value: (_vm.successModal),
-      callback: function($$v) {
-        _vm.successModal = $$v
-      },
-      expression: "successModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    staticClass: "modal-warning",
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.warningModal = false
-      }
-    },
-    model: {
-      value: (_vm.warningModal),
-      callback: function($$v) {
-        _vm.warningModal = $$v
-      },
-      expression: "warningModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    staticClass: "modal-danger",
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.dangerModal = false
-      }
-    },
-    model: {
-      value: (_vm.dangerModal),
-      callback: function($$v) {
-        _vm.dangerModal = $$v
-      },
-      expression: "dangerModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")]), _vm._v(" "), _c('modal', {
-    staticClass: "modal-info",
-    attrs: {
-      "title": "Modal title",
-      "effect": "fade/zoom"
-    },
-    on: {
-      "ok": function($event) {
-        _vm.infoModal = false
-      }
-    },
-    model: {
-      value: (_vm.infoModal),
-      callback: function($$v) {
-        _vm.infoModal = $$v
-      },
-      expression: "infoModal"
-    }
-  }, [_c('div', {
-    staticClass: "modal-header",
-    attrs: {
-      "slot": "modal-header"
-    },
-    slot: "modal-header"
-  }, [_c('h4', {
-    staticClass: "modal-title"
-  }, [_vm._v("Modal title")])]), _vm._v("\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  ")])], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Bootstrap Modals\n          ")])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-63620e30", module.exports)
-  }
-}
-
-/***/ }),
-/* 547 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Simple Table\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('table', {
-    staticClass: "table"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Username")]), _vm._v(" "), _c('th', [_vm._v("Date registered")]), _vm._v(" "), _c('th', [_vm._v("Role")]), _vm._v(" "), _c('th', [_vm._v("Status")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Samppa Nori")]), _vm._v(" "), _c('td', [_vm._v("2012/01/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Estavan Lykos")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-danger"
-  }, [_vm._v("Banned")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Chetan Mohamed")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Admin")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-default"
-  }, [_vm._v("Inactive")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Derick Maximinus")]), _vm._v(" "), _c('td', [_vm._v("2012/03/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-warning"
-  }, [_vm._v("Pending")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Friderik Dávid")]), _vm._v(" "), _c('td', [_vm._v("2012/01/21")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])])])]), _vm._v(" "), _c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-lg-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Striped Table\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('table', {
-    staticClass: "table table-striped"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Username")]), _vm._v(" "), _c('th', [_vm._v("Date registered")]), _vm._v(" "), _c('th', [_vm._v("Role")]), _vm._v(" "), _c('th', [_vm._v("Status")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Yiorgos Avraamu")]), _vm._v(" "), _c('td', [_vm._v("2012/01/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Avram Tarasios")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-danger"
-  }, [_vm._v("Banned")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Quintin Ed")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Admin")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-default"
-  }, [_vm._v("Inactive")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Enéas Kwadwo")]), _vm._v(" "), _c('td', [_vm._v("2012/03/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-warning"
-  }, [_vm._v("Pending")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Agapetus Tadeáš")]), _vm._v(" "), _c('td', [_vm._v("2012/01/21")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])])])]), _vm._v(" "), _c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Condensed Table\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('table', {
-    staticClass: "table table-condensed"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Username")]), _vm._v(" "), _c('th', [_vm._v("Date registered")]), _vm._v(" "), _c('th', [_vm._v("Role")]), _vm._v(" "), _c('th', [_vm._v("Status")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Carwyn Fachtna")]), _vm._v(" "), _c('td', [_vm._v("2012/01/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Nehemiah Tatius")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-danger"
-  }, [_vm._v("Banned")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Ebbe Gemariah")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Admin")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-default"
-  }, [_vm._v("Inactive")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Eustorgios Amulius")]), _vm._v(" "), _c('td', [_vm._v("2012/03/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-warning"
-  }, [_vm._v("Pending")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Leopold Gáspár")]), _vm._v(" "), _c('td', [_vm._v("2012/01/21")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])])])]), _vm._v(" "), _c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-lg-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Bordered Table\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('table', {
-    staticClass: "table table-bordered"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Username")]), _vm._v(" "), _c('th', [_vm._v("Date registered")]), _vm._v(" "), _c('th', [_vm._v("Role")]), _vm._v(" "), _c('th', [_vm._v("Status")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Pompeius René")]), _vm._v(" "), _c('td', [_vm._v("2012/01/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Paĉjo Jadon")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-danger"
-  }, [_vm._v("Banned")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Micheal Mercurius")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Admin")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-default"
-  }, [_vm._v("Inactive")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Ganesha Dubhghall")]), _vm._v(" "), _c('td', [_vm._v("2012/03/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-warning"
-  }, [_vm._v("Pending")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Hiroto Šimun")]), _vm._v(" "), _c('td', [_vm._v("2012/01/21")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])])])]), _vm._v(" "), _c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('i', {
-    staticClass: "fa fa-align-justify"
-  }), _vm._v(" Combined All Table\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('table', {
-    staticClass: "table table-bordered table-striped table-condensed"
-  }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Username")]), _vm._v(" "), _c('th', [_vm._v("Date registered")]), _vm._v(" "), _c('th', [_vm._v("Role")]), _vm._v(" "), _c('th', [_vm._v("Status")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Vishnu Serghei")]), _vm._v(" "), _c('td', [_vm._v("2012/01/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Zbyněk Phoibos")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-danger"
-  }, [_vm._v("Banned")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Einar Randall")]), _vm._v(" "), _c('td', [_vm._v("2012/02/01")]), _vm._v(" "), _c('td', [_vm._v("Admin")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-default"
-  }, [_vm._v("Inactive")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Félix Troels")]), _vm._v(" "), _c('td', [_vm._v("2012/03/01")]), _vm._v(" "), _c('td', [_vm._v("Member")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-warning"
-  }, [_vm._v("Pending")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Aulus Agmundr")]), _vm._v(" "), _c('td', [_vm._v("2012/01/21")]), _vm._v(" "), _c('td', [_vm._v("Staff")]), _vm._v(" "), _c('td', [_c('span', {
-    staticClass: "badge badge-success"
-  }, [_vm._v("Active")])])])])]), _vm._v(" "), _c('nav', [_c('ul', {
-    staticClass: "pagination"
-  }, [_c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Prev")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item active"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("1")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("2")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("3")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("4")])]), _vm._v(" "), _c('li', {
-    staticClass: "page-item"
-  }, [_c('a', {
-    staticClass: "page-link",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("Next")])])])])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6a797732", module.exports)
-  }
-}
-
-/***/ }),
-/* 548 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Social Media Button")]), _vm._v(" "), _c('small', [_vm._v("Usage ex.")]), _c('code', {
-    staticStyle: {
-      "text-transform": "lowercase"
-    }
-  }, [_vm._v("<button class=\"btn btn-facebook\"><span>Facebook</span></button>")]), _vm._v(" "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    staticClass: "btn-setting",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-settings"
-  })]), _vm._v(" "), _c('button', {
-    staticClass: "btn-minimize",
-    attrs: {
-      "type": "button",
-      "data-toggle": "collapse",
-      "data-target": "",
-      "aria-expanded": "false",
-      "aria-controls": "collapseExample"
-    }
-  }, [_c('i', {
-    staticClass: "icon-arrow-up"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "btn-close",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-close"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('h6', [_vm._v("Size Small "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-sm")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-sm btn-facebook",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-twitter",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-linkedin",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-flickr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-tumblr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-xing",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-github",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-html5",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-openid",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-stack-overflow",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-css3",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-youtube",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dribbble",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-google-plus",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-instagram",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-pinterest",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vk",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-yahoo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-behance",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dropbox",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-reddit",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-spotify",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vine",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-foursquare",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vimeo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Normal")]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-facebook",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-twitter",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-linkedin",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-flickr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-tumblr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-xing",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-github",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-html5",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-openid",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-stack-overflow",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-css3",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-youtube",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dribbble",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-google-plus",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-instagram",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-pinterest",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vk",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-yahoo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-behance",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dropbox",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-reddit",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-spotify",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vine",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-foursquare",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vimeo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Large "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-lg")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-lg btn-facebook",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-twitter",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-linkedin",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-flickr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-tumblr",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-xing",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-github",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-html5",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-openid",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-stack-overflow",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-css3",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-youtube",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dribbble",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-google-plus",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-instagram",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-pinterest",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vk",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-yahoo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-behance",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dropbox",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-reddit",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-spotify",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vine",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-foursquare",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vimeo",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Social Media Button")]), _vm._v(" "), _c('small', [_vm._v("Only icons. Usage ex.")]), _vm._v(" "), _c('code', {
-    staticStyle: {
-      "text-transform": "lowercase"
-    }
-  }, [_vm._v("<button class=\"btn btn-facebook icon\"><span>Facebook</span></button>")]), _vm._v(" "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    staticClass: "btn-setting",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-settings"
-  })]), _vm._v(" "), _c('button', {
-    staticClass: "btn-minimize",
-    attrs: {
-      "type": "button",
-      "data-toggle": "collapse",
-      "data-target": "",
-      "aria-expanded": "false",
-      "aria-controls": "collapseExample"
-    }
-  }, [_c('i', {
-    staticClass: "icon-arrow-up"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "btn-close",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-close"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('h6', [_vm._v("Size Small "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-sm")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-sm btn-facebook icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-twitter icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-linkedin icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-flickr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-tumblr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-xing icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-github icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-html5 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-openid icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-stack-overflow icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-css3 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-youtube icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dribbble icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-google-plus icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-instagram icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-pinterest icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vk icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-yahoo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-behance icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dropbox icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-reddit icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-spotify icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vine icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-foursquare icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vimeo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Normal")]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-facebook icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-twitter icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-linkedin icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-flickr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-tumblr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-xing icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-github icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-html5 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-openid icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-stack-overflow icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-css3 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-youtube icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dribbble icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-google-plus icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-instagram icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-pinterest icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vk icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-yahoo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-behance icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dropbox icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-reddit icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-spotify icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vine icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-foursquare icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vimeo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Large "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-lg")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-lg btn-facebook icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-twitter icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-linkedin icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-flickr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-tumblr icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-xing icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-github icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-html5 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-openid icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-stack-overflow icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-css3 icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-youtube icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dribbble icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-google-plus icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-instagram icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-pinterest icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vk icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-yahoo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-behance icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dropbox icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-reddit icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-spotify icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vine icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-foursquare icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vimeo icon",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_c('strong', [_vm._v("Social Media Button")]), _vm._v(" "), _c('small', [_vm._v("Only text. Usage ex.")]), _vm._v(" "), _c('code', {
-    staticStyle: {
-      "text-transform": "lowercase"
-    }
-  }, [_vm._v("<button class=\"btn btn-facebook text\"><span>Facebook</span></button>")]), _vm._v(" "), _c('div', {
-    staticClass: "card-actions"
-  }, [_c('a', {
-    staticClass: "btn-setting",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-settings"
-  })]), _vm._v(" "), _c('button', {
-    staticClass: "btn-minimize",
-    attrs: {
-      "type": "button",
-      "data-toggle": "collapse",
-      "data-target": "",
-      "aria-expanded": "false",
-      "aria-controls": "collapseExample"
-    }
-  }, [_c('i', {
-    staticClass: "icon-arrow-up"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "btn-close",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "icon-close"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('h6', [_vm._v("Size Small "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-sm")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-sm btn-facebook text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-twitter text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-linkedin text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-flickr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-tumblr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-xing text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-github text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-html5 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-openid text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-stack-overflow text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-css3 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-youtube text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dribbble text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-google-plus text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-instagram text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-pinterest text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vk text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-yahoo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-behance text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-dropbox text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-reddit text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-spotify text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vine text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-foursquare text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-sm btn-vimeo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Normal")]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-facebook text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-twitter text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-linkedin text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-flickr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-tumblr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-xing text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-github text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-html5 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-openid text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-stack-overflow text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-css3 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-youtube text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dribbble text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-google-plus text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-instagram text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-pinterest text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vk text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-yahoo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-behance text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-dropbox text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-reddit text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-spotify text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vine text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-foursquare text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-vimeo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])]), _vm._v(" "), _c('h6', [_vm._v("Size Large "), _c('small', [_vm._v("Add this class "), _c('code', [_vm._v(".btn-lg")])])]), _vm._v(" "), _c('p', [_c('button', {
-    staticClass: "btn btn-lg btn-facebook text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Facebook")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-twitter text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Twitter")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-linkedin text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("LinkedIn")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-flickr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Flickr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-tumblr text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Tumblr")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-xing text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Xing")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-github text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Github")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-html5 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("HTML5")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-openid text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("OpenID")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-stack-overflow text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("StackOverflow")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-css3 text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("CSS3")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-youtube text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("YouTube")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dribbble text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dribbble")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-google-plus text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Google+")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-instagram text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Instagram")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-pinterest text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Pinterest")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vk text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("VK")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-yahoo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Yahoo")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-behance text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Behance")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-dropbox text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Dropbox")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-reddit text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Reddit")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-spotify text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Spotify")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vine text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vine")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-foursquare text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Forsquare")])]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-lg btn-vimeo text",
-    attrs: {
-      "type": "button"
-    }
-  }, [_c('span', [_vm._v("Vimeo")])])])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6a81bac2", module.exports)
-  }
-}
-
-/***/ }),
-/* 549 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -116913,7 +105891,7 @@ if (false) {
 }
 
 /***/ }),
-/* 550 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -116930,7 +105908,7 @@ if (false) {
 }
 
 /***/ }),
-/* 551 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -116957,7 +105935,7 @@ if (false) {
 }
 
 /***/ }),
-/* 552 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -117042,1894 +106020,7 @@ if (false) {
 }
 
 /***/ }),
-/* 553 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "animated fadeIn"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          3d Switch\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-3d switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-3d switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-3d switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-3d switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-3d switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-3d switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch default\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch default - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-pill switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch outline - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-pill switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch outline alternative\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch outline alternative - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-default switch-pill switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-default switch-pill switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-pill switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text outline - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-pill switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text outline alternative\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with text outline alternative - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-text switch-pill switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-text switch-pill switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "On",
-      "data-off": "Off"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-pill switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-secondary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-success"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-warning"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-info"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-danger"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon outline\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon outline - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-pill switch-primary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-secondary-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-success-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-warning-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-info-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-danger-outline"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon outline alternative\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Switch with icon outline alternative - pills\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block"
-  }, [_c('label', {
-    staticClass: "switch switch-icon switch-pill switch-primary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-secondary-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-success-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-warning-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-info-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })]), _vm._v("\n             \n          "), _c('label', {
-    staticClass: "switch switch-icon switch-pill switch-danger-outline-alt"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label",
-    attrs: {
-      "data-on": "&#xf00c",
-      "data-off": "&#xf00d"
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-12"
-  }, [_c('div', {
-    staticClass: "card"
-  }, [_c('div', {
-    staticClass: "card-header"
-  }, [_vm._v("\n          Sizes\n        ")]), _vm._v(" "), _c('div', {
-    staticClass: "card-block p-0"
-  }, [_c('table', {
-    staticClass: "table table-hover table-striped table-align-middle mb-0"
-  }, [_c('thead', [_c('th', [_vm._v("Size")]), _vm._v(" "), _c('th', [_vm._v("Example")]), _vm._v(" "), _c('th', [_vm._v("CSS Class")])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("\n                  Large\n                ")]), _vm._v(" "), _c('td', [_c('label', {
-    staticClass: "switch switch-lg switch-3d switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])]), _vm._v(" "), _c('td', [_vm._v("\n                  Add following class "), _c('code', [_vm._v(".switch-lg")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("\n                  Normal\n                ")]), _vm._v(" "), _c('td', [_c('label', {
-    staticClass: "switch switch-3d switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])]), _vm._v(" "), _c('td', [_vm._v("\n                  -\n                ")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("\n                  Small\n                ")]), _vm._v(" "), _c('td', [_c('label', {
-    staticClass: "switch switch-sm switch-3d switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])]), _vm._v(" "), _c('td', [_vm._v("\n                  Add following class "), _c('code', [_vm._v(".switch-sm")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("\n                  Extra small\n                ")]), _vm._v(" "), _c('td', [_c('label', {
-    staticClass: "switch switch-xs switch-3d switch-primary"
-  }, [_c('input', {
-    staticClass: "switch-input",
-    attrs: {
-      "type": "checkbox",
-      "checked": ""
-    }
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-label"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "switch-handle"
-  })])]), _vm._v(" "), _c('td', [_vm._v("\n                  Add following class "), _c('code', [_vm._v(".switch-sm")])])])])])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f9ef1838", module.exports)
-  }
-}
-
-/***/ }),
-/* 554 */
+/* 521 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121441,7 +108532,7 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 555 */
+/* 522 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121608,17 +108699,17 @@ function VueFixer (vue) {
 
 
 /***/ }),
-/* 556 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(346);
+var content = __webpack_require__(332);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(42)("1d348825", content, false);
+var update = __webpack_require__(61)("1d348825", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -121634,17 +108725,17 @@ if(false) {
 }
 
 /***/ }),
-/* 557 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(347);
+var content = __webpack_require__(333);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(42)("3d2ba98a", content, false);
+var update = __webpack_require__(61)("3d2ba98a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -121660,17 +108751,17 @@ if(false) {
 }
 
 /***/ }),
-/* 558 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(348);
+var content = __webpack_require__(334);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(42)("aa39d186", content, false);
+var update = __webpack_require__(61)("aa39d186", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -121686,33 +108777,7 @@ if(false) {
 }
 
 /***/ }),
-/* 559 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(349);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(42)("7f877f81", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6a81bac2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SocialButtons.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6a81bac2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SocialButtons.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 560 */
+/* 526 */
 /***/ (function(module, exports) {
 
 /**
@@ -121745,11 +108810,11 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 561 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(237);
-module.exports = __webpack_require__(238);
+__webpack_require__(236);
+module.exports = __webpack_require__(237);
 
 
 /***/ })

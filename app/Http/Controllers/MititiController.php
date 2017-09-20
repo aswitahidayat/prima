@@ -14,9 +14,22 @@ class MititiController extends Controller
      */
     public function index()
     {        
-        return Mititi::where('deleted', 0)
+        $results = Mititi::where('deleted', 0)
                 ->orderBy('id', 'asc')
                 ->paginate(10);
+        $response = [
+            'pagination' => [
+                'total' => $results->total(),
+                'per_page' => $results->perPage(),
+                'current_page' => $results->currentPage(),
+                'last_page' => $results->lastPage(),
+                'from' => $results->firstItem(),
+                'to' => $results->lastItem()
+            ],
+            'data' => $results->all()
+        ];
+        
+        return $response;
     }
 
     /**

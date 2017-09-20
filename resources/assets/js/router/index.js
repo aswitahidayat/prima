@@ -6,17 +6,6 @@ import Full from '../containers/Full';
 
 // Views
 import Dashboard from '../views/Dashboard';
-import Charts from '../views/Charts';
-import Widgets from '../views/Widgets';
-
-// Views - Components
-import Buttons from '../views/components/Buttons';
-import SocialButtons from '../views/components/SocialButtons';
-import Cards from '../views/components/Cards';
-import Forms from '../views/components/Forms';
-import Modals from '../views/components/Modals';
-import Switches from '../views/components/Switches';
-import Tables from '../views/components/Tables';
 
 // Views - Icons
 import FontAwesome from '../views/icons/FontAwesome';
@@ -48,81 +37,6 @@ export default new Router({
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
-        },
-        {
-          path: 'charts',
-          name: 'Charts',
-          component: Charts
-        },
-        {
-          path: 'widgets',
-          name: 'Widgets',
-          component: Widgets
-        },
-        {
-          path: 'components',
-          redirect: '/components/buttons',
-          name: 'Components',
-          component: {
-            render (c) { return c('router-view'); }
-          },
-          children: [
-            {
-              path: 'buttons',
-              name: 'Buttons',
-              component: Buttons
-            },
-            {
-              path: 'social-buttons',
-              name: 'Social Buttons',
-              component: SocialButtons
-            },
-            {
-              path: 'cards',
-              name: 'Cards',
-              component: Cards
-            },
-            {
-              path: 'forms',
-              name: 'Forms',
-              component: Forms
-            },
-            {
-              path: 'modals',
-              name: 'Modals',
-              component: Modals
-            },
-            {
-              path: 'switches',
-              name: 'Switches',
-              component: Switches
-            },
-            {
-              path: 'tables',
-              name: 'Tables',
-              component: Tables
-            }
-          ]
-        },
-        {
-          path: 'icons',
-          redirect: '/icons/font-awesome',
-          name: 'Icons',
-          component: {
-            render (c) { return c('router-view'); }
-          },
-          children: [
-            {
-              path: 'font-awesome',
-              name: 'Font Awesome',
-              component: FontAwesome
-            },
-            {
-              path: 'simple-line-icons',
-              name: 'Simple Line Icons',
-              component: SimpleLineIcons
-            }
-          ]
         },
         {
           path: 'master',
