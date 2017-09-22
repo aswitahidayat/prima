@@ -31786,7 +31786,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/node_modules/vue-strap/src/Modal.vue"
+Component.options.__file = "D:\\workpalce\\prima\\node_modules\\vue-strap\\src\\Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31820,7 +31820,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/App.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -48669,8 +48669,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-throw new Error("Cannot find module \"./file-upload.fake.service\"");
-throw new Error("Cannot find module \"./utils\"");
 //
 //
 //
@@ -48712,10 +48710,6 @@ throw new Error("Cannot find module \"./utils\"");
 //
 //
 //
-
-// swap as you need
- // fake service
-// import { upload } from './file-upload.service';   // real service
 
 
 var STATUS_INITIAL = 0,
@@ -48762,7 +48756,7 @@ var STATUS_INITIAL = 0,
       this.currentStatus = STATUS_SAVING;
       var url = BASE_URL + '/photos/upload';
 
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__file_upload_fake_service__["upload"])(formData).then(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils__["wait"])(1500)) // DEV ONLY: wait for 1.5s 
+      upload(formData).then(wait(1500)) // DEV ONLY: wait for 1.5s 
       .then(function (x) {
         _this.uploadedFiles = [].concat(x);
         _this.currentStatus = STATUS_SUCCESS;
@@ -64589,7 +64583,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(26)();
-exports.push([module.i, "\n.dropdown-toggle::after {\n  /*display: none !important;*/\n}\n", ""]);
+exports.push([module.i, "\n.dropdown-toggle::after {\r\n  /*display: none !important;*/\n}\r\n", ""]);
 
 /***/ }),
 /* 334 */
@@ -64610,7 +64604,7 @@ exports.push([module.i, "\n.dropbox {\n  outline: 2px dashed grey;\n  /* the das
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(26)();
-exports.push([module.i, "\n.modal {\n  transition: all 0.3s ease;\n}\n.modal.in {\n  background-color: rgba(0,0,0,0.5);\n}\n.modal.zoom .modal-dialog {\n  -webkit-transform: scale(0.1);\n  transform: scale(0.1);\n  top: 300px;\n  opacity: 0;\n  transition: all 0.3s;\n}\n.modal.zoom.in .modal-dialog {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transform: translate3d(0, -300px, 0);\n  transform: translate3d(0, -300px, 0);\n  opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n.modal {\r\n  transition: all 0.3s ease;\n}\n.modal.in {\r\n  background-color: rgba(0,0,0,0.5);\n}\n.modal.zoom .modal-dialog {\r\n  -webkit-transform: scale(0.1);\r\n  transform: scale(0.1);\r\n  top: 300px;\r\n  opacity: 0;\r\n  transition: all 0.3s;\n}\n.modal.zoom.in .modal-dialog {\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n  -webkit-transform: translate3d(0, -300px, 0);\r\n  transform: translate3d(0, -300px, 0);\r\n  opacity: 1;\n}\r\n", ""]);
 
 /***/ }),
 /* 337 */
@@ -100223,7 +100217,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Aside.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Aside.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Aside.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100257,7 +100251,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Breadcrumb.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Breadcrumb.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Breadcrumb.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100291,7 +100285,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Footer.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Footer.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Footer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100329,7 +100323,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Header.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Header.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100363,7 +100357,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Navbar.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Navbar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navbar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100401,7 +100395,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/components/Sidebar.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\components\\Sidebar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Sidebar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100435,7 +100429,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/containers/Full.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\containers\\Full.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Full.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100469,7 +100463,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/Dashboard.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\Dashboard.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Dashboard.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100503,7 +100497,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/CardBarChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\CardBarChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100536,7 +100530,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/CardLine1ChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\CardLine1ChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100569,7 +100563,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/CardLine2ChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\CardLine2ChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100602,7 +100596,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/CardLine3ChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\CardLine3ChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100635,7 +100629,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/MainChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\MainChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100668,7 +100662,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/dashboard/SocialBoxChartExample.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\dashboard\\SocialBoxChartExample.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -100701,7 +100695,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/icons/FontAwesome.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\icons\\FontAwesome.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] FontAwesome.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100735,7 +100729,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/icons/SimpleLineIcons.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\icons\\SimpleLineIcons.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] SimpleLineIcons.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100773,7 +100767,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/modules/master/Banner.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\modules\\master\\Banner.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Banner.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100807,7 +100801,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/modules/master/Kalpen.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\modules\\master\\Kalpen.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Kalpen.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100841,7 +100835,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/modules/master/TipsNTrik.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\modules\\master\\TipsNTrik.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] TipsNTrik.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100875,7 +100869,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/pages/Login.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\pages\\Login.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Login.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100909,7 +100903,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/pages/Page404.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\pages\\Page404.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Page404.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100943,7 +100937,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/pages/Page500.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\pages\\Page500.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Page500.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -100977,7 +100971,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/aswita/workplace/prima/prima/resources/assets/js/views/pages/Register.vue"
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\pages\\Register.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Register.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -107425,12 +107419,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('router-link', {
     staticClass: "nav-link",
     attrs: {
-      "to": '/components/social-buttons',
+      "to": '/master/kalpen',
       "exact": ""
     }
   }, [_c('i', {
     staticClass: "icon-puzzle"
-  }), _vm._v(" Social Buttons")])], 1)])])], 1)])])
+  }), _vm._v(" Kalpen")])], 1)])])], 1)])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

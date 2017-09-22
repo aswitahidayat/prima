@@ -34,7 +34,7 @@
               <router-link :to="'/master/mititi'" class="nav-link" exact><i class="icon-puzzle"></i> Materi Tips n Trik</router-link>
             </li>
             <li class="nav-item">
-              <router-link :to="'/components/social-buttons'" class="nav-link" exact><i class="icon-puzzle"></i> Social Buttons</router-link>
+              <router-link :to="'/master/kalpen'" class="nav-link" exact><i class="icon-puzzle"></i> Kalpen</router-link>
             </li>
           </ul>
         </router-link>
