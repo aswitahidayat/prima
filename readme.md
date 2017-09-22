@@ -55,5 +55,5 @@ php artisan migrate
 Error `bash: $'\302\226php': command not found`
 Try `composer global require "laravel/installer"`
 
-SQL Server driver for php
-`https://github.com/Microsoft/msphpsql/releases
+SQL Server driver for php, please read
+`https://github.com/Microsoft/msphpsql/releases`
