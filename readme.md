@@ -23,7 +23,15 @@ If your here, you most likely know what Laravel is and hopefully how to get up a
 
 ## Getting Started
 ```
+composer install
+```
+
+```
 php artisan serve
+```
+
+```
+npm install
 ```
 
 ```
@@ -41,3 +49,14 @@ php artisan make:model SmartEbook --migration
 ```
 php artisan migrate
 ```
+
+## Frequent Trouble & Soulution
+
+[bash: $'\302\226php': command not found]
+
+```
+composer global require "laravel/installer"
+```
+
+SQL Server driver for php
+[https://github.com/Microsoft/msphpsql/releases]

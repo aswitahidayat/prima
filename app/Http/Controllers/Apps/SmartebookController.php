@@ -15,7 +15,23 @@ class SmartebookController extends Controller
      */
     public function index()
     {
-        //
+        $results = Smartebook::where('deleted', 0)
+        ->orderBy('id', 'asc')
+        ->paginate(10);
+        
+        $response = [
+            'pagination' => [
+                'total' => $results->total(),
+                'per_page' => $results->perPage(),
+                'current_page' => $results->currentPage(),
+                'last_page' => $results->lastPage(),
+                'from' => $results->firstItem(),
+                'to' => $results->lastItem()
+            ],
+            'data' => $results->all()
+        ];
+
+        return $response;
     }
 
     /**
@@ -36,7 +52,18 @@ class SmartebookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required|max:500',
+            'keterangan' => 'required|max:500'
+        ]);
+
+        return Smartebook::create([ 
+            'nama' => $request->nama,
+            'keterangan' => $request->keterangan,
+            'jenjang1' => $request->jenjang1,
+            'jenjang2' => $request->jenjang2,
+            'kurikulum' => $request->kurikulum
+        ]);
     }
 
     /**
@@ -47,7 +74,9 @@ class SmartebookController extends Controller
      */
     public function show($id)
     {
-        //
+        return Smartebook::where('deleted', 0)
+            ->where('id', $id)
+            ->first();
     }
 
     /**
@@ -70,7 +99,20 @@ class SmartebookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required|max:500',
+            'keterangan' => 'required|max:500'
+        ]);
+
+        return Smartebook::where('deleted', 0)
+            ->where('id', $id)
+            ->update([ 
+                'nama' => $request->nama,
+                'keterangan' => $request->keterangan,
+                'jenjang1' => $request->jenjang1,
+                'jenjang2' => $request->jenjang2,
+                'kurikulum' => $request->kurikulum
+            ]);
     }
 
     /**
@@ -81,6 +123,8 @@ class SmartebookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Smartebook::where('deleted', 0)
+            ->where('id', $id)
+            ->update(['deleted' => 1]);
     }
 }

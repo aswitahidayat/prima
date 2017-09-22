@@ -49467,6 +49467,8 @@ window.axios.defaults.headers.common = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__views_modules_master_Kalpen___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__views_modules_master_Kalpen__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__views_modules_master_Banner__ = __webpack_require__(496);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__views_modules_master_Banner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__views_modules_master_Banner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__views_modules_master_Smartebook__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__views_modules_master_Smartebook___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__views_modules_master_Smartebook__);
 
 
 
@@ -49487,6 +49489,7 @@ window.axios.defaults.headers.common = {
 
 
 // Views - Modules
+
 
 
 
@@ -49529,6 +49532,10 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         path: 'kalpen',
         name: 'Kalpen',
         component: __WEBPACK_IMPORTED_MODULE_11__views_modules_master_Kalpen___default.a
+      }, {
+        path: 'smartebook',
+        name: 'Smartebook',
+        component: __WEBPACK_IMPORTED_MODULE_13__views_modules_master_Smartebook___default.a
       }]
     }]
   }, {
@@ -111112,6 +111119,540 @@ module.exports = function listToStyles (parentId, list) {
 __webpack_require__(237);
 module.exports = __webpack_require__(238);
 
+
+/***/ }),
+/* 530 */,
+/* 531 */,
+/* 532 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'modals',
+  components: {
+    modal: __WEBPACK_IMPORTED_MODULE_0_vue_strap_src_Modal___default.a
+  },
+  data: function data() {
+    return {
+      primaryModal: false,
+      list: [],
+      dataForm: {
+        id: '',
+        file: '',
+        keterangan: ''
+      },
+      pagination: {
+        total: 0,
+        per_page: 10,
+        from: 1,
+        to: 0,
+        current_page: 1
+      }
+    };
+  },
+  created: function created() {
+    this.fetchSmartebookList();
+  },
+
+
+  methods: {
+    fetchSmartebookList: function fetchSmartebookList(page) {
+      var _this = this;
+
+      axios.get('api/smartebook?page=' + page).then(function (res) {
+        _this.list = res.data;
+        _this.pagination = res.data.pagination;
+      }).catch(function (err) {
+        return console.error(err);
+      });
+    },
+    createSmartebook: function createSmartebook() {
+      var _this2 = this;
+
+      axios.post('api/smartebook', this.dataForm).then(function (res) {
+        _this2.dataForm = {};
+        _this2.fetchSmartebookList();
+      }).catch(function (err) {
+        return console.error(err);
+      });
+    },
+    popUpEditSmartebook: function popUpEditSmartebook(id) {
+      var _this3 = this;
+
+      axios.get('api/smartebook/' + id).then(function (res) {
+        _this3.primaryModal = true;
+        _this3.dataForm = res.data;
+      }).catch(function (err) {
+        return console.error(err);
+      });
+    },
+    editSmartebook: function editSmartebook(id) {
+      var _this4 = this;
+
+      if (id && id !== "") {
+        axios.put('api/smartebook/' + id, this.dataForm).then(function (res) {
+          _this4.primaryModal = false;
+          _this4.dataForm = {};
+          _this4.fetchSmartebookList();
+        }).catch(function (err) {
+          return console.error(err);
+        });
+      } else {
+        axios.post('api/smartebook', this.dataForm).then(function (res) {
+          _this4.primaryModal = false;
+          _this4.dataForm = {};
+          _this4.fetchSmartebookList();
+        }).catch(function (err) {
+          return console.error(err);
+        });
+      }
+    },
+    deleteSmartebook: function deleteSmartebook(id) {
+      var _this5 = this;
+
+      axios.delete('api/smartebook/' + id).then(function (res) {
+        _this5.fetchSmartebookList();
+      }).catch(function (err) {
+        return console.error(err);
+      });
+    },
+
+
+    pagesNumber: function pagesNumber() {
+      if (!this.pagination.to) {
+        return [];
+      }
+      var from = this.pagination.current_page - this.offset;
+      if (from < 1) {
+        from = 1;
+      }
+      var to = from + this.offset * 2;
+      if (to >= this.pagination.last_page) {
+        to = this.pagination.last_page;
+      }
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+
+      return pagesArray;
+    },
+
+    changePage: function changePage(page) {
+      this.pagination.current_page = page;
+      this.fetchItems(page);
+    }
+  }
+});
+
+/***/ }),
+/* 533 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(532),
+  /* template */
+  __webpack_require__(534),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "D:\\workpalce\\prima\\resources\\assets\\js\\views\\modules\\master\\Smartebook.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Smartebook.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1e2e93d3", Component.options)
+  } else {
+    hotAPI.reload("data-v-1e2e93d3", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 534 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-lg-12"
+  }, [_c('div', {
+    staticClass: "card"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "card-block"
+  }, [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": function($event) {
+        _vm.primaryModal = true
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-plus"
+  }), _vm._v(" Tambah")]), _vm._v(" "), _c('table', {
+    staticClass: "table table-bordered table-striped table-condensed"
+  }, [_vm._m(1), _vm._v(" "), _c('tbody', _vm._l((_vm.list.data), function(task, index) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(index + _vm.list.pagination.from))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.nama))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.keterangan))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.jenjang1))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.jenjang2))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(task.kurikulum))]), _vm._v(" "), _c('td', [_c('button', {
+      staticClass: "btn btn-primary",
+      attrs: {
+        "type": "button"
+      },
+      on: {
+        "click": function($event) {
+          _vm.popUpEditSmartebook(task.id)
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-edit"
+    })]), _vm._v(" "), _c('button', {
+      staticClass: "btn btn-danger btn-xs",
+      on: {
+        "click": function($event) {
+          _vm.deleteSmartebook(task.id)
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-trash"
+    })])])])
+  }))]), _vm._v(" "), _c('nav', [_c('ul', {
+    staticClass: "pagination"
+  }, [(_vm.pagination.current_page > 1) ? _c('li', {
+    staticClass: "page-item"
+  }, [_c('a', {
+    staticClass: "page-link",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.fetchSmartebookList(_vm.pagination.current_page - 1)
+      }
+    }
+  }, [_vm._v("Prev")])]) : _vm._e(), _vm._v(" "), _vm._l((_vm.pagination.last_page), function(page) {
+    return _c('li', {
+      class: [page == _vm.pagination.current_page ? 'active' : '']
+    }, [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.fetchSmartebookList(page)
+        }
+      }
+    }, [_vm._v(_vm._s(page))])])
+  }), _vm._v(" "), (_vm.pagination.current_page < _vm.pagination.last_page) ? _c('li', {
+    staticClass: "page-item"
+  }, [_c('a', {
+    staticClass: "page-link",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.fetchSmartebookList(_vm.pagination.current_page + 1)
+      }
+    }
+  }, [_vm._v("Next")])]) : _vm._e()], 2)])])])]), _vm._v(" "), _c('modal', {
+    staticClass: "modal-primary",
+    attrs: {
+      "title": "Modal title",
+      "effect": "fade/zoom"
+    },
+    on: {
+      "ok": function($event) {
+        _vm.editSmartebook(_vm.dataForm.id)
+      }
+    },
+    model: {
+      value: (_vm.primaryModal),
+      callback: function($$v) {
+        _vm.primaryModal = $$v
+      },
+      expression: "primaryModal"
+    }
+  }, [_c('div', {
+    staticClass: "modal-header",
+    attrs: {
+      "slot": "modal-header"
+    },
+    slot: "modal-header"
+  }, [_c('h4', {
+    staticClass: "modal-title"
+  }, [_vm._v(_vm._s(_vm.dataForm.id ? "Edit Data" : "Tambah Data"))])]), _vm._v(" "), _c('div', {
+    staticClass: "card-block"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "company"
+    }
+  }, [_vm._v("File")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.dataForm.nama),
+      expression: "dataForm.nama"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "value": "{ dataForm.nama }",
+      "placeholder": "Masukan Nama"
+    },
+    domProps: {
+      "value": (_vm.dataForm.nama)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.dataForm.nama = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "company"
+    }
+  }, [_vm._v("Keterangan")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.dataForm.keterangan),
+      expression: "dataForm.keterangan"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "value": "{ dataForm.keterangan }",
+      "placeholder": "Masukan Keterangan"
+    },
+    domProps: {
+      "value": (_vm.dataForm.keterangan)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.dataForm.keterangan = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "company"
+    }
+  }, [_vm._v("Jenjang 1")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.dataForm.jenjang1),
+      expression: "dataForm.jenjang1"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "value": "{ dataForm.jenjang1 }",
+      "placeholder": "Masukan Jenjang 1"
+    },
+    domProps: {
+      "value": (_vm.dataForm.jenjang1)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.dataForm.jenjang1 = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "company"
+    }
+  }, [_vm._v("Jenjang 2")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.dataForm.jenjang2),
+      expression: "dataForm.jenjang2"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "value": "{ dataForm.jenjang2 }",
+      "placeholder": "Masukan Jenjang 2"
+    },
+    domProps: {
+      "value": (_vm.dataForm.jenjang2)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.dataForm.jenjang2 = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "company"
+    }
+  }, [_vm._v("Kurikulum")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.dataForm.kurikulum),
+      expression: "dataForm.kurikulum"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "value": "{ dataForm.kurikulum }",
+      "placeholder": "Masukan Kurikulum"
+    },
+    domProps: {
+      "value": (_vm.dataForm.kurikulum)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.dataForm.kurikulum = $event.target.value
+      }
+    }
+  })])])])], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "card-header"
+  }, [_c('i', {
+    staticClass: "fa fa-align-justify"
+  }), _vm._v(" Smartbook Table\n      ")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("No")]), _vm._v(" "), _c('th', [_vm._v("Nama")]), _vm._v(" "), _c('th', [_vm._v("Keterangan")]), _vm._v(" "), _c('th', [_vm._v("Jenjang 1")]), _vm._v(" "), _c('th', [_vm._v("Jenjang 2")]), _vm._v(" "), _c('th', [_vm._v("Kurikulum")]), _vm._v(" "), _c('th', [_vm._v("Action")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-1e2e93d3", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

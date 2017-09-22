@@ -18,4 +18,8 @@ Route::get('/', function () {
 Route::prefix('api')->group(function() {
     Route::resource('mititi', 'Apps\MititiController');
     Route::resource('kalpen', 'Apps\KalpenController');
+    Route::resource('smartebook', 'Apps\SmartebookController');
+    Route::resource('jenjang', 'Apps\JenjangController');
+    Route::resource('propinsi', 'Apps\PropinsiController');
+    Route::resource('kota', 'Apps\KotaController');
 });

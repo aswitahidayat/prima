@@ -21,6 +21,7 @@ import Register from '../views/pages/Register';
 import TipsNTrik from '../views/modules/master/TipsNTrik';
 import Kalpen from '../views/modules/master/Kalpen';
 import Banner from '../views/modules/master/Banner';
+import Smartebook from '../views/modules/master/Smartebook';
 
 Vue.use(Router);
 
@@ -62,6 +63,11 @@ export default new Router({
               path: 'kalpen',
               name: 'Kalpen',
               component: Kalpen
+            },
+            {
+              path: 'smartebook',
+              name: 'Smartebook',
+              component: Smartebook
             }
           ]
         }
