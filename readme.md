@@ -43,7 +43,7 @@ php artisan make:controller Apps/<Controller Name> --resource
 ```
 
 ```
-php artisan make:model SmartEbook --migration
+php artisan make:model <Model Name> --migration
 ```
 
 ```
