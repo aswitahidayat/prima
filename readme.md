@@ -38,6 +38,7 @@ npm install
 npm run watch
 ```
 
+## Common Artisan Command 
 ```
 php artisan make:controller Apps/<Controller Name> --resource
 ```
@@ -50,7 +51,7 @@ php artisan make:model <Model Name> --migration
 php artisan migrate
 ```
 
-## Frequent Trouble & Soulution
+## Common Trouble & Soulution
 
 Error `bash: $'\302\226php': command not found`
 Try `composer global require "laravel/installer"`
